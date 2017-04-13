@@ -28,13 +28,4 @@
 
 <element name="department" type="tns:部门信息类型"></element>
 
-<!--要不要删掉-->
-<complexType name="学校部门列表类型">
-	<sequence minOccurs="0" maxOccurs="unbounded">
-		<element name="部门信息" type="tns:部门信息类型"></element>
-	</sequence>
-</complexType>
-
-<element name="学校部门列表" type="学校部门列表类型"></element>
-<!--删掉结束-->
 </schema>
