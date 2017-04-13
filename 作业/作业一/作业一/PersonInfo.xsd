@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nju.edu.cn/schema" xmlns:tns="http://www.nju.edu.cn/schema"  elementFormDefault="qualified">
+	<include schemaLocation="../Department.xsd"></include>
+
+ 
+ <complexType name="个人基本信息类型">
+   <sequence>
+	   <element name="姓名" type="string"/>
+	   <element name="省" type="string"/>
+	   <element name="国家" type="string"/>
+	   <element name="部门" type="tns:部门信息类型"/>
+   </sequence>
+ </complexType>
+
+<element name="personInfo" type="tns:个人基本信息类型"></element>
+
+</schema>

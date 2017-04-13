@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nju.edu.cn/schema" xmlns:tns="http://www.nju.edu.cn/schema"  elementFormDefault="qualified">
+	
+ 
+<complexType name="部门信息类型">
+  <sequence>
+  	  <element name="部门id" type="tns:部门编号"/>
+  	  <element name="部门类型" type="tns:部门类型"/> 
+	  <element name="部门名称" type="string"/>
+	  <element name="部门地址" type="string"/>
+  </sequence>
+</complexType>
+
+<simpleType name="部门编号">
+	<restriction base="int">
+		<minInclusive value="0"></minInclusive>
+		<maxInclusive value="100"></maxInclusive>
+	</restriction>
+</simpleType>
+
+<simpleType name="部门类型">
+	<restriction base="string">
+		<enumeration value="院系单位"></enumeration>
+		<enumeration value="直属部门"></enumeration>
+		<enumeration value="行政部门"></enumeration>
+	</restriction>
+</simpleType>
+
+<element name="department" type="tns:部门信息类型"></element>
+
+<!--要不要删掉-->
+<complexType name="学校部门列表类型">
+	<sequence minOccurs="0" maxOccurs="unbounded">
+		<element name="部门信息" type="tns:部门信息类型"></element>
+	</sequence>
+</complexType>
+
+<element name="学校部门列表" type="学校部门列表类型"></element>
+<!--删掉结束-->
+</schema>
