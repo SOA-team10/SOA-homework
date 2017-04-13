@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="gb2312"?>
-<student number="141250033">
+<student id="141250033">
     <name>段正谋</name>
-    <address>云南</address>
+    <province>云南</province>
     <country>中国 </country>
     <scorelist>?</scorelist> 
   </student>

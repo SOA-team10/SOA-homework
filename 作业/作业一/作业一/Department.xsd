@@ -4,10 +4,10 @@
  
 <complexType name="部门信息类型">
   <sequence>
-  	  <element name="部门id" type="tns:部门编号"/>
-  	  <element name="部门类型" type="tns:部门类型"/> 
-	  <element name="部门名称" type="string"/>
-	  <element name="部门地址" type="string"/>
+  	  <element name="depId" type="tns:部门编号"/>
+  	  <element name="depType" type="tns:部门类型"/> 
+	  <element name="depName" type="string"/>
+	  <element name="depAddress" type="string"/>
   </sequence>
 </complexType>
 

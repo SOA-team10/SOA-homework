@@ -5,10 +5,10 @@
  
  <complexType name="个人基本信息类型">
    <sequence>
-	   <element name="姓名" type="string"/>
-	   <element name="省" type="string"/>
-	   <element name="国家" type="string"/>
-	   <element name="部门" type="tns:部门信息类型"/>
+	   <element name="name" type="string"/>
+	   <element name="province" type="string"/>
+	   <element name="country" type="string"/>
+	   <element name="department" type="tns:部门信息类型"/>
    </sequence>
  </complexType>
 
