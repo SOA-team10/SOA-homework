@@ -10,7 +10,7 @@
 	<complexType name="学生信息类型">
 		<complexContent>
 		  	<extension base="tns:个人基本信息类型">
-		  		<attribute name="id" type="tns:学号类型"/>
+		  		<attribute name="id" type="tns:学号类型" use="required"/>
 				<sequence>
 					<element name="课程成绩列表" type="tns:课程成绩列表类型"/>
 				</sequence>

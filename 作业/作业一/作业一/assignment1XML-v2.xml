@@ -1,0 +1,27 @@
+
+<studentInfo id='141250033'>
+	<name>段正谋</name>
+	<province>云南</province>
+	<country>中国</country>
+	<课程成绩列表>
+		<课程成绩 课程编号='123456' 成绩性质='平时成绩'>
+			<成绩>
+				<学号>141250033</学号>
+				<得分>85</得分>
+			</成绩>
+		</课程成绩>
+		<课程成绩 课程编号='654321' 成绩性质='总评成绩'>
+			<成绩>
+				<学号>141250033</学号>
+				<得分>90</得分>
+			</成绩>
+		</课程成绩>
+	</课程成绩列表>
+	<department>
+		<depId>1</depId>
+		<depType>直属部门</depType>
+		<depName>后勤部</depName>
+		<depAddress>就在食堂后面吧</depAddress>
+	</department>
+
+</studentInfo>

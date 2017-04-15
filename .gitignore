@@ -1,0 +1,4 @@
+.DS_Store
+
+# 忽略.zip archive
+*.zip
