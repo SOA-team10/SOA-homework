@@ -13,19 +13,19 @@
 
 <simpleType name="部门编号">
 	<restriction base="int">
-		<minInclusive value="0"></minInclusive>
-		<maxInclusive value="100"></maxInclusive>
+		<minInclusive value="0" />
+		<maxInclusive value="100" />
 	</restriction>
 </simpleType>
 
 <simpleType name="部门类型">
 	<restriction base="string">
-		<enumeration value="院系单位"></enumeration>
-		<enumeration value="直属部门"></enumeration>
-		<enumeration value="行政部门"></enumeration>
+		<enumeration value="院系单位" />
+		<enumeration value="直属部门" />
+		<enumeration value="行政部门" />
 	</restriction>
 </simpleType>
 
-<element name="department" type="tns:部门信息类型"></element>
+<element name="department" type="tns:部门信息类型" />
 
 </schema>

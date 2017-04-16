@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nju.edu.cn/schema" xmlns:tns="http://www.nju.edu.cn/schema"  elementFormDefault="qualified">
-	<include schemaLocation="../Department.xsd"></include>
+	<include schemaLocation="./Department.xsd" />
 
  
  <complexType name="个人基本信息类型">
@@ -27,6 +27,6 @@
 	</restriction>
 </simpleType>
 
-<element name="personInfo" type="tns:个人基本信息类型"></element>
+<element name="personInfo" type="tns:个人基本信息类型" />
 
 </schema>
