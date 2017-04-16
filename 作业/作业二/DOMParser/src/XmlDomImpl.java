@@ -1,0 +1,337 @@
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Random;
+
+/**
+ * Created by 张文玘 on 2017/4/16.
+ */
+public class XmlDomImpl implements XmlInterface{
+    private Document document;
+    private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+    public void init(){
+        try {
+            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+            docFactory.setValidating(true);
+            DocumentBuilder builder = docFactory.newDocumentBuilder();
+            document = builder.newDocument();
+        }catch (ParserConfigurationException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Override
+    public void createXml(String fileName) throws ParseException {
+        Element root = document.createElement("studentList");
+        document.appendChild(root);
+        //学生1
+        Department department = new Department();
+        department.setDepId(1);
+        department.setDepName("软件学院");
+        department.setDepType("院系单位");
+        department.setDepAddress("南京大学鼓楼校区费彝民楼");
+
+        Student student1 = new Student();
+        student1.setId("141250033");
+        student1.setIdCard("530000199602191533");
+        student1.setName("段正谋");
+        student1.setSex("男");
+        student1.setBirthday(sdf.parse("1996-02-19"));
+        student1.setDepartment(department);
+        student1.setProvince("云南");
+        ArrayList<Score> scores = getScoreByStudent(student1.getId());
+        student1.setScores(scores);
+        root.appendChild(appendStudent(student1));
+
+        //学生2
+        Student student2 = new Student();
+        student2.setId("141250192");
+        student2.setIdCard("140311199512251522");
+        student2.setName("张文玘");
+        student2.setSex("女");
+        student2.setBirthday(sdf.parse("1995-12-25"));
+        student2.setDepartment(department);
+        student2.setProvince("山西");
+        student2.setScores(getScoreByStudent(student2.getId()));
+        root.appendChild(appendStudent(student2));
+
+        //学生3
+        Student student3 = new Student();
+        student3.setId("141220142");
+        student3.setIdCard("410000199509131432");
+        student3.setName("王亚杰");
+        student3.setSex("男");
+        student3.setBirthday(sdf.parse("1995-09-13"));
+        student3.setDepartment(department);
+        student3.setProvince("河南");
+        student3.setScores(getScoreByStudent(student3.getId()));
+        root.appendChild(appendStudent(student3));
+
+        //学生4
+        Student student4 = new Student();
+        student4.setId("12");
+        student4.setIdCard("");
+        student4.setName("张宇逸");
+        student4.setSex("男");
+        student4.setBirthday(sdf.parse("1992-12-12"));
+        student4.setDepartment(department);
+        student4.setProvince("");
+        student4.setScores(getScoreByStudent(student4.getId()));
+        root.appendChild(appendStudent(student4));
+
+        //学生5
+        Student student5 = new Student();
+        student5.setId("141250004");
+        student5.setIdCard("");
+        student5.setName("曹江湖");
+        student5.setSex("男");
+        student5.setBirthday(sdf.parse("1996-02-24"));
+        student5.setDepartment(department);
+        student5.setProvince("湖北");
+        student5.setScores(getScoreByStudent(student5.getId()));
+        root.appendChild(appendStudent(student5));
+
+        //学生6
+        Student student6 = new Student();
+        student6.setId("141250205");
+        student6.setIdCard("");
+        student6.setName("周梦佳");
+        student6.setSex("女");
+        student6.setBirthday(sdf.parse("1996-03-11"));
+        student6.setDepartment(department);
+        student6.setProvince("江苏");
+        student6.setScores(getScoreByStudent(student6.getId()));
+        root.appendChild(appendStudent(student6));
+
+        //学生7
+        Student student7 = new Student();
+        student7.setId("141250056");
+        student7.setIdCard("");
+        student7.setName("姜新炀");
+        student7.setSex("男");
+        student7.setBirthday(sdf.parse("1996-08-10"));
+        student7.setDepartment(department);
+        student7.setProvince("江苏");
+        student7.setScores(getScoreByStudent(student7.getId()));
+        root.appendChild(appendStudent(student7));
+
+        //学生8
+        Student student8 = new Student();
+        student8.setId("141250109");
+        student8.setIdCard("");
+        student8.setName("石婉容");
+        student8.setSex("女");
+        student8.setBirthday(sdf.parse("1997-02-08"));
+        student8.setDepartment(department);
+        student8.setProvince("山西");
+        student8.setScores(getScoreByStudent(student8.getId()));
+        root.appendChild(appendStudent(student8));
+
+        //学生9
+        Student student9 = new Student();
+        student9.setId("141250160");
+        student9.setIdCard("");
+        student9.setName("徐江成");
+        student9.setSex("男");
+        student9.setBirthday(sdf.parse("1996-05-21"));
+        student9.setDepartment(department);
+        student9.setProvince("江苏");
+        student9.setScores(getScoreByStudent(student9.getId()));
+        root.appendChild(appendStudent(student9));
+
+        //学生10
+        Student student10 = new Student();
+        student10.setId("141250206");
+        student10.setIdCard("");
+        student10.setName("周锐");
+        student10.setSex("男");
+        student10.setBirthday(sdf.parse("1995-10-23"));
+        student10.setDepartment(department);
+        student10.setProvince("江苏");
+        student10.setScores(getScoreByStudent(student10.getId()));
+        root.appendChild(appendStudent(student10));
+
+        //学生11
+        Student student11 = new Student();
+        student11.setId("141250050");
+        student11.setIdCard("");
+        student11.setName("花蕾");
+        student11.setSex("女");
+        student11.setBirthday(sdf.parse("1996-10-06"));
+        student11.setDepartment(department);
+        student11.setProvince("江苏");
+        student11.setScores(getScoreByStudent(student11.getId()));
+        root.appendChild(appendStudent(student11));
+
+
+
+
+
+
+        TransformerFactory tf = TransformerFactory.newInstance();
+        try {
+            Transformer transformer = tf.newTransformer();
+            DOMSource source = new DOMSource(document);
+            transformer.setOutputProperty(OutputKeys.ENCODING, "gb2312");
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            PrintWriter pw = new PrintWriter(new FileOutputStream(fileName));
+            StreamResult result = new StreamResult(pw);
+            transformer.transform(source, result);
+            System.out.println("生成XML文件成功!");
+        } catch (TransformerConfigurationException e) {
+            System.out.println(e.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (TransformerException e) {
+            System.out.println(e.getMessage());
+        }
+
+
+    }
+
+    private ArrayList<Score> getScoresByCourse(String studentId, String courseId){
+        ArrayList<Score> scores = new ArrayList<>();
+
+        Score usual = new Score();
+        usual.setCourseId(courseId);
+        usual.setStudentId(studentId);
+        usual.setScoreType("平时成绩");
+        usual.setScore(getRandom(0,100));
+        scores.add(usual);
+
+        Score exam = new Score();
+        exam.setCourseId(courseId);
+        exam.setStudentId(studentId);
+        exam.setScoreType("期末成绩");
+        exam.setScore(getRandom(0,100));
+        scores.add(exam);
+
+        Score total = new Score();
+        total.setCourseId(courseId);
+        total.setStudentId(studentId);
+        total.setScoreType("总评成绩");
+        total.setScore(getRandom(0,100));
+        scores.add(total);
+
+        return scores;
+
+    }
+
+    private int getRandom(int min, int max){
+        Random random = new Random();
+        int s = random.nextInt(max)%(max-min) + min;
+        return s;
+    }
+
+    private ArrayList<Score> getScoreByStudent(String studentId){
+        ArrayList<Score> scores = new ArrayList<>();
+
+        for(int i = 0; i < 5; i++){
+            String courseId = "00000"+i;
+            scores.addAll(getScoresByCourse(studentId, courseId));
+        }
+
+        return scores;
+    }
+
+    private Element appendStudent(Student student){
+        Element studentElement = document.createElement("student");
+
+        studentElement.setAttribute("studentId", student.getId());
+        studentElement.setAttribute("idCard", student.getIdCard());
+
+        Element name = document.createElement("name");
+        name.setTextContent(student.getName());
+        studentElement.appendChild(name);
+
+        Element province = document.createElement("province");
+        province.setTextContent(student.getProvince());
+        studentElement.appendChild(province);
+
+        Element birthday = document.createElement("birthday");
+        birthday.setTextContent(sdf.format(student.getBirthday()));
+        studentElement.appendChild(birthday);
+
+        Element sex = document.createElement("sex");
+        sex.setTextContent(student.getSex());
+        studentElement.appendChild(sex);
+
+        Element department = appendDepartment(student.getDepartment());
+        studentElement.appendChild(department);
+
+
+        Element scoreList = appendScore(student.getScores());
+        studentElement.appendChild(scoreList);
+
+        return studentElement;
+    }
+
+    private Element appendDepartment(Department department){
+        Element departmentNode = document.createElement("department");
+
+        Element depId = document.createElement("depId");
+        depId.setTextContent(String.valueOf(department.getDepId()));
+        departmentNode.appendChild(depId);
+
+        Element depType = document.createElement("depType");
+        depType.setTextContent(department.getDepType());
+        departmentNode.appendChild(depType);
+
+        Element depName = document.createElement("depName");
+        depName.setTextContent(department.getDepName());
+        departmentNode.appendChild(depName);
+
+        Element depAddress = document.createElement("depAddress");
+        depAddress.setTextContent(department.getDepAddress());
+        departmentNode.appendChild(depAddress);
+
+        return departmentNode;
+    }
+
+    private Element appendScore(ArrayList<Score> scoreList){
+        Element scoresNode = document.createElement("scoreList");
+
+        for(int i = 0; i < scoreList.size(); i++){
+            Score score = scoreList.get(i);
+            Element courseScore = document.createElement("courseScore");
+            Element scoreNode = document.createElement("score");
+            courseScore.appendChild(scoreNode);
+            courseScore.setAttribute("courseId", score.getCourseId());
+            courseScore.setAttribute("scoreType", score.getScoreType());
+
+            Element studentId = document.createElement("studentId");
+            studentId.setTextContent(score.getStudentId());
+            scoreNode.appendChild(studentId);
+
+            Element studentScore = document.createElement("studentScore");
+            studentScore.setTextContent(String.valueOf(score.getScore()));
+            scoreNode.appendChild(studentScore);
+
+            scoresNode.appendChild(courseScore);
+        }
+
+        return scoresNode;
+
+    }
+
+    @Override
+    public void parseXml(String fileName) {
+
+    }
+}

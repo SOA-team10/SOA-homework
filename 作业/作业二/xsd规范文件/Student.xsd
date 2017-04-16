@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://jw.nju.edu.cn/schema" xmlns:tns="http://jw.nju.edu.cn/schema"  elementFormDefault="qualified">
+
+    <import namespace="http://www.nju.edu.cn/schema"
+            schemaLocation="./PersonInfo.xsd" />
+
+    <include schemaLocation="./Course.xsd" />
+	<include schemaLocation="./ScoreList.xsd" />
+	
+	<complexType name="学生信息类型">
+		<complexContent>
+		  	<extension base="tns:个人基本信息类型">
+		  		<!--把sequence改成all了-->
+				<all>
+					<!--入学年份-->
+					<element name="checkInYear" type="gYear"/>
+					<element name="scoreList" type="tns:课程成绩列表类型" minOccurs="0" maxOccurs="1"/>
+					<!--想把scoreList给改了。。。感觉应该以课程为单位划分成绩，最后的
+					xml文件里我的预想应该是<courseList>里包含<course>，然后<course>里包含这门课的scoreList，感觉这样设计才比较合理-->
+				</all>
+                <attribute name="studentId" type="tns:学号类型" use="required"/>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<simpleType name="学号类型">
+		<restriction base="string">
+			<pattern value="^\d{9}$"/>
+		</restriction>
+	</simpleType>
+
+	<element name="student" type="tns:学生信息类型"/>
+
+</schema>

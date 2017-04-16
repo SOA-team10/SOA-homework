@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://jw.nju.edu.cn/schema" xmlns:tns="http://jw.nju.edu.cn/schema"  elementFormDefault="qualified">
+
+	<include schemaLocation="./PersonInfo.xsd"/>
+	
+	<complexType name="课程信息类型">
+		<sequence>
+			<element name="courseId" type="tns:课程编号类型"/>
+			<element name="courseName" type="string"/>
+			<element name="teacher" type="tns:个人基本信息类型"/>
+		</sequence>
+	</complexType>
+
+    <element name="course" type="tns:课程信息类型" />
+
+    <simpleType name="课程编号类型">
+    	<restriction base="string">
+    		<length value="6" />
+    	</restriction>
+    </simpleType>
+</schema>
