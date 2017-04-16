@@ -4,13 +4,28 @@
 
  
  <complexType name="个人基本信息类型">
-   <sequence>
+   <all>
 	   <element name="name" type="string"/>
 	   <element name="province" type="string"/>
-	   <element name="country" type="string"/>
+	   <element name="birthday" type="date"/>
+	   <element name="sex" type="tns:性别类型"/>
 	   <element name="department" type="tns:部门信息类型"/>
-   </sequence>
+   </all>
+   <attribute name="idCard" type="tns:身份证号类型"/>
  </complexType>
+
+<simpleType name="性别类型">
+	<restriction base="string">
+		<enumeration value="男"/>
+		<enumeration value="女"/>
+	</restriction>
+</simpleType>
+
+<simpleType name="身份证号类型">
+	<restriction base="string">
+		<pattern value="/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/"/>
+	</restriction>
+</simpleType>
 
 <element name="personInfo" type="tns:个人基本信息类型"></element>
 
