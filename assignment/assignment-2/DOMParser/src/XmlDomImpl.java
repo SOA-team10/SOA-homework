@@ -37,6 +37,8 @@ public class XmlDomImpl implements XmlInterface{
     @Override
     public void createXml(String fileName) throws ParseException {
         Element root = document.createElement("studentList");
+
+        root.setAttribute("xmlns","http://jw.nju.edu.cn/schema");
         document.appendChild(root);
         //办公地址
         Address address = new Address();
@@ -57,6 +59,7 @@ public class XmlDomImpl implements XmlInterface{
         student1.setIdCard("530000199602191533");
         student1.setName("段正谋");
         student1.setSex("男");
+        student1.setPhone("18260068888");
         student1.setBirthday(sdf.parse("1996-02-19"));
         student1.setDepartment(department);
         student1.setProvince("云南");
@@ -70,6 +73,7 @@ public class XmlDomImpl implements XmlInterface{
         student2.setIdCard("140311199512251522");
         student2.setName("张文玘");
         student2.setSex("女");
+        student1.setPhone("18260068636");
         student2.setBirthday(sdf.parse("1995-12-25"));
         student2.setDepartment(department);
         student2.setProvince("山西");
@@ -82,6 +86,7 @@ public class XmlDomImpl implements XmlInterface{
         student3.setIdCard("410000199509131432");
         student3.setName("王亚杰");
         student3.setSex("男");
+        student1.setPhone("18260068888");
         student3.setBirthday(sdf.parse("1995-09-13"));
         student3.setDepartment(department);
         student3.setProvince("河南");
@@ -90,20 +95,21 @@ public class XmlDomImpl implements XmlInterface{
 
         //学生4
         Student student4 = new Student();
-        student4.setId("12");
-        student4.setIdCard("");
+        student4.setId("121250216");
+        student4.setIdCard("111111111111223323");
         student4.setName("张宇逸");
         student4.setSex("男");
-        student4.setBirthday(sdf.parse("1992-12-12"));
+        student1.setPhone("18260068888");
+        student4.setBirthday(sdf.parse("1992-09-09"));
         student4.setDepartment(department);
-        student4.setProvince("");
+        student4.setProvince("江苏省");
         student4.setScores(getScoreByStudent(student4.getId()));
         root.appendChild(appendStudent(student4));
 
         //学生5
         Student student5 = new Student();
         student5.setId("141250004");
-        student5.setIdCard("");
+        student5.setIdCard("111123737384842222");
         student5.setName("曹江湖");
         student5.setSex("男");
         student5.setBirthday(sdf.parse("1996-02-24"));
@@ -115,7 +121,7 @@ public class XmlDomImpl implements XmlInterface{
         //学生6
         Student student6 = new Student();
         student6.setId("141250205");
-        student6.setIdCard("");
+        student6.setIdCard("123333223323231233");
         student6.setName("周梦佳");
         student6.setSex("女");
         student6.setBirthday(sdf.parse("1996-03-11"));
@@ -127,7 +133,7 @@ public class XmlDomImpl implements XmlInterface{
         //学生7
         Student student7 = new Student();
         student7.setId("141250056");
-        student7.setIdCard("");
+        student7.setIdCard("123333232333232322");
         student7.setName("姜新炀");
         student7.setSex("男");
         student7.setBirthday(sdf.parse("1996-08-10"));
@@ -139,7 +145,7 @@ public class XmlDomImpl implements XmlInterface{
         //学生8
         Student student8 = new Student();
         student8.setId("141250109");
-        student8.setIdCard("");
+        student8.setIdCard("140311202929484712");
         student8.setName("石婉容");
         student8.setSex("女");
         student8.setBirthday(sdf.parse("1997-02-08"));
@@ -151,7 +157,7 @@ public class XmlDomImpl implements XmlInterface{
         //学生9
         Student student9 = new Student();
         student9.setId("141250160");
-        student9.setIdCard("");
+        student9.setIdCard("10292332324583939");
         student9.setName("徐江成");
         student9.setSex("男");
         student9.setBirthday(sdf.parse("1996-05-21"));
@@ -163,7 +169,7 @@ public class XmlDomImpl implements XmlInterface{
         //学生10
         Student student10 = new Student();
         student10.setId("141250206");
-        student10.setIdCard("");
+        student10.setIdCard("122333234555433323");
         student10.setName("周锐");
         student10.setSex("男");
         student10.setBirthday(sdf.parse("1995-10-23"));
@@ -175,7 +181,7 @@ public class XmlDomImpl implements XmlInterface{
         //学生11
         Student student11 = new Student();
         student11.setId("141250050");
-        student11.setIdCard("");
+        student11.setIdCard("122333234555433320");
         student11.setName("花蕾");
         student11.setSex("女");
         student11.setBirthday(sdf.parse("1996-10-06"));
@@ -270,6 +276,7 @@ public class XmlDomImpl implements XmlInterface{
 
         Element personInfo = document.createElement("personInfo");
         personInfo.setAttribute("idCard",student.getIdCard());
+        personInfo.setAttribute("xmlns","http://www.nju.edu.cn/schema");
 
         Element name = document.createElement("name");
         name.setTextContent(student.getName());
