@@ -13,7 +13,6 @@ import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Random;
 
 /**
@@ -169,7 +168,7 @@ public class XmlDomImpl implements XmlInterface{
         //学生9
         Student student9 = new Student();
         student9.setId("141250160");
-        student9.setIdCard("10292332324583939");
+        student9.setIdCard("10292332324583939X");
         student9.setName("徐江成");
         student9.setSex("男");
         student9.setPhone("18260068888");
@@ -248,21 +247,49 @@ public class XmlDomImpl implements XmlInterface{
         usual.setCourseId(courseId);
         usual.setStudentId(studentId);
         usual.setScoreType("平时成绩");
-        usual.setScore(getRandom(0,100));
+        usual.setScore(getRandom(60,100));
         scores.add(usual);
 
         Score exam = new Score();
         exam.setCourseId(courseId);
         exam.setStudentId(studentId);
         exam.setScoreType("期末成绩");
-        exam.setScore(getRandom(0,100));
+        exam.setScore(getRandom(60,100));
         scores.add(exam);
 
         Score total = new Score();
         total.setCourseId(courseId);
         total.setStudentId(studentId);
         total.setScoreType("总评成绩");
-        total.setScore(getRandom(0,100));
+        total.setScore(getRandom(60,100));
+        scores.add(total);
+
+        return scores;
+
+    }
+
+    private ArrayList<Score> getSurpriseScoresByCourse(String studentId, String courseId){
+        ArrayList<Score> scores = new ArrayList<>();
+
+        Score usual = new Score();
+        usual.setCourseId(courseId);
+        usual.setStudentId(studentId);
+        usual.setScoreType("平时成绩");
+        usual.setScore(getRandom(10, 55));
+        scores.add(usual);
+
+        Score exam = new Score();
+        exam.setCourseId(courseId);
+        exam.setStudentId(studentId);
+        exam.setScoreType("期末成绩");
+        exam.setScore(getRandom(10, 55));
+        scores.add(exam);
+
+        Score total = new Score();
+        total.setCourseId(courseId);
+        total.setStudentId(studentId);
+        total.setScoreType("总评成绩");
+        total.setScore(getRandom(10, 55));
         scores.add(total);
 
         return scores;
@@ -277,11 +304,20 @@ public class XmlDomImpl implements XmlInterface{
 
     private ArrayList<Score> getScoreByStudent(String studentId){
         ArrayList<Score> scores = new ArrayList<>();
-
+        boolean isSurprise = false;
+        if(Math.random()<0.3) {
+            isSurprise = true;
+            System.out.println("surprise !");
+        }
         for(int i = 0; i < 5; i++){
             String courseId = "00000"+i;
-            scores.addAll(getScoresByCourse(studentId, courseId));
+            if(isSurprise){
+                scores.addAll(getSurpriseScoresByCourse(studentId, courseId));
+            }else {
+                scores.addAll(getScoresByCourse(studentId, courseId));
+            }
         }
+
 
         return scores;
     }
@@ -317,12 +353,14 @@ public class XmlDomImpl implements XmlInterface{
         sex.setTextContent(student.getSex());
         personInfo.appendChild(sex);
 
+        Element department = appendDepartment(student.getDepartment());
+        personInfo.appendChild(department);
+
         Element checkInYear = document.createElement("checkInYear");
         checkInYear.setTextContent(student.getCheckInYear());
         studentElement.appendChild(checkInYear);
 
-        Element department = appendDepartment(student.getDepartment());
-        studentElement.appendChild(department);
+
 
 
         Element scoreList = appendScore(student.getScores());
