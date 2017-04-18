@@ -1,1147 +1,1147 @@
 <?xml version="1.0" encoding="GB2312" standalone="no"?>
 <studentList>
-<student idCard="530000199602191533" studentId="141250033">
-<name>娈垫璋�</name>
-<province>浜戝崡</province>
-<birthday>1996-02-19</birthday>
-<sex>鐢�</sex>
-<department>
-<depId>1</depId>
-<depType>闄㈢郴鍗曚綅</depType>
-<depName>杞欢瀛﹂櫌</depName>
-<depAddress>鍗椾含澶у榧撴ゼ鏍″尯璐瑰綕姘戞ゼ</depAddress>
-</department>
-<scoreList>
-<courseScore courseId="000000" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>17</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>52</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>1</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>96</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>5</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>53</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>15</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>9</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>21</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>31</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>55</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>40</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>13</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>57</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250033</studentId>
-<studentScore>23</studentScore>
-</score>
-</courseScore>
-</scoreList>
-</student>
-<student idCard="140311199512251522" studentId="141250192">
-<name>寮犳枃&#29592;</name>
-<province>灞辫タ</province>
-<birthday>1995-12-25</birthday>
-<sex>濂�</sex>
-<department>
-<depId>1</depId>
-<depType>闄㈢郴鍗曚綅</depType>
-<depName>杞欢瀛﹂櫌</depName>
-<depAddress>鍗椾含澶у榧撴ゼ鏍″尯璐瑰綕姘戞ゼ</depAddress>
-</department>
-<scoreList>
-<courseScore courseId="000000" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>22</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>18</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>84</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>84</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>51</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>23</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>70</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>65</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>16</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>55</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>20</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>44</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>71</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>55</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250192</studentId>
-<studentScore>41</studentScore>
-</score>
-</courseScore>
-</scoreList>
-</student>
-<student idCard="410000199509131432" studentId="141220142">
-<name>鐜嬩簹鏉�</name>
-<province>娌冲崡</province>
-<birthday>1995-09-13</birthday>
-<sex>鐢�</sex>
-<department>
-<depId>1</depId>
-<depType>闄㈢郴鍗曚綅</depType>
-<depName>杞欢瀛﹂櫌</depName>
-<depAddress>鍗椾含澶у榧撴ゼ鏍″尯璐瑰綕姘戞ゼ</depAddress>
-</department>
-<scoreList>
-<courseScore courseId="000000" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>23</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>86</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>18</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>85</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>98</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>51</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>6</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>93</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>19</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>60</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>29</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>82</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>76</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>53</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141220142</studentId>
-<studentScore>17</studentScore>
-</score>
-</courseScore>
-</scoreList>
-</student>
-<student idCard="" studentId="12">
-<name>寮犲畤閫�</name>
-<province/>
-<birthday>1992-12-12</birthday>
-<sex>鐢�</sex>
-<department>
-<depId>1</depId>
-<depType>闄㈢郴鍗曚綅</depType>
-<depName>杞欢瀛﹂櫌</depName>
-<depAddress>鍗椾含澶у榧撴ゼ鏍″尯璐瑰綕姘戞ゼ</depAddress>
-</department>
-<scoreList>
-<courseScore courseId="000000" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>19</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>55</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>34</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>81</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>98</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>63</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>40</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>46</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>31</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>48</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>3</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>14</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>12</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>44</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>12</studentId>
-<studentScore>44</studentScore>
-</score>
-</courseScore>
-</scoreList>
-</student>
-<student idCard="" studentId="141250004">
-<name>鏇规睙婀�</name>
-<province>婀栧寳</province>
-<birthday>1996-02-24</birthday>
-<sex>鐢�</sex>
-<department>
-<depId>1</depId>
-<depType>闄㈢郴鍗曚綅</depType>
-<depName>杞欢瀛﹂櫌</depName>
-<depAddress>鍗椾含澶у榧撴ゼ鏍″尯璐瑰綕姘戞ゼ</depAddress>
-</department>
-<scoreList>
-<courseScore courseId="000000" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>1</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>71</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>2</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>17</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>70</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>77</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>67</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>21</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>66</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>4</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>44</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>47</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>43</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>71</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250004</studentId>
-<studentScore>30</studentScore>
-</score>
-</courseScore>
-</scoreList>
-</student>
-<student idCard="" studentId="141250205">
-<name>鍛ㄦⅵ浣�</name>
-<province>姹熻嫃</province>
-<birthday>1996-03-11</birthday>
-<sex>濂�</sex>
-<department>
-<depId>1</depId>
-<depType>闄㈢郴鍗曚綅</depType>
-<depName>杞欢瀛﹂櫌</depName>
-<depAddress>鍗椾含澶у榧撴ゼ鏍″尯璐瑰綕姘戞ゼ</depAddress>
-</department>
-<scoreList>
-<courseScore courseId="000000" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>27</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>72</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>38</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>22</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>82</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>66</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>73</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>15</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>92</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>52</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>92</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>68</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>34</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>62</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250205</studentId>
-<studentScore>39</studentScore>
-</score>
-</courseScore>
-</scoreList>
-</student>
-<student idCard="" studentId="141250056">
-<name>濮滄柊鐐�</name>
-<province>姹熻嫃</province>
-<birthday>1996-08-10</birthday>
-<sex>鐢�</sex>
-<department>
-<depId>1</depId>
-<depType>闄㈢郴鍗曚綅</depType>
-<depName>杞欢瀛﹂櫌</depName>
-<depAddress>鍗椾含澶у榧撴ゼ鏍″尯璐瑰綕姘戞ゼ</depAddress>
-</department>
-<scoreList>
-<courseScore courseId="000000" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>43</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>81</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>48</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>25</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>8</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>17</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>19</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>26</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>30</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>20</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>89</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>57</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>19</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>63</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250056</studentId>
-<studentScore>15</studentScore>
-</score>
-</courseScore>
-</scoreList>
-</student>
-<student idCard="" studentId="141250109">
-<name>鐭冲〾瀹�</name>
-<province>灞辫タ</province>
-<birthday>1997-02-08</birthday>
-<sex>濂�</sex>
-<department>
-<depId>1</depId>
-<depType>闄㈢郴鍗曚綅</depType>
-<depName>杞欢瀛﹂櫌</depName>
-<depAddress>鍗椾含澶у榧撴ゼ鏍″尯璐瑰綕姘戞ゼ</depAddress>
-</department>
-<scoreList>
-<courseScore courseId="000000" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>70</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>61</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>68</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>5</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>32</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>21</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>17</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>54</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>10</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>95</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>58</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>86</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>39</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>6</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250109</studentId>
-<studentScore>95</studentScore>
-</score>
-</courseScore>
-</scoreList>
-</student>
-<student idCard="" studentId="141250160">
-<name>寰愭睙鎴�</name>
-<province>姹熻嫃</province>
-<birthday>1996-05-21</birthday>
-<sex>鐢�</sex>
-<department>
-<depId>1</depId>
-<depType>闄㈢郴鍗曚綅</depType>
-<depName>杞欢瀛﹂櫌</depName>
-<depAddress>鍗椾含澶у榧撴ゼ鏍″尯璐瑰綕姘戞ゼ</depAddress>
-</department>
-<scoreList>
-<courseScore courseId="000000" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>19</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>20</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>31</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>78</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>23</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>67</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>14</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>23</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>57</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>63</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>59</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>39</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>20</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>83</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250160</studentId>
-<studentScore>42</studentScore>
-</score>
-</courseScore>
-</scoreList>
-</student>
-<student idCard="" studentId="141250206">
-<name>鍛ㄩ攼</name>
-<province>姹熻嫃</province>
-<birthday>1995-10-23</birthday>
-<sex>鐢�</sex>
-<department>
-<depId>1</depId>
-<depType>闄㈢郴鍗曚綅</depType>
-<depName>杞欢瀛﹂櫌</depName>
-<depAddress>鍗椾含澶у榧撴ゼ鏍″尯璐瑰綕姘戞ゼ</depAddress>
-</department>
-<scoreList>
-<courseScore courseId="000000" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>92</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>1</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>50</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>25</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>63</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>32</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>86</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>42</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>82</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>92</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>3</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>7</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>35</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>44</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250206</studentId>
-<studentScore>90</studentScore>
-</score>
-</courseScore>
-</scoreList>
-</student>
-<student idCard="" studentId="141250050">
-<name>鑺辫暰</name>
-<province>姹熻嫃</province>
-<birthday>1996-10-06</birthday>
-<sex>濂�</sex>
-<department>
-<depId>1</depId>
-<depType>闄㈢郴鍗曚綅</depType>
-<depName>杞欢瀛﹂櫌</depName>
-<depAddress>鍗椾含澶у榧撴ゼ鏍″尯璐瑰綕姘戞ゼ</depAddress>
-</department>
-<scoreList>
-<courseScore courseId="000000" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>49</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>10</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000000" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>45</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>95</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>74</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000001" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>38</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>19</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>96</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000002" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>78</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>77</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>99</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000003" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>3</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="骞虫椂鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>50</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鏈熸湯鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>45</studentScore>
-</score>
-</courseScore>
-<courseScore courseId="000004" scoreType="鎬昏瘎鎴愮哗">
-<score>
-<studentId>141250050</studentId>
-<studentScore>36</studentScore>
-</score>
-</courseScore>
-</scoreList>
-</student>
+    <student idCard="530000199602191533" studentId="141250033">
+        <name>段正谋</name>
+        <province>云南</province>
+        <birthday>1996-02-19</birthday>
+        <sex>男</sex>
+        <department>
+            <depId>1</depId>
+            <depType>院系单位</depType>
+            <depName>软件学院</depName>
+            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+        </department>
+        <scoreList>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>17</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>52</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>1</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>96</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>5</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>53</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>15</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="期末成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>9</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>21</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>31</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>55</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>40</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>13</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>57</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>23</studentScore>
+                </score>
+            </courseScore>
+        </scoreList>
+    </student>
+    <student idCard="140311199512251522" studentId="141250192">
+        <name>张文&#29592;</name>
+        <province>山西</province>
+        <birthday>1995-12-25</birthday>
+        <sex>女</sex>
+        <department>
+            <depId>1</depId>
+            <depType>院系单位</depType>
+            <depName>软件学院</depName>
+            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+        </department>
+        <scoreList>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>22</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>18</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>84</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>84</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>51</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>23</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>70</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="期末成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>65</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>16</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>55</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>20</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>44</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>71</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>55</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>41</studentScore>
+                </score>
+            </courseScore>
+        </scoreList>
+    </student>
+    <student idCard="410000199509131432" studentId="141220142">
+        <name>王亚杰</name>
+        <province>河南</province>
+        <birthday>1995-09-13</birthday>
+        <sex>男</sex>
+        <department>
+            <depId>1</depId>
+            <depType>院系单位</depType>
+            <depName>软件学院</depName>
+            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+        </department>
+        <scoreList>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>23</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>86</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>18</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>85</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>98</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>51</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>6</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="期末成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>93</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>19</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>60</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>29</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>82</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>76</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>53</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>141220142</studentId>
+                    <studentScore>17</studentScore>
+                </score>
+            </courseScore>
+        </scoreList>
+    </student>
+    <student idCard="" studentId="12">
+        <name>张宇逸</name>
+        <province/>
+        <birthday>1992-12-12</birthday>
+        <sex>男</sex>
+        <department>
+            <depId>1</depId>
+            <depType>院系单位</depType>
+            <depName>软件学院</depName>
+            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+        </department>
+        <scoreList>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>19</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>55</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>34</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>81</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>98</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>63</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>40</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="期末成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>46</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>31</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>48</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>3</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>14</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>12</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>44</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>12</studentId>
+                    <studentScore>44</studentScore>
+                </score>
+            </courseScore>
+        </scoreList>
+    </student>
+    <student idCard="" studentId="141250004">
+        <name>曹江湖</name>
+        <province>湖北</province>
+        <birthday>1996-02-24</birthday>
+        <sex>男</sex>
+        <department>
+            <depId>1</depId>
+            <depType>院系单位</depType>
+            <depName>软件学院</depName>
+            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+        </department>
+        <scoreList>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>1</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>71</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>2</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>17</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>70</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>77</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>67</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="期末成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>21</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>66</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>4</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>44</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>47</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>43</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>71</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>141250004</studentId>
+                    <studentScore>30</studentScore>
+                </score>
+            </courseScore>
+        </scoreList>
+    </student>
+    <student idCard="" studentId="141250205">
+        <name>周梦佳</name>
+        <province>江苏</province>
+        <birthday>1996-03-11</birthday>
+        <sex>女</sex>
+        <department>
+            <depId>1</depId>
+            <depType>院系单位</depType>
+            <depName>软件学院</depName>
+            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+        </department>
+        <scoreList>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>27</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>72</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>38</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>22</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>82</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>66</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>73</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="期末成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>15</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>92</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>52</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>92</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>68</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>34</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>62</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>39</studentScore>
+                </score>
+            </courseScore>
+        </scoreList>
+    </student>
+    <student idCard="" studentId="141250056">
+        <name>姜新炀</name>
+        <province>江苏</province>
+        <birthday>1996-08-10</birthday>
+        <sex>男</sex>
+        <department>
+            <depId>1</depId>
+            <depType>院系单位</depType>
+            <depName>软件学院</depName>
+            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+        </department>
+        <scoreList>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>43</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>81</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>48</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>25</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>8</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>17</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>19</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="期末成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>26</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>30</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>20</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>89</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>57</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>19</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>63</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>15</studentScore>
+                </score>
+            </courseScore>
+        </scoreList>
+    </student>
+    <student idCard="" studentId="141250109">
+        <name>石婉容</name>
+        <province>山西</province>
+        <birthday>1997-02-08</birthday>
+        <sex>女</sex>
+        <department>
+            <depId>1</depId>
+            <depType>院系单位</depType>
+            <depName>软件学院</depName>
+            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+        </department>
+        <scoreList>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>70</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>61</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>68</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>5</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>32</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>21</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>17</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="期末成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>54</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>10</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>95</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>58</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>86</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>39</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>6</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>95</studentScore>
+                </score>
+            </courseScore>
+        </scoreList>
+    </student>
+    <student idCard="" studentId="141250160">
+        <name>徐江成</name>
+        <province>江苏</province>
+        <birthday>1996-05-21</birthday>
+        <sex>男</sex>
+        <department>
+            <depId>1</depId>
+            <depType>院系单位</depType>
+            <depName>软件学院</depName>
+            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+        </department>
+        <scoreList>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>19</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>20</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>31</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>78</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>23</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>67</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>14</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="期末成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>23</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>57</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>63</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>59</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>39</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>20</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>83</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>141250160</studentId>
+                    <studentScore>42</studentScore>
+                </score>
+            </courseScore>
+        </scoreList>
+    </student>
+    <student idCard="" studentId="141250206">
+        <name>周锐</name>
+        <province>江苏</province>
+        <birthday>1995-10-23</birthday>
+        <sex>男</sex>
+        <department>
+            <depId>1</depId>
+            <depType>院系单位</depType>
+            <depName>软件学院</depName>
+            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+        </department>
+        <scoreList>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>92</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>1</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>50</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>25</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>63</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>32</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>86</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="期末成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>42</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>82</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>92</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>3</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>7</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>35</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>44</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>90</studentScore>
+                </score>
+            </courseScore>
+        </scoreList>
+    </student>
+    <student idCard="" studentId="141250050">
+        <name>花蕾</name>
+        <province>江苏</province>
+        <birthday>1996-10-06</birthday>
+        <sex>女</sex>
+        <department>
+            <depId>1</depId>
+            <depType>院系单位</depType>
+            <depName>软件学院</depName>
+            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+        </department>
+        <scoreList>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>49</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>10</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>45</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>95</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>74</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>38</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>19</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="期末成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>96</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>78</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>77</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>99</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>3</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>50</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>45</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>36</studentScore>
+                </score>
+            </courseScore>
+        </scoreList>
+    </student>
 </studentList>
