@@ -5,7 +5,7 @@ public class Department {
     private int depId;
     private String depType;
     private String depName;
-    private String depAddress;
+    private Address depAddress;
 
 
     public int getDepId() {
@@ -32,11 +32,11 @@ public class Department {
         this.depName = depName;
     }
 
-    public String getDepAddress() {
+    public Address getDepAddress() {
         return depAddress;
     }
 
-    public void setDepAddress(String depAddress) {
+    public void setDepAddress(Address depAddress) {
         this.depAddress = depAddress;
     }
 }

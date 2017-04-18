@@ -10,6 +10,7 @@ public class Student {
     private String name;
     private String province;
     private Date birthday;
+    private String phone;
     private String sex;
     private Department department;
 
@@ -81,5 +82,13 @@ public class Student {
 
     public void addScore(Score score){
         this.scores.add(score);
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

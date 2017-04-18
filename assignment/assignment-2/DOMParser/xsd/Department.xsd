@@ -6,15 +6,15 @@
 	
  
 <complexType name="部门信息类型">
-  <sequence>
-  	  <element name="depId" type="nju:部门编号"/>
-  	  <element name="depType" type="nju:部门类型"/>
-	  <element name="depName" type="string"/>
-	  <element name="depAddress" type="string"/>
-  </sequence>
+    <all>
+        <element name="depName" type="string"/>
+        <element name="depType" type="nju:部门类型"/>
+        <element name="depAddress" type="nju:地址类型"/>
+    </all>
+	<attribute name="depId" type="nju:部门编号类型"/>
 </complexType>
 
-<simpleType name="部门编号">
+<simpleType name="部门编号类型">
 	<restriction base="int">
 		<minInclusive value="0" />
 		<maxInclusive value="100" />
@@ -28,6 +28,17 @@
 		<enumeration value="行政部门" />
 	</restriction>
 </simpleType>
+
+<complexType name="地址类型">
+    <sequence>
+        <element name="province" type="string"/>
+        <element name="city" type="string"/>
+        <element name="district" type="string"/>
+        <element name="street" type="string"/>
+        <element name="number" type="string"/>
+    </sequence>
+</complexType>
+
 
 <element name="department" type="nju:部门信息类型" />
 

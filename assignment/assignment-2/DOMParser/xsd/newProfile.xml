@@ -5,15 +5,22 @@
         <province>云南</province>
         <birthday>1996-02-19</birthday>
         <sex>男</sex>
-        <department>
-            <depId>1</depId>
+        <phone>18260068888</phone>
+        <department depId="1">
             <depType>院系单位</depType>
             <depName>软件学院</depName>
-            <depAddress>南京大学鼓楼校区费彝民楼</depAddress>
+            <depAddress>
+                <province>江苏省</province>
+                <city>南京市</city>
+                <district>鼓楼区</district>
+                <street>汉口路</street>
+                <number>22号</number>
+            </depAddress>
         </department>
     </personInfo>
 
-    <checkInYear>2017</checkInYear>
+    <checkInYear>2014</checkInYear>
+
     <scoreList>
         <courseScore courseId='123456' scoreType='平时成绩'>
             <score>

@@ -8,7 +8,7 @@ public class Test {
         XmlDomImpl xml = new XmlDomImpl();
         xml.init();
         try {
-            xml.createXml("./studentList.xml");
+            xml.createXml("studentList.xml");
         } catch (ParseException e) {
             e.printStackTrace();
         }

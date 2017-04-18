@@ -38,13 +38,20 @@ public class XmlDomImpl implements XmlInterface{
     public void createXml(String fileName) throws ParseException {
         Element root = document.createElement("studentList");
         document.appendChild(root);
-        //学生1
+        //办公地址
+        Address address = new Address();
+        address.setProvince("江苏省");
+        address.setCity("南京市");
+        address.setDistrict("鼓楼区");
+        address.setStreet("汉口路");
+        address.setNumber("22号");
+        //部门信息
         Department department = new Department();
         department.setDepId(1);
         department.setDepName("软件学院");
         department.setDepType("院系单位");
-        department.setDepAddress("南京大学鼓楼校区费彝民楼");
-
+        department.setDepAddress(address);
+        //学生1
         Student student1 = new Student();
         student1.setId("141250033");
         student1.setIdCard("530000199602191533");
@@ -190,6 +197,11 @@ public class XmlDomImpl implements XmlInterface{
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             PrintWriter pw = new PrintWriter(new FileOutputStream(fileName));
             StreamResult result = new StreamResult(pw);
+
+            //设置换行和缩进
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+
             transformer.transform(source, result);
             System.out.println("生成XML文件成功!");
         } catch (TransformerConfigurationException e) {
@@ -250,11 +262,14 @@ public class XmlDomImpl implements XmlInterface{
         return scores;
     }
 
+    //添加学生节点
     private Element appendStudent(Student student){
         Element studentElement = document.createElement("student");
 
         studentElement.setAttribute("studentId", student.getId());
-        studentElement.setAttribute("idCard", student.getIdCard());
+
+        Element personInfo = document.createElement("personInfo");
+        personInfo.setAttribute("idCard",student.getIdCard());
 
         Element name = document.createElement("name");
         name.setTextContent(student.getName());
@@ -263,6 +278,10 @@ public class XmlDomImpl implements XmlInterface{
         Element province = document.createElement("province");
         province.setTextContent(student.getProvince());
         studentElement.appendChild(province);
+
+        Element phone = document.createElement("phone");
+        phone.setTextContent(student.getPhone());
+        studentElement.appendChild(phone);
 
         Element birthday = document.createElement("birthday");
         birthday.setTextContent(sdf.format(student.getBirthday()));
@@ -282,12 +301,11 @@ public class XmlDomImpl implements XmlInterface{
         return studentElement;
     }
 
+    //添加部门节点
     private Element appendDepartment(Department department){
         Element departmentNode = document.createElement("department");
 
-        Element depId = document.createElement("depId");
-        depId.setTextContent(String.valueOf(department.getDepId()));
-        departmentNode.appendChild(depId);
+        departmentNode.setAttribute("depId", String.valueOf(department.getDepId()));
 
         Element depType = document.createElement("depType");
         depType.setTextContent(department.getDepType());
@@ -298,12 +316,34 @@ public class XmlDomImpl implements XmlInterface{
         departmentNode.appendChild(depName);
 
         Element depAddress = document.createElement("depAddress");
-        depAddress.setTextContent(department.getDepAddress());
         departmentNode.appendChild(depAddress);
+
+        Address address = department.getDepAddress();
+
+        Element province = document.createElement("depType");
+        province.setTextContent(address.getProvince());
+        depAddress.appendChild(province);
+
+        Element city = document.createElement("city");
+        city.setTextContent(address.getCity());
+        depAddress.appendChild(city);
+
+        Element district = document.createElement("district");
+        district.setTextContent(address.getDistrict());
+        depAddress.appendChild(district);
+
+        Element street = document.createElement("street");
+        street.setTextContent(address.getStreet());
+        depAddress.appendChild(street);
+
+        Element number = document.createElement("number");
+        number.setTextContent(address.getNumber());
+        depAddress.appendChild(number);
+
 
         return departmentNode;
     }
-
+    //添加成绩节点
     private Element appendScore(ArrayList<Score> scoreList){
         Element scoresNode = document.createElement("scoreList");
 

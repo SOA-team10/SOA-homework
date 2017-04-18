@@ -10,10 +10,10 @@
 	
 	<complexType name="课程信息类型">
 		<sequence>
-			<element name="courseId" type="tns:课程编号类型"/>
-			<element name="courseName" type="string"/>
 			<element name="teacher" type="nju:个人基本信息类型"/>
 		</sequence>
+		<attribute name="courseId" type="tns:课程编号类型"/>
+		<attribute name="courseName" type="string"/>
 	</complexType>
 
     <element name="course" type="tns:课程信息类型" />
