@@ -5,14 +5,15 @@ import java.util.Date;
  * Created by 张文玘 on 2017/4/16.
  */
 public class Student {
-    private String id;
-    private String idCard;
-    private String name;
-    private String province;
-    private Date birthday;
-    private String phone;
-    private String sex;
-    private Department department;
+    private String id;//学号
+    private String idCard;//身份证
+    private String name;//姓名
+    private String province;//籍贯
+    private Date birthday;//生日
+    private String phone;//手机
+    private String sex;//性别
+    private String checkInYear;//入学年份
+    private Department department;//部门
 
     private ArrayList<Score> scores;
 
@@ -90,5 +91,13 @@ public class Student {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getCheckInYear() {
+        return checkInYear;
+    }
+
+    public void setCheckInYear(String checkInYear) {
+        this.checkInYear = checkInYear;
     }
 }

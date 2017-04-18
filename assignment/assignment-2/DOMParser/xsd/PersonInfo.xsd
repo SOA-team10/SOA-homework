@@ -12,7 +12,7 @@
 			<element name="name" type="string"/>
 			<element name="sex" type="nju:性别类型"/>
 			<element name="phone" type="nju:手机号类型"/>
-		    <element name="province" type="string"/>
+		    <element name="native" type="string"/>
 		    <element name="birthday" type="date"/>
 		    <element name="department" type="nju:部门信息类型"/>
 	    </all>
