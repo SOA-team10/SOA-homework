@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--this example is for testing of xpathParser, noting to do with this DOMParser project-->
+<paper>
+    <title>title</title>
+    <chapter>
+        <title>ch1</title>
+        <section>
+            <title>section1 of ch1</title>
+            <section>
+                <title>avatar</title>
+            </section>
+        </section>
+        <section>
+            <title>section2 of ch1</title>
+        </section>
+    </chapter>
+    <chapter>
+        <title>ch2</title>
+        <section>
+            <title>section1 of ch2</title>
+        </section>
+        <section status="someStatus">
+            <title>section2 of ch2</title>
+        </section>
+    </chapter>
+    <appendix>
+        <title>append</title>
+        <section>
+            <title>this is appendix</title>
+            <section>
+                <title>this is section of appendix</title>
+            </section>
+        </section>
+    </appendix>
+</paper>

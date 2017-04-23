@@ -23,16 +23,94 @@
         <checkInYear>2014</checkInYear>
 
         <scoreList>
-            <courseScore courseId='123456' scoreType='平时成绩'>
+            <courseScore courseId="000000" scoreType="平时成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>66</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="期末成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>72</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="总评成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>71</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="平时成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>91</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="期末成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>62</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="总评成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>79</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="平时成绩">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>85</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId='123456' scoreType='期末成绩'>
+            <courseScore courseId="000002" scoreType="期末成绩">
                 <score>
                     <studentId>141250033</studentId>
-                    <studentScore>90</studentScore>
+                    <studentScore>78</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="总评成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>94</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="平时成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>92</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="期末成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>78</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="总评成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>84</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="平时成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>71</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="期末成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>89</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="总评成绩">
+                <score>
+                    <studentId>141250033</studentId>
+                    <studentScore>78</studentScore>
                 </score>
             </courseScore>
         </scoreList>

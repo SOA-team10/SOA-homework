@@ -1,5 +1,7 @@
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -9,6 +11,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -20,13 +23,14 @@ import java.util.Random;
  */
 public class XmlDomImpl implements XmlInterface{
     private Document document;
+    private DocumentBuilder builder;
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
     public void init(){
         try {
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
             docFactory.setValidating(true);
-            DocumentBuilder builder = docFactory.newDocumentBuilder();
+             builder = docFactory.newDocumentBuilder();
             document = builder.newDocument();
         }catch (ParserConfigurationException e){
             System.out.println(e.getMessage());
@@ -36,9 +40,18 @@ public class XmlDomImpl implements XmlInterface{
     @Override
     public void createXml(String fileName) throws ParseException {
         Element root = document.createElement("studentList");
-
         root.setAttribute("xmlns","http://jw.nju.edu.cn/schema");
         document.appendChild(root);
+        try {
+            Document sampleDoc = builder.parse("./xsd/newProfile.xml");
+            Node sampleNode = document.importNode(sampleDoc.getElementsByTagName("student").item(0), true);
+            root.appendChild(sampleNode);
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         //办公地址
         Address address = new Address();
         address.setProvince("江苏省");
@@ -53,19 +66,19 @@ public class XmlDomImpl implements XmlInterface{
         department.setDepType("院系单位");
         department.setDepAddress(address);
         //学生1
-        Student student1 = new Student();
-        student1.setId("141250033");
-        student1.setIdCard("530000199602191533");
-        student1.setName("段正谋");
-        student1.setSex("男");
-        student1.setPhone("18260068888");
-        student1.setBirthday(sdf.parse("1996-02-19"));
-        student1.setDepartment(department);
-        student1.setProvince("云南");
-        student1.setCheckInYear("2014");
-        ArrayList<Score> scores = getScoreByStudent(student1.getId());
-        student1.setScores(scores);
-        root.appendChild(appendStudent(student1));
+//        Student student1 = new Student();
+//        student1.setId("141250033");
+//        student1.setIdCard("530000199602191533");
+//        student1.setName("段正谋");
+//        student1.setSex("男");
+//        student1.setPhone("18260068888");
+//        student1.setBirthday(sdf.parse("1996-02-19"));
+//        student1.setDepartment(department);
+//        student1.setProvince("云南");
+//        student1.setCheckInYear("2014");
+//        ArrayList<Score> scores = getScoreByStudent(student1.getId());
+//        student1.setScores(scores);
+//        root.appendChild(appendStudent(student1));
 
         //学生2
         Student student2 = new Student();
@@ -83,7 +96,7 @@ public class XmlDomImpl implements XmlInterface{
 
         //学生3
         Student student3 = new Student();
-        student3.setId("141220142");
+        student3.setId("141250142");
         student3.setIdCard("410000199509131432");
         student3.setName("王亚杰");
         student3.setSex("男");
@@ -216,14 +229,14 @@ public class XmlDomImpl implements XmlInterface{
         try {
             Transformer transformer = tf.newTransformer();
             DOMSource source = new DOMSource(document);
-            transformer.setOutputProperty(OutputKeys.ENCODING, "gb2312");
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
             PrintWriter pw = new PrintWriter(new FileOutputStream(fileName));
             StreamResult result = new StreamResult(pw);
 
             //设置换行和缩进
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+            transformer.setOutputProperty(OutputKeys.ENCODING, "utf-8");
 
             transformer.transform(source, result);
             System.out.println("生成XML文件成功!");

@@ -1,1244 +1,1248 @@
-<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <studentList xmlns="http://jw.nju.edu.cn/schema">
-    <student studentId="141250033">
-        <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="530000199602191533">
-            <name>∂Œ’˝ƒ±</name>
-            <native>‘∆ƒœ</native>
-            <phone>18260068888</phone>
+    <student studentId="141250033" id="some">
+        <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="11111111111111533X">
+            <name>ÊÆµÊ≠£Ë∞ã</name>
+            <native>‰∫ëÂçó</native>
             <birthday>1996-02-19</birthday>
-            <sex>ƒ–</sex>
+            <sex>Áî∑</sex>
+            <phone>18260068888</phone>
             <department depId="1">
-                <depType>‘∫œµµ•Œª</depType>
-                <depName>»Ìº˛—ß‘∫</depName>
+                <depType>Èô¢Á≥ªÂçï‰Ωç</depType>
+                <depName>ËΩØ‰ª∂Â≠¶Èô¢</depName>
                 <depAddress>
-                    <province>Ω≠À’ °</province>
-                    <city>ƒœæ© –</city>
-                    <district>πƒ¬•«¯</district>
-                    <street>∫∫ø⁄¬∑</street>
-                    <number>22∫≈</number>
+                    <province>Ê±üËãèÁúÅ</province>
+                    <city>Âçó‰∫¨Â∏Ç</city>
+                    <district>ÈºìÊ•ºÂå∫</district>
+                    <street>Ê±âÂè£Ë∑Ø</street>
+                    <number>22Âè∑</number>
                 </depAddress>
             </department>
         </personInfo>
+
         <checkInYear>2014</checkInYear>
+
         <scoreList>
-            <courseScore courseId="000000" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000000" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>66</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000000" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>72</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000000" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>71</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000001" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>91</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000001" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>62</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000001" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>79</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000002" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>85</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000002" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>78</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000002" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>94</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000003" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>92</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000003" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>78</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000003" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>84</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000004" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>71</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000004" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>89</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000004" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250033</studentId>
                     <studentScore>78</studentScore>
                 </score>
             </courseScore>
         </scoreList>
+
+
     </student>
     <student studentId="141250192">
         <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="140311199512251522">
-            <name>’≈Œƒ&#29592;</name>
-            <native>…ΩŒ˜</native>
+            <name>Âº†ÊñáÁéò</name>
+            <native>Â±±Ë•ø</native>
             <phone>18260068636</phone>
             <birthday>1995-12-25</birthday>
-            <sex>≈Æ</sex>
+            <sex>Â•≥</sex>
             <department depId="1">
-                <depType>‘∫œµµ•Œª</depType>
-                <depName>»Ìº˛—ß‘∫</depName>
+                <depType>Èô¢Á≥ªÂçï‰Ωç</depType>
+                <depName>ËΩØ‰ª∂Â≠¶Èô¢</depName>
                 <depAddress>
-                    <province>Ω≠À’ °</province>
-                    <city>ƒœæ© –</city>
-                    <district>πƒ¬•«¯</district>
-                    <street>∫∫ø⁄¬∑</street>
-                    <number>22∫≈</number>
+                    <province>Ê±üËãèÁúÅ</province>
+                    <city>Âçó‰∫¨Â∏Ç</city>
+                    <district>ÈºìÊ•ºÂå∫</district>
+                    <street>Ê±âÂè£Ë∑Ø</street>
+                    <number>22Âè∑</number>
                 </depAddress>
             </department>
         </personInfo>
         <checkInYear>2014</checkInYear>
         <scoreList>
-            <courseScore courseId="000000" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000000" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250192</studentId>
-                    <studentScore>66</studentScore>
+                    <studentScore>73</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000000" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250192</studentId>
-                    <studentScore>95</studentScore>
+                    <studentScore>71</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000000" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>99</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>80</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>60</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>90</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>89</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>67</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>72</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250192</studentId>
+                    <studentScore>61</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250192</studentId>
                     <studentScore>79</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000003" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250192</studentId>
-                    <studentScore>73</studentScore>
+                    <studentScore>71</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250192</studentId>
-                    <studentScore>66</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000001" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000004" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250192</studentId>
                     <studentScore>94</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000004" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250192</studentId>
-                    <studentScore>94</studentScore>
+                    <studentScore>98</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000004" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250192</studentId>
-                    <studentScore>73</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250192</studentId>
-                    <studentScore>74</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250192</studentId>
-                    <studentScore>76</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250192</studentId>
-                    <studentScore>73</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250192</studentId>
-                    <studentScore>64</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000004" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250192</studentId>
-                    <studentScore>77</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000004" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250192</studentId>
-                    <studentScore>70</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000004" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250192</studentId>
-                    <studentScore>63</studentScore>
+                    <studentScore>61</studentScore>
                 </score>
             </courseScore>
         </scoreList>
     </student>
-    <student studentId="141220142">
+    <student studentId="141250142">
         <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="410000199509131432">
-            <name>Õı—«Ω‹</name>
-            <native>∫”ƒœ</native>
+            <name>Áéã‰∫öÊù∞</name>
+            <native>Ê≤≥Âçó</native>
             <phone>18260068888</phone>
             <birthday>1995-09-13</birthday>
-            <sex>ƒ–</sex>
+            <sex>Áî∑</sex>
             <department depId="1">
-                <depType>‘∫œµµ•Œª</depType>
-                <depName>»Ìº˛—ß‘∫</depName>
+                <depType>Èô¢Á≥ªÂçï‰Ωç</depType>
+                <depName>ËΩØ‰ª∂Â≠¶Èô¢</depName>
                 <depAddress>
-                    <province>Ω≠À’ °</province>
-                    <city>ƒœæ© –</city>
-                    <district>πƒ¬•«¯</district>
-                    <street>∫∫ø⁄¬∑</street>
-                    <number>22∫≈</number>
+                    <province>Ê±üËãèÁúÅ</province>
+                    <city>Âçó‰∫¨Â∏Ç</city>
+                    <district>ÈºìÊ•ºÂå∫</district>
+                    <street>Ê±âÂè£Ë∑Ø</street>
+                    <number>22Âè∑</number>
                 </depAddress>
             </department>
         </personInfo>
         <checkInYear>2014</checkInYear>
         <scoreList>
-            <courseScore courseId="000000" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000000" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>61</studentScore>
+                    <studentId>141250142</studentId>
+                    <studentScore>90</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000000" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
-                    <studentId>141220142</studentId>
+                    <studentId>141250142</studentId>
+                    <studentScore>68</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250142</studentId>
+                    <studentScore>85</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250142</studentId>
+                    <studentScore>78</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250142</studentId>
+                    <studentScore>82</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250142</studentId>
                     <studentScore>97</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000002" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>73</studentScore>
+                    <studentId>141250142</studentId>
+                    <studentScore>74</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000002" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>87</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000001" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>67</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000001" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>76</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>63</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>72</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>61</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141220142</studentId>
+                    <studentId>141250142</studentId>
                     <studentScore>66</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000002" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>63</studentScore>
+                    <studentId>141250142</studentId>
+                    <studentScore>64</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000003" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
-                    <studentId>141220142</studentId>
+                    <studentId>141250142</studentId>
+                    <studentScore>93</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250142</studentId>
                     <studentScore>68</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000003" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>99</studentScore>
+                    <studentId>141250142</studentId>
+                    <studentScore>70</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000004" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>94</studentScore>
+                    <studentId>141250142</studentId>
+                    <studentScore>87</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000004" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
-                    <studentId>141220142</studentId>
-                    <studentScore>68</studentScore>
+                    <studentId>141250142</studentId>
+                    <studentScore>66</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250142</studentId>
+                    <studentScore>75</studentScore>
                 </score>
             </courseScore>
         </scoreList>
     </student>
     <student studentId="121250216">
         <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="111111111111223323">
-            <name>’≈”Ó“›</name>
-            <native>Ω≠À’ °</native>
+            <name>Âº†ÂÆáÈÄ∏</name>
+            <native>Ê±üËãèÁúÅ</native>
             <phone>18260068888</phone>
             <birthday>1992-09-09</birthday>
-            <sex>ƒ–</sex>
+            <sex>Áî∑</sex>
             <department depId="1">
-                <depType>‘∫œµµ•Œª</depType>
-                <depName>»Ìº˛—ß‘∫</depName>
+                <depType>Èô¢Á≥ªÂçï‰Ωç</depType>
+                <depName>ËΩØ‰ª∂Â≠¶Èô¢</depName>
                 <depAddress>
-                    <province>Ω≠À’ °</province>
-                    <city>ƒœæ© –</city>
-                    <district>πƒ¬•«¯</district>
-                    <street>∫∫ø⁄¬∑</street>
-                    <number>22∫≈</number>
+                    <province>Ê±üËãèÁúÅ</province>
+                    <city>Âçó‰∫¨Â∏Ç</city>
+                    <district>ÈºìÊ•ºÂå∫</district>
+                    <street>Ê±âÂè£Ë∑Ø</street>
+                    <number>22Âè∑</number>
                 </depAddress>
             </department>
         </personInfo>
         <checkInYear>2012</checkInYear>
         <scoreList>
-            <courseScore courseId="000000" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000000" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>121250216</studentId>
-                    <studentScore>80</studentScore>
+                    <studentScore>82</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000000" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>121250216</studentId>
-                    <studentScore>65</studentScore>
+                    <studentScore>66</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000000" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>121250216</studentId>
-                    <studentScore>89</studentScore>
+                    <studentScore>72</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000001" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>121250216</studentId>
-                    <studentScore>83</studentScore>
+                    <studentScore>67</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000001" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>121250216</studentId>
-                    <studentScore>71</studentScore>
+                    <studentScore>92</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000001" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>121250216</studentId>
-                    <studentScore>90</studentScore>
+                    <studentScore>72</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000002" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>121250216</studentId>
-                    <studentScore>61</studentScore>
+                    <studentScore>86</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000002" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>121250216</studentId>
-                    <studentScore>95</studentScore>
+                    <studentScore>72</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>121250216</studentId>
-                    <studentScore>61</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>121250216</studentId>
-                    <studentScore>62</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>121250216</studentId>
-                    <studentScore>62</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>121250216</studentId>
-                    <studentScore>71</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000004" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>121250216</studentId>
-                    <studentScore>78</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000004" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000002" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>121250216</studentId>
                     <studentScore>85</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000003" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>121250216</studentId>
-                    <studentScore>64</studentScore>
+                    <studentScore>75</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>121250216</studentId>
+                    <studentScore>75</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>121250216</studentId>
+                    <studentScore>61</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>121250216</studentId>
+                    <studentScore>87</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>121250216</studentId>
+                    <studentScore>73</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>121250216</studentId>
+                    <studentScore>67</studentScore>
                 </score>
             </courseScore>
         </scoreList>
     </student>
     <student studentId="141250004">
         <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="111123737384842222">
-            <name>≤‹Ω≠∫˛</name>
-            <native>∫˛±±</native>
+            <name>ÊõπÊ±üÊπñ</name>
+            <native>ÊπñÂåó</native>
             <phone>18260068888</phone>
             <birthday>1996-02-24</birthday>
-            <sex>ƒ–</sex>
+            <sex>Áî∑</sex>
             <department depId="1">
-                <depType>‘∫œµµ•Œª</depType>
-                <depName>»Ìº˛—ß‘∫</depName>
+                <depType>Èô¢Á≥ªÂçï‰Ωç</depType>
+                <depName>ËΩØ‰ª∂Â≠¶Èô¢</depName>
                 <depAddress>
-                    <province>Ω≠À’ °</province>
-                    <city>ƒœæ© –</city>
-                    <district>πƒ¬•«¯</district>
-                    <street>∫∫ø⁄¬∑</street>
-                    <number>22∫≈</number>
+                    <province>Ê±üËãèÁúÅ</province>
+                    <city>Âçó‰∫¨Â∏Ç</city>
+                    <district>ÈºìÊ•ºÂå∫</district>
+                    <street>Ê±âÂè£Ë∑Ø</street>
+                    <number>22Âè∑</number>
                 </depAddress>
             </department>
         </personInfo>
         <checkInYear>2014</checkInYear>
         <scoreList>
-            <courseScore courseId="000000" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000000" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>20</studentScore>
+                    <studentScore>85</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000000" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>49</studentScore>
+                    <studentScore>68</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000000" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>43</studentScore>
+                    <studentScore>73</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000001" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>53</studentScore>
+                    <studentScore>94</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000001" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>24</studentScore>
+                    <studentScore>77</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000001" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>25</studentScore>
+                    <studentScore>65</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000002" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>50</studentScore>
+                    <studentScore>85</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000002" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>46</studentScore>
+                    <studentScore>79</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000002" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>48</studentScore>
+                    <studentScore>65</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000003" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>35</studentScore>
+                    <studentScore>95</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000003" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>30</studentScore>
+                    <studentScore>82</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000003" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>38</studentScore>
+                    <studentScore>75</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000004" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>50</studentScore>
+                    <studentScore>69</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000004" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>11</studentScore>
+                    <studentScore>90</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000004" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250004</studentId>
-                    <studentScore>29</studentScore>
+                    <studentScore>95</studentScore>
                 </score>
             </courseScore>
         </scoreList>
     </student>
     <student studentId="141250205">
         <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="123333223323231233">
-            <name>÷‹√Œº—</name>
-            <native>Ω≠À’</native>
+            <name>Âë®Ê¢¶‰Ω≥</name>
+            <native>Ê±üËãè</native>
             <phone>18260068888</phone>
             <birthday>1996-03-11</birthday>
-            <sex>≈Æ</sex>
+            <sex>Â•≥</sex>
             <department depId="1">
-                <depType>‘∫œµµ•Œª</depType>
-                <depName>»Ìº˛—ß‘∫</depName>
+                <depType>Èô¢Á≥ªÂçï‰Ωç</depType>
+                <depName>ËΩØ‰ª∂Â≠¶Èô¢</depName>
                 <depAddress>
-                    <province>Ω≠À’ °</province>
-                    <city>ƒœæ© –</city>
-                    <district>πƒ¬•«¯</district>
-                    <street>∫∫ø⁄¬∑</street>
-                    <number>22∫≈</number>
+                    <province>Ê±üËãèÁúÅ</province>
+                    <city>Âçó‰∫¨Â∏Ç</city>
+                    <district>ÈºìÊ•ºÂå∫</district>
+                    <street>Ê±âÂè£Ë∑Ø</street>
+                    <number>22Âè∑</number>
                 </depAddress>
             </department>
         </personInfo>
         <checkInYear>2014</checkInYear>
         <scoreList>
-            <courseScore courseId="000000" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000000" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250205</studentId>
-                    <studentScore>77</studentScore>
+                    <studentScore>92</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000000" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250205</studentId>
-                    <studentScore>62</studentScore>
+                    <studentScore>61</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000000" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250205</studentId>
-                    <studentScore>64</studentScore>
+                    <studentScore>97</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250205</studentId>
-                    <studentScore>74</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000001" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250205</studentId>
-                    <studentScore>88</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000001" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250205</studentId>
-                    <studentScore>72</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250205</studentId>
-                    <studentScore>60</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250205</studentId>
-                    <studentScore>81</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250205</studentId>
-                    <studentScore>69</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250205</studentId>
-                    <studentScore>66</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250205</studentId>
-                    <studentScore>79</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250205</studentId>
-                    <studentScore>63</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000004" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000001" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250205</studentId>
                     <studentScore>78</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000001" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250205</studentId>
-                    <studentScore>96</studentScore>
+                    <studentScore>87</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000001" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250205</studentId>
-                    <studentScore>63</studentScore>
+                    <studentScore>61</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>68</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>86</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>70</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>68</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>85</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>60</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>68</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>67</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250205</studentId>
+                    <studentScore>75</studentScore>
                 </score>
             </courseScore>
         </scoreList>
     </student>
     <student studentId="141250056">
         <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="123333232333232322">
-            <name>Ω™–¬Ïæ</name>
-            <native>Ω≠À’</native>
+            <name>ÂßúÊñ∞ÁÇÄ</name>
+            <native>Ê±üËãè</native>
             <phone>18260068888</phone>
             <birthday>1996-08-10</birthday>
-            <sex>ƒ–</sex>
+            <sex>Áî∑</sex>
             <department depId="1">
-                <depType>‘∫œµµ•Œª</depType>
-                <depName>»Ìº˛—ß‘∫</depName>
+                <depType>Èô¢Á≥ªÂçï‰Ωç</depType>
+                <depName>ËΩØ‰ª∂Â≠¶Èô¢</depName>
                 <depAddress>
-                    <province>Ω≠À’ °</province>
-                    <city>ƒœæ© –</city>
-                    <district>πƒ¬•«¯</district>
-                    <street>∫∫ø⁄¬∑</street>
-                    <number>22∫≈</number>
+                    <province>Ê±üËãèÁúÅ</province>
+                    <city>Âçó‰∫¨Â∏Ç</city>
+                    <district>ÈºìÊ•ºÂå∫</district>
+                    <street>Ê±âÂè£Ë∑Ø</street>
+                    <number>22Âè∑</number>
                 </depAddress>
             </department>
         </personInfo>
         <checkInYear>2014</checkInYear>
         <scoreList>
-            <courseScore courseId="000000" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000000" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250056</studentId>
-                    <studentScore>11</studentScore>
+                    <studentScore>25</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000000" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>20</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000000" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250056</studentId>
                     <studentScore>19</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000001" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250056</studentId>
-                    <studentScore>38</studentScore>
+                    <studentScore>18</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000001" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>42</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000001" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>19</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>28</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250056</studentId>
+                    <studentScore>49</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250056</studentId>
                     <studentScore>12</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000003" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250056</studentId>
-                    <studentScore>53</studentScore>
+                    <studentScore>48</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000003" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250056</studentId>
-                    <studentScore>53</studentScore>
+                    <studentScore>42</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000003" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250056</studentId>
-                    <studentScore>44</studentScore>
+                    <studentScore>10</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000004" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250056</studentId>
-                    <studentScore>17</studentScore>
+                    <studentScore>34</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000004" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250056</studentId>
-                    <studentScore>45</studentScore>
+                    <studentScore>19</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000004" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250056</studentId>
-                    <studentScore>15</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250056</studentId>
-                    <studentScore>12</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250056</studentId>
-                    <studentScore>24</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000004" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250056</studentId>
-                    <studentScore>38</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000004" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250056</studentId>
-                    <studentScore>45</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000004" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250056</studentId>
-                    <studentScore>21</studentScore>
+                    <studentScore>43</studentScore>
                 </score>
             </courseScore>
         </scoreList>
     </student>
     <student studentId="141250109">
         <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="140311202929484712">
-            <name> ØÕÒ»›</name>
-            <native>…ΩŒ˜</native>
+            <name>Áü≥Â©âÂÆπ</name>
+            <native>Â±±Ë•ø</native>
             <phone>18260068888</phone>
             <birthday>1997-02-08</birthday>
-            <sex>≈Æ</sex>
+            <sex>Â•≥</sex>
             <department depId="1">
-                <depType>‘∫œµµ•Œª</depType>
-                <depName>»Ìº˛—ß‘∫</depName>
+                <depType>Èô¢Á≥ªÂçï‰Ωç</depType>
+                <depName>ËΩØ‰ª∂Â≠¶Èô¢</depName>
                 <depAddress>
-                    <province>Ω≠À’ °</province>
-                    <city>ƒœæ© –</city>
-                    <district>πƒ¬•«¯</district>
-                    <street>∫∫ø⁄¬∑</street>
-                    <number>22∫≈</number>
+                    <province>Ê±üËãèÁúÅ</province>
+                    <city>Âçó‰∫¨Â∏Ç</city>
+                    <district>ÈºìÊ•ºÂå∫</district>
+                    <street>Ê±âÂè£Ë∑Ø</street>
+                    <number>22Âè∑</number>
                 </depAddress>
             </department>
         </personInfo>
         <checkInYear>2014</checkInYear>
         <scoreList>
-            <courseScore courseId="000000" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000000" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250109</studentId>
-                    <studentScore>65</studentScore>
+                    <studentScore>68</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000000" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250109</studentId>
-                    <studentScore>83</studentScore>
+                    <studentScore>92</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000000" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250109</studentId>
-                    <studentScore>76</studentScore>
+                    <studentScore>91</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000001" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250109</studentId>
-                    <studentScore>80</studentScore>
+                    <studentScore>97</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000001" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250109</studentId>
-                    <studentScore>61</studentScore>
+                    <studentScore>75</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250109</studentId>
-                    <studentScore>73</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250109</studentId>
-                    <studentScore>86</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250109</studentId>
-                    <studentScore>94</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250109</studentId>
-                    <studentScore>71</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250109</studentId>
-                    <studentScore>83</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000001" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250109</studentId>
                     <studentScore>78</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000002" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250109</studentId>
                     <studentScore>67</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000002" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250109</studentId>
-                    <studentScore>69</studentScore>
+                    <studentScore>82</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000002" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250109</studentId>
-                    <studentScore>85</studentScore>
+                    <studentScore>90</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000003" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250109</studentId>
-                    <studentScore>94</studentScore>
+                    <studentScore>75</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>68</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>92</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>70</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>62</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250109</studentId>
+                    <studentScore>92</studentScore>
                 </score>
             </courseScore>
         </scoreList>
     </student>
     <student studentId="141250160">
         <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="10292332324583939X">
-            <name>–ÏΩ≠≥…</name>
-            <native>Ω≠À’</native>
+            <name>ÂæêÊ±üÊàê</name>
+            <native>Ê±üËãè</native>
             <phone>18260068888</phone>
             <birthday>1996-05-21</birthday>
-            <sex>ƒ–</sex>
+            <sex>Áî∑</sex>
             <department depId="1">
-                <depType>‘∫œµµ•Œª</depType>
-                <depName>»Ìº˛—ß‘∫</depName>
+                <depType>Èô¢Á≥ªÂçï‰Ωç</depType>
+                <depName>ËΩØ‰ª∂Â≠¶Èô¢</depName>
                 <depAddress>
-                    <province>Ω≠À’ °</province>
-                    <city>ƒœæ© –</city>
-                    <district>πƒ¬•«¯</district>
-                    <street>∫∫ø⁄¬∑</street>
-                    <number>22∫≈</number>
+                    <province>Ê±üËãèÁúÅ</province>
+                    <city>Âçó‰∫¨Â∏Ç</city>
+                    <district>ÈºìÊ•ºÂå∫</district>
+                    <street>Ê±âÂè£Ë∑Ø</street>
+                    <number>22Âè∑</number>
                 </depAddress>
             </department>
         </personInfo>
         <checkInYear>2014</checkInYear>
         <scoreList>
-            <courseScore courseId="000000" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000000" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>43</studentScore>
+                    <studentScore>69</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000000" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>17</studentScore>
+                    <studentScore>61</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000000" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>25</studentScore>
+                    <studentScore>93</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000001" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>43</studentScore>
+                    <studentScore>74</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000001" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>23</studentScore>
+                    <studentScore>82</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000001" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>34</studentScore>
+                    <studentScore>86</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000002" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>53</studentScore>
+                    <studentScore>62</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000002" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>16</studentScore>
+                    <studentScore>77</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000002" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>22</studentScore>
+                    <studentScore>64</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000003" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>21</studentScore>
+                    <studentScore>64</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000003" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>19</studentScore>
+                    <studentScore>65</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000003" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>14</studentScore>
+                    <studentScore>61</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000004" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>34</studentScore>
+                    <studentScore>70</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000004" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>48</studentScore>
+                    <studentScore>89</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000004" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250160</studentId>
-                    <studentScore>21</studentScore>
+                    <studentScore>70</studentScore>
                 </score>
             </courseScore>
         </scoreList>
     </student>
     <student studentId="141250206">
         <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="122333234555433323">
-            <name>÷‹»Ò</name>
-            <native>Ω≠À’</native>
+            <name>Âë®Èîê</name>
+            <native>Ê±üËãè</native>
             <phone>18260068888</phone>
             <birthday>1995-10-23</birthday>
-            <sex>ƒ–</sex>
+            <sex>Áî∑</sex>
             <department depId="1">
-                <depType>‘∫œµµ•Œª</depType>
-                <depName>»Ìº˛—ß‘∫</depName>
+                <depType>Èô¢Á≥ªÂçï‰Ωç</depType>
+                <depName>ËΩØ‰ª∂Â≠¶Èô¢</depName>
                 <depAddress>
-                    <province>Ω≠À’ °</province>
-                    <city>ƒœæ© –</city>
-                    <district>πƒ¬•«¯</district>
-                    <street>∫∫ø⁄¬∑</street>
-                    <number>22∫≈</number>
+                    <province>Ê±üËãèÁúÅ</province>
+                    <city>Âçó‰∫¨Â∏Ç</city>
+                    <district>ÈºìÊ•ºÂå∫</district>
+                    <street>Ê±âÂè£Ë∑Ø</street>
+                    <number>22Âè∑</number>
                 </depAddress>
             </department>
         </personInfo>
         <checkInYear>2014</checkInYear>
         <scoreList>
-            <courseScore courseId="000000" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000000" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250206</studentId>
-                    <studentScore>89</studentScore>
+                    <studentScore>73</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000000" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250206</studentId>
-                    <studentScore>67</studentScore>
+                    <studentScore>82</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000000" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250206</studentId>
-                    <studentScore>74</studentScore>
+                    <studentScore>62</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250206</studentId>
-                    <studentScore>91</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000001" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250206</studentId>
-                    <studentScore>91</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000001" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250206</studentId>
-                    <studentScore>67</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250206</studentId>
-                    <studentScore>74</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250206</studentId>
-                    <studentScore>99</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000002" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000001" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250206</studentId>
                     <studentScore>71</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250206</studentId>
-                    <studentScore>95</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250206</studentId>
-                    <studentScore>77</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000001" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250206</studentId>
                     <studentScore>96</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000001" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250206</studentId>
-                    <studentScore>99</studentScore>
+                    <studentScore>78</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000002" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250206</studentId>
-                    <studentScore>95</studentScore>
+                    <studentScore>71</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000002" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250206</studentId>
-                    <studentScore>75</studentScore>
+                    <studentScore>77</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000002" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>84</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>69</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>96</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>89</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>64</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>68</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250206</studentId>
+                    <studentScore>97</studentScore>
                 </score>
             </courseScore>
         </scoreList>
     </student>
     <student studentId="141250050">
         <personInfo xmlns="http://www.nju.edu.cn/schema" idCard="122333234555433320">
-            <name>ª®¿Ÿ</name>
-            <native>Ω≠À’</native>
+            <name>Ëä±Ëïæ</name>
+            <native>Ê±üËãè</native>
             <phone>18260068888</phone>
             <birthday>1996-10-06</birthday>
-            <sex>≈Æ</sex>
+            <sex>Â•≥</sex>
             <department depId="1">
-                <depType>‘∫œµµ•Œª</depType>
-                <depName>»Ìº˛—ß‘∫</depName>
+                <depType>Èô¢Á≥ªÂçï‰Ωç</depType>
+                <depName>ËΩØ‰ª∂Â≠¶Èô¢</depName>
                 <depAddress>
-                    <province>Ω≠À’ °</province>
-                    <city>ƒœæ© –</city>
-                    <district>πƒ¬•«¯</district>
-                    <street>∫∫ø⁄¬∑</street>
-                    <number>22∫≈</number>
+                    <province>Ê±üËãèÁúÅ</province>
+                    <city>Âçó‰∫¨Â∏Ç</city>
+                    <district>ÈºìÊ•ºÂå∫</district>
+                    <street>Ê±âÂè£Ë∑Ø</street>
+                    <number>22Âè∑</number>
                 </depAddress>
             </department>
         </personInfo>
         <checkInYear>2014</checkInYear>
         <scoreList>
-            <courseScore courseId="000000" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000000" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250050</studentId>
-                    <studentScore>79</studentScore>
+                    <studentScore>94</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000000" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250050</studentId>
-                    <studentScore>95</studentScore>
+                    <studentScore>99</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000000" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000000" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250050</studentId>
-                    <studentScore>95</studentScore>
+                    <studentScore>66</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000001" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250050</studentId>
-                    <studentScore>71</studentScore>
+                    <studentScore>80</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000001" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250050</studentId>
-                    <studentScore>85</studentScore>
+                    <studentScore>65</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000001" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000001" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250050</studentId>
-                    <studentScore>63</studentScore>
+                    <studentScore>94</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆Ω ±≥…º®">
+            <courseScore courseId="000002" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250050</studentId>
-                    <studentScore>95</studentScore>
+                    <studentScore>91</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000002" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250050</studentId>
                     <studentScore>74</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000002" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000002" scoreType="ÊÄªËØÑÊàêÁª©">
                 <score>
                     <studentId>141250050</studentId>
-                    <studentScore>76</studentScore>
+                    <studentScore>69</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000003" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250050</studentId>
-                    <studentScore>78</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="∆⁄ƒ©≥…º®">
-                <score>
-                    <studentId>141250050</studentId>
-                    <studentScore>90</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000003" scoreType="◊‹∆¿≥…º®">
-                <score>
-                    <studentId>141250050</studentId>
-                    <studentScore>68</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000004" scoreType="∆Ω ±≥…º®">
-                <score>
-                    <studentId>141250050</studentId>
-                    <studentScore>62</studentScore>
-                </score>
-            </courseScore>
-            <courseScore courseId="000004" scoreType="∆⁄ƒ©≥…º®">
+            <courseScore courseId="000003" scoreType="Âπ≥Êó∂ÊàêÁª©">
                 <score>
                     <studentId>141250050</studentId>
                     <studentScore>98</studentScore>
                 </score>
             </courseScore>
-            <courseScore courseId="000004" scoreType="◊‹∆¿≥…º®">
+            <courseScore courseId="000003" scoreType="ÊúüÊú´ÊàêÁª©">
                 <score>
                     <studentId>141250050</studentId>
-                    <studentScore>89</studentScore>
+                    <studentScore>71</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000003" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>74</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="Âπ≥Êó∂ÊàêÁª©">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>90</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="ÊúüÊú´ÊàêÁª©">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>97</studentScore>
+                </score>
+            </courseScore>
+            <courseScore courseId="000004" scoreType="ÊÄªËØÑÊàêÁª©">
+                <score>
+                    <studentId>141250050</studentId>
+                    <studentScore>78</studentScore>
                 </score>
             </courseScore>
         </scoreList>
