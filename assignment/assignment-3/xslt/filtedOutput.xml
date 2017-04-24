@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<tns:scoreList xmlns:tns="http://jw.nju.edu.cn/schema">
+    <tns:courseScore courseId="000000" scoreType="总评成绩">
+        <tns:score>
+            <tns:studentId>141250109</tns:studentId>
+            <tns:studentScore>13</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000000" scoreType="平时成绩">
+        <tns:score>
+            <tns:studentId>141250109</tns:studentId>
+            <tns:studentScore>14</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000000" scoreType="期末成绩">
+        <tns:score>
+            <tns:studentId>141250205</tns:studentId>
+            <tns:studentScore>16</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000000" scoreType="平时成绩">
+        <tns:score>
+            <tns:studentId>141250205</tns:studentId>
+            <tns:studentScore>19</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000000" scoreType="总评成绩">
+        <tns:score>
+            <tns:studentId>141250205</tns:studentId>
+            <tns:studentScore>22</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000000" scoreType="期末成绩">
+        <tns:score>
+            <tns:studentId>141250109</tns:studentId>
+            <tns:studentScore>40</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000001" scoreType="总评成绩">
+        <tns:score>
+            <tns:studentId>141250109</tns:studentId>
+            <tns:studentScore>13</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000001" scoreType="平时成绩">
+        <tns:score>
+            <tns:studentId>141250109</tns:studentId>
+            <tns:studentScore>14</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000001" scoreType="期末成绩">
+        <tns:score>
+            <tns:studentId>141250205</tns:studentId>
+            <tns:studentScore>16</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000001" scoreType="平时成绩">
+        <tns:score>
+            <tns:studentId>141250205</tns:studentId>
+            <tns:studentScore>19</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000001" scoreType="总评成绩">
+        <tns:score>
+            <tns:studentId>141250205</tns:studentId>
+            <tns:studentScore>22</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000001" scoreType="期末成绩">
+        <tns:score>
+            <tns:studentId>141250109</tns:studentId>
+            <tns:studentScore>40</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000002" scoreType="总评成绩">
+        <tns:score>
+            <tns:studentId>141250109</tns:studentId>
+            <tns:studentScore>13</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000002" scoreType="平时成绩">
+        <tns:score>
+            <tns:studentId>141250109</tns:studentId>
+            <tns:studentScore>14</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000002" scoreType="期末成绩">
+        <tns:score>
+            <tns:studentId>141250205</tns:studentId>
+            <tns:studentScore>16</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000002" scoreType="平时成绩">
+        <tns:score>
+            <tns:studentId>141250205</tns:studentId>
+            <tns:studentScore>19</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000002" scoreType="总评成绩">
+        <tns:score>
+            <tns:studentId>141250205</tns:studentId>
+            <tns:studentScore>22</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+    <tns:courseScore courseId="000002" scoreType="期末成绩">
+        <tns:score>
+            <tns:studentId>141250109</tns:studentId>
+            <tns:studentScore>40</tns:studentScore>
+        </tns:score>
+    </tns:courseScore>
+</tns:scoreList>

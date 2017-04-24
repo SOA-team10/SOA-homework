@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<scoreList xmlns="http://jw.nju.edu.cn/schema">
+    <courseScore courseId="123451" scoreType="平时成绩">
+        <score>
+            <studentId>141250033</studentId>
+            <studentScore>90</studentScore>
+        </score>
+    </courseScore>
+    <courseScore courseId="123451" scoreType="期末成绩">
+        <score>
+            <studentId>141250033</studentId>
+            <studentScore>90</studentScore>
+        </score>
+    </courseScore>
+</scoreList>
