@@ -27,18 +27,18 @@
 
 	<complexType name="课程成绩信息类型">
         <sequence minOccurs="0" maxOccurs="6">
-            <element name="score" type="tns:成绩类型"/>
+            <element name="score" type="tns:单科成绩类型"/>
         </sequence>
     </complexType>
 
-    <complexType name="成绩类型">
+    <complexType name="单科成绩类型">
         <sequence>
             <element name="scoreType" type="tns:得分性质"/>
-            <element name="scoreValue" type="tns:得分类型"/>
+            <element name="scoreValue" type="tns:分数类型"/>
         </sequence>
     </complexType>
 
-    <simpleType name="得分类型">
+    <simpleType name="分数类型">
         <restriction base="int">
             <maxInclusive value="100"/>
             <minInclusive value="0"/>

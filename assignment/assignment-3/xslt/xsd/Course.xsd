@@ -7,7 +7,6 @@
 
 	<import namespace="http://www.nju.edu.cn/schema"
 			schemaLocation="./PersonInfo.xsd"/>
-    <!--<include schemaLocation="ScoreList.xsd"/>-->
 	
 	<complexType name="课程信息类型">
 		<sequence>
