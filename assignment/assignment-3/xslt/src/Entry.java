@@ -7,10 +7,10 @@ public class Entry {
     public static void main(String args[]){
         // main
         MyXslTransformer.xsl("xml/newStudentList.xml",
-                             "xsd/",
+                             "xsd/StudentList.xsd",
                              "xml/output.xml",
                              "xsl/transform.xsl");
         boolean result = MyValidator.validateXMLByXSD(new File("xml/output.xml"), new File("xsd/ScoreList.xsd"));
-        System.out.println("valid? "+result);
+        System.out.println("output valid? "+result);
     }
 }
