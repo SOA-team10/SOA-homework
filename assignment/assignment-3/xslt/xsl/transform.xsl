@@ -7,9 +7,6 @@
     <xsl:template match="/">
 
         <xsl:element name="tns:scoreList">
-            <!--<xsl:attribute name="xmlns">-->
-                <!--http://jw.nju.edu.cn/schema-->
-            <!--</xsl:attribute>-->
 
             <xsl:for-each select="/tns:studentList/tns:student/tns:courseList/tns:course/tns:scoreList/tns:score">
                 <xsl:sort select="../../@courseId"/>

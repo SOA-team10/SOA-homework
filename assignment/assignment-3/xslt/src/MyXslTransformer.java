@@ -1,6 +1,7 @@
 import javax.xml.transform.*;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -12,8 +13,17 @@ public class MyXslTransformer {
 
     public static void xsl(
             String inFilename,
+            String inXsdname,
             String outFilename,
             String xslFilename) {
+        // validate the input xml
+        File inputXsd = new File(inXsdname);
+        File inputXml = new File(inFilename);
+        boolean isValid = MyValidator.validateXMLByXSD(inputXml, inputXsd);
+        if (! isValid ){
+            System.err.println("not a valid xml input");
+            return ;
+        }
         try {
             // Create transformer factory
             TransformerFactory factory = TransformerFactory.newInstance();
@@ -33,6 +43,7 @@ public class MyXslTransformer {
             // output file
 
             xformer.transform(source, result);
+            System.out.println("transform finish");
         } catch (FileNotFoundException e) {
             // File not found
         } catch (TransformerConfigurationException e) {
