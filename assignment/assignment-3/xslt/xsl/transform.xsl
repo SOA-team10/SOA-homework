@@ -3,7 +3,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:tns="http://jw.nju.edu.cn/schema"
                 xmlns:nju="http://www.nju.edu.cn/schema">
-    <xsl:output indent="yes"/>
+    <xsl:output method="xml" indent="yes" xmlns:xslt="http://xml.apache.org/xslt" xslt:indent-amount="3"/>
     <xsl:template match="/">
 
         <xsl:element name="tns:scoreList">
