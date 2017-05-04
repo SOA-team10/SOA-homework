@@ -28,13 +28,7 @@ public class MsgReceiver extends SAAJServlet {
                 courseElement.addChildElement(envelope.createName("FinalScore")).addTextNode("58");
                 courseElement.addChildElement(envelope.createName("TotalScore")).addTextNode("92");
             } else {
-                SOAPElement faultElement = body.addChildElement(envelope.createName("Fault", "env", "http://www.w3.org/2003/05/soap-envelope"));
-                SOAPElement soapCode = faultElement.addChildElement(envelope.createName("Code", "env", "http://www.w3.org/2003/05/soap-envelope"));
-                SOAPElement soapCodeValue=soapCode.addChildElement(envelope.createName("Value", "env", "http://www.w3.org/2003/05/soap-envelope"));
-                soapCodeValue.addTextNode("StudentId");
-                SOAPElement soapReason=faultElement.addChildElement(envelope.createName("Reason", "env", "http://www.w3.org/2003/05/soap-envelope"));
-                SOAPElement soapText=soapReason.addChildElement(envelope.createName("Text", "env", "http://www.w3.org/2003/05/soap-envelope"));
-                soapText.addTextNode("StudentId:"+userID+" doesn't exist");
+                attachFault(envelope, "StudentId:"+userID+" doesn't exist", "StudentId");
             }
             return respMsg;
         } catch (SOAPException e) {
@@ -44,12 +38,23 @@ public class MsgReceiver extends SAAJServlet {
         return null;
     }
     private String extractStudentId(SOAPMessage reqMsg) throws SOAPException {
-        // soap信封
+        // get envelope
         SOAPEnvelope env = reqMsg.getSOAPPart().getEnvelope();
-        // soap消息体
+        // get body
         SOAPBody body = reqMsg.getSOAPBody();
         SOAPElement stuElem = (SOAPElement)body.getChildElements(env.createName("Student")).next();
         SOAPElement paramElem = (SOAPElement)stuElem.getChildElements(env.createName("StudentId")).next();
         return paramElem.getTextContent();
+    }
+
+    private void attachFault(SOAPEnvelope envelope, String faultMsg, String faultNode) throws SOAPException {
+        SOAPBody body = envelope.getBody();
+        SOAPElement faultElement = body.addChildElement(envelope.createName("Fault", "env", "http://www.w3.org/2003/05/soap-envelope"));
+        SOAPElement soapCode = faultElement.addChildElement(envelope.createName("Code", "env", "http://www.w3.org/2003/05/soap-envelope"));
+        SOAPElement soapCodeValue=soapCode.addChildElement(envelope.createName("Value", "env", "http://www.w3.org/2003/05/soap-envelope"));
+        soapCodeValue.addTextNode(faultNode);
+        SOAPElement soapReason=faultElement.addChildElement(envelope.createName("Reason", "env", "http://www.w3.org/2003/05/soap-envelope"));
+        SOAPElement soapText=soapReason.addChildElement(envelope.createName("Text", "env", "http://www.w3.org/2003/05/soap-envelope"));
+        soapText.addTextNode(faultMsg);
     }
 }
