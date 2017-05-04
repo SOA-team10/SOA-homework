@@ -8,19 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.soap.*;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
 
 @WebServlet("/sender")
-public class Sender extends HttpServlet{
+public class MsgSender extends HttpServlet{
     private static final long serialVersionUID = 1L;
     private SOAPConnection conn;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Sender() {
+    public MsgSender() {
         super();
         SOAPConnectionFactory factory = null;
         try {
@@ -36,51 +38,58 @@ public class Sender extends HttpServlet{
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        response.setContentType("text/html; charset=UTF-8");
+//        PrintWriter out = response.getWriter();
+        String id = request.getParameter("id");
+        if (id == null){
+            id = "";
+        }
         try {
-            // 1.创建消息工厂
+            // message factory
             MessageFactory factory = MessageFactory.newInstance();
-            // 2.创建soap消息reqMsg
+            // soap message instance
             SOAPMessage reqMsg = factory.createMessage();
-            // 3.创建soap消息的部分reqMsgpart
+            // soap message part
             SOAPPart part = reqMsg.getSOAPPart();
-            // 3.1.创建sope信封envelope，开始写信
+            // soap-envelope
             SOAPEnvelope envelope = part.getEnvelope();
             // envelope.setPrefix("soap");	// 默认是SOAP-ENV
-            // 3.2.写header
+            // header
             // SOAPHeader header = envelope.getHeader();
-            // 3.3.写body
+            // 写body
             SOAPBody body = envelope.getBody();
             // 3.4.向body中添加元素，即要传递的数据
-            SOAPBodyElement stuElement = body.addBodyElement(envelope.createName("学生"));
-            stuElement.addChildElement(envelope.createName("姓名")).addTextNode("陈云龙");
-            stuElement.addChildElement(envelope.createName("学号")).addTextNode("131250181");
+            SOAPBodyElement stuElement = body.addBodyElement(envelope.createName("Student"));
+            stuElement.addChildElement(envelope.createName("StudentName")).addTextNode("段正谋");
+            stuElement.addChildElement(envelope.createName("StudentId")).addTextNode(id);
             SOAPBodyElement courseElement = body.addBodyElement(envelope.createName("课程"));
-            courseElement.addChildElement(envelope.createName("课程编号")).addTextNode("000001");
-            courseElement.addChildElement(envelope.createName("课程讲师")).addTextNode("xxx");
-            courseElement.addChildElement(envelope.createName("平时成绩")).addTextNode("77");
-            courseElement.addChildElement(envelope.createName("期末成绩")).addTextNode("58");
-            courseElement.addChildElement(envelope.createName("总评成绩")).addTextNode("92");
+            courseElement.addChildElement(envelope.createName("CourseId")).addTextNode("000001");
+            courseElement.addChildElement(envelope.createName("Teacher")).addTextNode("Frank");
+            courseElement.addChildElement(envelope.createName("AttendanceScore")).addTextNode("90");
+            courseElement.addChildElement(envelope.createName("FinalScore")).addTextNode("85");
+            courseElement.addChildElement(envelope.createName("TotalScore")).addTextNode("92");
             // 4.创建SOAP消息的目标对象（服务端点endPoint），即消息发给谁
             String reqBaseUrl = getReqBaseUrl(request);
             URL endPoint = new URL(reqBaseUrl + "/msgReceiver");
             // 5.发送SOAP消息，并接收返回信息
             SOAPMessage respMsg = conn.call(reqMsg, endPoint);
 
-            out.print("success!");
-            System.out.println("\n=====================请求的消息 : ");
+//            out.print("success!");
+            System.out.println("\nrequest: ");
             reqMsg.writeTo(System.out);
 
-            System.out.println("\n=====================接收的消息 : ");
+            System.out.println("\nresponse: ");
             respMsg.writeTo(System.out);
+            response.setContentType("text/xml");
+            respMsg.writeTo(response.getOutputStream());
+//            Source respSource = respMsg.getSOAPPart().getContent();
+
 
         } catch (SOAPException e) {
             e.printStackTrace();
-            out.print("error!\n" + e.getMessage());
+//            out.print("error!\n" + e.getMessage());
         }
-        out.flush();
-        out.close();
+//        out.flush();
+//        out.close();
     }
 
     private String getReqBaseUrl(HttpServletRequest req) {

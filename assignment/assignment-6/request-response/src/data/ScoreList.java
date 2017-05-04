@@ -1,59 +1,50 @@
 package data;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.HashMap;
 
-/**
- * Created by duanzhengmou on 5/2/17.
- */
 public class ScoreList {
-    private List<CourseScore> scoreList = new ArrayList<CourseScore>();
 
-    public ScoreList(){
-        // generate data
-        for (int i=0;i<5;i++){
-            String studentId = "14125000"+i;
-            CourseScore c1 = new CourseScore();
-            c1.setCourseId("000000");
-            c1.setScoreType("平时成绩");
-            c1.setScore(new Score(studentId, (int)(Math.random()*20+50)));
+	private HashMap<String, CourseStudent> scoreMap;
+	
+	public ScoreList(){
+		
+		scoreMap = new HashMap<String, CourseStudent>();
+		initData();
+	}
+	
+	private void initData(){
+		ArrayList<Course> courses = new ArrayList<Course>();
+		ArrayList<Score> scores = new ArrayList<>();
+		CourseStudent student1 = new CourseStudent();
+		CourseStudent student2 = new CourseStudent();
+		CourseStudent student3 = new CourseStudent();
 
-            CourseScore c2 = new CourseScore();
-            c2.setCourseId("000000");
-            c2.setScoreType("期末成绩");
-            c2.setScore(new Score(studentId, (int)(Math.random()*20+50)));
+		scores.add(new Score("平时成绩",90));
+		scores.add(new Score("期末成绩",80));
+		scores.add(new Score("总评成绩",87));
 
-            CourseScore c3 = new CourseScore();
-            c3.setCourseId("000000");
-            c3.setScoreType("总评成绩");
-            c3.setScore(new Score(studentId, (int)(Math.random()*20+50)));
-
-            scoreList.add(c1);
-            scoreList.add(c2);
-            scoreList.add(c3);
-        }
-    }
-    public List<CourseScore> getScoreList() {
-        return scoreList;
-    }
-
-    public List<CourseScore> getScoreById(String id){
-        List<CourseScore> result = new ArrayList<CourseScore>();
-        for (CourseScore c : scoreList){
-            if ( c.getScore().getStudentId().equals(id)){
-                result.add(c);
-            }
-        }
-        return result;
-    }
-
-    public void show() {
-        for (CourseScore c : scoreList){
-            System.out.println("courseId :"+c.getCourseId()+" scoreType:"+c.getScoreType());
-            System.out.println("studentId: "+c.getScore().getStudentId());
-            System.out.println("score    :"+c.getScore().getStudentScore());
-            System.out.println("----------");
-        }
-    }
+		
+		courses.add(new Course("离散数学","000000",scores));
+		courses.add(new Course("线性代数","000001",scores));
+		courses.add(new Course("微积分","000002",scores));
+		
+		student1.setCourses(courses);
+		student1.setId("141250133");
+		student1.setName("段正谋");
+		scoreMap.put("141250133", student1);
+		student2.setId("141250192");
+		student2.setName("张文玘");
+		student2.setCourses(courses);
+		scoreMap.put("141250192", student2);
+		student3.setId("141250142");
+		student3.setName("王亚杰");
+		student3.setCourses(courses);
+		scoreMap.put("141250142", student3);
+	}
+	
+	public CourseStudent getScoreById(String id){
+		CourseStudent student = scoreMap.get(id);
+		return student;
+	}
 }

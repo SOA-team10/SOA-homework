@@ -15,26 +15,26 @@ public class MsgReceiver extends SAAJServlet {
             respMsg = this.msgFactory.createMessage();
             SOAPEnvelope envelope = respMsg.getSOAPPart().getEnvelope();
             SOAPBody body = envelope.getBody();
-            String userID = "141250001";
-            if(userID.equals("141250001")) {
-                body.addChildElement(envelope.createName("ResponseMsg")).addTextNode("修改 " + userID + " 的成绩成功!");
-                SOAPBodyElement stuElement = body.addBodyElement(envelope.createName("学生"));
-                stuElement.addChildElement(envelope.createName("姓名")).addTextNode("Someone");
-                stuElement.addChildElement(envelope.createName("学号")).addTextNode("141250001");
-                SOAPBodyElement courseElement = body.addBodyElement(envelope.createName("课程"));
-                courseElement.addChildElement(envelope.createName("课程编号")).addTextNode("000001");
-                courseElement.addChildElement(envelope.createName("课程讲师")).addTextNode("xxx");
-                courseElement.addChildElement(envelope.createName("平时成绩")).addTextNode("77");
-                courseElement.addChildElement(envelope.createName("期末成绩")).addTextNode("58");
-                courseElement.addChildElement(envelope.createName("总评成绩")).addTextNode("92");
+            String userID = extractStudentId(soapMessage);
+            if(userID.equals("141250033")) {
+                body.addChildElement(envelope.createName("ResponseMsg")).addTextNode("Successfully modified score of " + userID);
+                SOAPBodyElement stuElement = body.addBodyElement(envelope.createName("Student"));
+                stuElement.addChildElement(envelope.createName("StudentName")).addTextNode("段正谋");
+                stuElement.addChildElement(envelope.createName("StudentId")).addTextNode("141250001");
+                SOAPBodyElement courseElement = body.addBodyElement(envelope.createName("Course"));
+                courseElement.addChildElement(envelope.createName("CourseId")).addTextNode("000001");
+                courseElement.addChildElement(envelope.createName("Teacher")).addTextNode("xxx");
+                courseElement.addChildElement(envelope.createName("AttendanceScore")).addTextNode("77");
+                courseElement.addChildElement(envelope.createName("FinalScore")).addTextNode("58");
+                courseElement.addChildElement(envelope.createName("TotalScore")).addTextNode("92");
             } else {
                 SOAPElement faultElement = body.addChildElement(envelope.createName("Fault", "env", "http://www.w3.org/2003/05/soap-envelope"));
                 SOAPElement soapCode = faultElement.addChildElement(envelope.createName("Code", "env", "http://www.w3.org/2003/05/soap-envelope"));
                 SOAPElement soapCodeValue=soapCode.addChildElement(envelope.createName("Value", "env", "http://www.w3.org/2003/05/soap-envelope"));
-                soapCodeValue.addTextNode("学号");
+                soapCodeValue.addTextNode("StudentId");
                 SOAPElement soapReason=faultElement.addChildElement(envelope.createName("Reason", "env", "http://www.w3.org/2003/05/soap-envelope"));
                 SOAPElement soapText=soapReason.addChildElement(envelope.createName("Text", "env", "http://www.w3.org/2003/05/soap-envelope"));
-                soapText.addTextNode("学号不存在");
+                soapText.addTextNode("StudentId:"+userID+" doesn't exist");
             }
             return respMsg;
         } catch (SOAPException e) {
@@ -42,5 +42,14 @@ public class MsgReceiver extends SAAJServlet {
         }
 
         return null;
+    }
+    private String extractStudentId(SOAPMessage reqMsg) throws SOAPException {
+        // soap信封
+        SOAPEnvelope env = reqMsg.getSOAPPart().getEnvelope();
+        // soap消息体
+        SOAPBody body = reqMsg.getSOAPBody();
+        SOAPElement stuElem = (SOAPElement)body.getChildElements(env.createName("Student")).next();
+        SOAPElement paramElem = (SOAPElement)stuElem.getChildElements(env.createName("StudentId")).next();
+        return paramElem.getTextContent();
     }
 }

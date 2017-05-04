@@ -2,11 +2,7 @@
  * Created by duanzhengmou on 5/2/17.
  */
 
-import data.CourseScore;
-import data.ScoreList;
-
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import java.util.Locale;
 import javax.servlet.ServletException;
@@ -20,7 +16,7 @@ import javax.xml.soap.*;
 @WebServlet("/receiver")
 public class Receiver extends HttpServlet{
     private static final long serialVersionUID = 1L;
-    private ScoreList scoreList = new ScoreList();
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -44,17 +40,17 @@ public class Receiver extends HttpServlet{
             SOAPBody body = envelope.getBody();
 
             // handle error
-            if (id == null){
-                addFault(body, "Absent of parameter: id");
-            }else{
-                List<CourseScore> scores = scoreList.getScoreById(id);
-                if (scores.size() == 0){
-                    addFault(body, "Can not find such a record with id: "+id);
-                }else {
-                    SOAPBodyElement bodyElement = body.addBodyElement(new QName("http://www.nju.edu.cn", "getStudent", "m"));
-                    QName rootQName = bodyElement.createQName("CourseScore", "tns");
-                }
-            }
+//            if (id == null){
+//                addFault(body, "Absent of parameter: id");
+//            }else{
+//                List<CourseScore> scores = scoreList.getScoreById(id);
+//                if (scores.size() == 0){
+//                    addFault(body, "Can not find such a record with id: "+id);
+//                }else {
+//                    SOAPBodyElement bodyElement = body.addBodyElement(new QName("http://www.nju.edu.cn", "getStudent", "m"));
+//                    QName rootQName = bodyElement.createQName("CourseScore", "tns");
+//                }
+//            }
         } catch (SOAPException e) {
             e.printStackTrace();
         }
