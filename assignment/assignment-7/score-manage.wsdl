@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<description
+    xmlns="http://www.w3.org/ns/wsdl"
+    targetNamespace="http://jw.nju.edu.cn/wsdl"
+    xmlns:tns="http://jw.nju.edu.cn/wsdl"
+    xmlns:ft="http://jw.nju.edu.cn/fault"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:sch="http://jw.nju.edu.cn/schema"
+    xmlns:wsoap="http://www.w3.org/ns/wsdl/soap"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <documentation>
+        student score management web service description
+    </documentation>
+    <import namespace="http://jw.nju.edu.cn/fault"
+            location="student-score-faults.wsdl"/>
+    <types>
+        <xs:import
+            namespace="http://jw.nju.edu.cn/schema"
+            schemaLocation="Student.xsd"/>
+        <xs:import
+            namespace="http://jw.nju.edu.cn/schema"
+            schemaLocation="ScoreList.xsd"/>
+        <xs:element name="studentId" type="sch:学号类型"/>
+        <xs:element name="stuScore" type="sch:课程成绩类型"/>
+    </types>
+
+    <interface name="stuScoreInterface" extends="ft:scoreManageFaults">
+        <operation name="getScore"
+                   pattern="http://www.w3.org/ns/wsdl/in-out"
+                   style="http://www.w3.org/ns/wsdl/style/iri">
+            <input messageLabel="In" element="tns:studentId"/>
+            <output messageLabel="Out" element="sch:student"/>
+            <infault ref="ft:noIdInputFault" messageLabel="In"/>
+            <outfault ref="ft:idNotFoundFault" messageLabel="Out"/>
+        </operation>
+
+        <operation name="addScore"
+                   pattern="http://www.w3.org/ns/wsdl/in-out"
+                   style="http://www.w3.org/ns/wsdl/style/iri">
+            <input messageLabel="StuIn" element="tns:studentId"/>
+            <input messageLabel="ScoreIn" element="tns:stuScore"/>
+            <output messageLabel="Out" element="sch:student"/>
+            <infault ref="ft:noIdInputFault" messageLabel="StuIn"/>
+            <infault ref="ft:noScoreInputFault" messageLabel="ScoreIn"/>
+            <outfault ref="ft:studentNotFoundFault" messageLabel="Out"/>
+            <outfault ref="ft:courseNotFoundFault" messageLabel="Out"/>
+            <outfault ref="ft:scoreTypeFault" messageLabel="Out"/>
+            <outfault ref="ft:scoreFormatFault" messageLabel="Out"/>
+        </operation>
+
+        <operation name="modifyScore"
+                   pattern="http://www.w3.org/ns/wsdl/in-out"
+                   style="http://www.w3.org/ns/wsdl/style/iri">
+            <input messageLabel="StuIn" element="tns:studentId"/>
+            <input messageLabel="ScoreIn" element="tns:stuScore"/>
+            <output messageLabel="Out" element="sch:student"/>
+            <infault ref="ft:noIdInputFault" messageLabel="StuIn"/>
+            <infault ref="ft:noScoreInputFault" messageLabel="ScoreIn"/>
+            <outfault ref="ft:studentNotFoundFault" messageLabel="Out"/>
+            <outfault ref="ft:courseNotFoundFault" messageLabel="Out"/>
+            <outfault ref="ft:scoreTypeFault" messageLabel="Out"/>
+            <outfault ref="ft:scoreFormatFault" messageLabel="Out"/>
+        </operation>
+
+        <operation name="delScore"
+                   pattern="http://www.w3.org/ns/wsdl/in-out"
+                   style="http://www.w3.org/ns/wsdl/style/iri">
+            <input messageLabel="StuIn" element="tns:studentId"/>
+            <input messageLabel="ScoreIn" element="tns:stuScore"/>
+            <output messageLabel="Out" element="sch:student"/>
+            <infault ref="ft:noIdInputFault" messageLabel="StuIn"/>
+            <infault ref="ft:noScoreInputFault" messageLabel="ScoreIn"/>
+            <outfault ref="ft:studentNotFoundFault" messageLabel="Out"/>
+            <outfault ref="ft:scoreNotFoundFault" messageLabel="Out"/>
+            <outfault ref="ft:courseNotFoundFault" messageLabel="Out"/>
+        </operation>
+        
+    </interface>
+
+    <interface name="courseInterfacee">
+
+    </interface>
+
+    <binding name="stuScoreBinding"
+             interface="tns:stuScoreInterface"
+             type="http://www.w3.org/ns/wsdl/soap"
+             wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/">
+        <operation ref="tns:addScore"
+                   wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response"/>
+        <operation ref="tns:getScore"
+                   wsoap:mep="http://www.w3.org/2003/05/soap/mep/soap-response"/>
+        <operation ref="tns:modifyScore"
+                   wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response"/>
+        <operation ref="tns:delScore"
+                   wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response"/>
+        <fault ref="ft:noIdInputFault" wsoap:code="soap:Sender"/>
+        <fault ref="ft:noScoreInputFault" wsoap:code="soap:Sender"/>
+        <fault ref="ft:idNotFoundFault" wsoap:code="soap:Sender"/>
+        <fault ref="ft:studentNotFoundFault" wsoap:code="soap:Sender"/>
+        <fault ref="ft:scoreNotFoundFault" wsoap:code="soap:Sender"/>
+        <fault ref="ft:courseNotFoundFault" wsoap:code="soap:Sender"/>
+        <fault ref="ft:scoreTypeFault" wsoap:code="soap:Sender"/>
+        <fault ref="ft:scoreFormatFault" wsoap:code="soap:Sender"/>
+    </binding>
+
+    <service name="stuScoreService" interface="tns:stuScoreInterface">
+        <endpoint name="stuScoreEndpoint"
+                  binding="tns:stuScoreBinding"
+                  address="http://www.example.com/wsdl/stuScore"/>
+    </service>
+</description>

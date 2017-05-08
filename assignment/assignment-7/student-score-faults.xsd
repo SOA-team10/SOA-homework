@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://jw.nju.edu.cn/schema"
+        xmlns:tns="http://jw.nju.edu.cn/schema"
+        xmlns:nju="http://www.nju.edu.cn/schema" elementFormDefault="qualified">
+    <complexType name="invalidDataFaultType">
+        <xs:sequence>
+            <xs:element name="errCode" type="tns:errCodeType"/>
+            <xs:element name="reason" type="tns:errReasonType"/>
+            <xs:element name="detail" type="xs:string" minOccurs="0"/>
+            <xs:element name="node" type="xs:string" minOccurs="0"/>
+            <xs:element name="role" type="tns:roleType" minOccurs="0"/>
+        </xs:sequence>
+    </complexType>
+
+    <complexType name="errCodeType">
+        <xs:all>
+            <xs:element name="errValue" type="xs:string"/>
+            <xs:element name="subCode" type="tns:errCodeType" minOccurs="0"/>
+        </xs:all>
+    </complexType>
+
+    <complexType name="errReasonType">
+        <xs:element name="errReason" type="xs:string"/>
+    </complexType>
+
+    <simpleType name="roleType">
+        <restriction base="string">
+            <enumeration value="initialSender"/>
+            <enumeration value="intermediary"/>
+            <enumeration value="ultimateReceiver"/>
+        </restriction>
+    </simpleType>
+
+    <element name="invalidDataFault" type="tns:invalidDataFaultType"/>
+</schema>
