@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<description xmlns="http://www.w3.org/ns/wsdl"
+             targetNamespace= "http://jw.nju.edu.cn/wsdl"
+             xmlns:info= "http://jw.nju.edu.cn/wsdl"
+             xmlns:wsoap= "http://www.w3.org/ns/wsdl/soap"
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             xmlns:tns="http://jw.nju.edu.cn/schema"
+             xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions">
+    <documentation>
+        This documentation illustrate the InfoManagementService
+    </documentation>
+
+    <types>
+        <xs:schema xmlns="http://www.w3.org/2001/XMLSchema"
+                   targetNamespace="http://jw.nju.edu.cn/wsdl">
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/Student.xsd"/>
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/StudentList.xsd"/>
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/ErrorMsg.xsd"/>
+            <!--<import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/"-->
+
+            <xs:element name="studentName" type="string"/>
+            <xs:element name="studentId" type="tns:学号类型"/>
+
+        </xs:schema>
+    </types>
+
+    <interface name="InfoManagementInterface">
+
+        <fault name = "invalidDataFault"
+               element = "info:ErrorMsg"/>
+
+        <operation name="getInfoById"
+                   pattern="http://www.w3.org/ns/wsdl/in-out"
+                   wsdlx:safe="true">
+            <documentation>
+                This operation return the basic info of student which identified by student id
+            </documentation>
+
+            <input messageLabel="In" element="info:studentId"/>
+            <output messageLabel="Out" element="info:student"/>
+            <outfault ref="info:invalidDataFault" messageLabel="Out"/>
+        </operation>
+
+        <operation name="getInfoByName">
+            <documentation>
+                This operation return the basic info of student which match the provided name
+            </documentation>
+
+            <input messageLabel="In" element="info:studentName"/>
+            <!--Just in case that multiple students have same name-->
+            <output messageLabel="Out" element="info:studentList"/>
+            <outfault ref="info:invalidDataFault" messageLabel="Out"/>
+        </operation>
+
+        <operation name="modifyAddress">
+            <documentation>
+                This operation do modification according to the provided information
+            </documentation>
+
+            <input messageLabel="In" element="info:studentId"/>
+            <output messageLabel="Out" element="info:student"/>
+            <outfault ref="info:invalidDataFault" messageLabel="Out"/>
+        </operation>
+    </interface>
+
+    <binding name="InfoManagementSOAPBinding"
+             type="http://www.w3.org/ns/wsdl/soap"
+             wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/">
+            <operation ref="info:getInfoById" wsoap:mep="http://www.w3.org/2003/05/soap/mep/soap-response"/>
+            <operation ref="info:getInfoByName" wsoap:mep="http://www.w3.org/2003/05/soap/mep/soap-response"/>
+            <operation ref="info:modifyAddress" wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response"/>
+    </binding>
+    
+    <service name="InfoManagementService" interface="info:InfoManagementInterface">
+        <endpoint name="InfoManagementEndPoint" binding="info:InfoManagementSOAPBinding" />
+    </service>
+</description>

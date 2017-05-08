@@ -2,6 +2,7 @@ import com.sun.xml.messaging.soap.server.SAAJServlet;
 
 import javax.servlet.annotation.WebServlet;
 import javax.xml.soap.*;
+import java.util.Iterator;
 
 /**
  * Created by duanzhengmou on 5/2/17.
@@ -10,6 +11,7 @@ import javax.xml.soap.*;
 public class MsgReceiver extends SAAJServlet {
 
     public SOAPMessage onMessage(SOAPMessage soapMessage) {
+
         SOAPMessage respMsg = null;
         try {
             respMsg = this.msgFactory.createMessage();
