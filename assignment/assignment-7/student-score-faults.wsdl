@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<description
+    xmlns="http://www.w3.org/ns/wsdl"
+    targetNamespace="http://jw.nju.edu.cn/fault"
+    xmlns:tns="http://jw.nju.edu.cn/fault"
+    xmlns:sch="http://jw.nju.edu.cn/schema">
+    <documentation>
+        This document describes standard faults for use by
+        Web services that process student scores
+    </documentation>
+    <types>
+        <xs:import
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            namespace="http://jw.nju.edu.cn/schema"
+            schemaLocation="student-score-faults.xsd"/>
+    </types>
+    <interface name="scoreManageFaults">
+        <fault name="noIdInputFault" element="sch:invalidDataFault">
+            <documentation>请求缺少id参数</documentation>
+        </fault>
+        <fault name="noScoreInputFault" element="sch:invalidDataFault">
+            <documentation>请求缺少成绩参数</documentation>
+        </fault>
+        <fault name="idNotFoundFault" element="sch:invalidDataFault">
+            <documentation>学号不存在错误</documentation>
+        </fault>
+        <fault name="studentNotFoundFault" element="sch:invalidDataFault">
+            <documentation>修改成绩时，找不到对应学生错误</documentation>
+        </fault>
+        <fault name="courseNotFoundFault" element="sch:invalidDataFault">
+            <documentation>修改成绩时，找不到对应课程错误</documentation>
+        </fault>
+        <fault name="scoreNotFoundFault" element="sch:invalidDataFault">
+            <documentation>找不到对应成绩错误</documentation>
+        </fault>
+        <fault name="scoreTypeFault" element="sch:invalidDataFault">
+            <documentation>修改成绩时，成绩类型错误</documentation>
+        </fault>
+        <fault name="scoreFormatFault" element="sch:invalidDataFault">
+            <documentation>修改成绩时，成绩格式错误</documentation>
+        </fault>
+    </interface>
+</description>

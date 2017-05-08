@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://jw.nju.edu.cn/schema"
+        xmlns:tns="http://jw.nju.edu.cn/schema"
+        elementFormDefault="qualified">
+
+    <include schemaLocation="./Course.xsd"/>
+
+    <complexType name="课程列表类型">
+        <sequence maxOccurs="unbounded" minOccurs="0">
+            <element name="course" type="tns:课程信息类型"/>
+        </sequence>
+    </complexType>
+
+    <element name="courseList" type="tns:课程列表类型"/>
+</schema>
