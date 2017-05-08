@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<description>
+<?xml version="1.0" encoding="utf-8" ?>
+<description xmlns="http://www.w3.org/ns/wsdl"
+             targetNamespace= "http://jw.nju.edu.cn/wsdl"
+             xmlns:info= "http://jw.nju.edu.cn/wsdl"
+             xmlns:wsoap= "http://www.w3.org/ns/wsdl/soap"
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             xmlns:tns="http://jw.nju.edu.cn/schema"
+             xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions">
+    <documentation>
+        This documentation illustrate the VerificationService
+    </documentation>
 
+    <types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns="http://jw.nju.edu.cn/wsdl"
+                   targetNamespace="http://jw.nju.edu.cn/wsdl">
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/ErrorMsg.xsd"/>
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/VerifyMsg.xsd"/>
+
+            <xs:element name="verifyInfo" type="验证信息类型" />
+
+            <xs:complexType name="验证信息类型">
+                <xs:sequence>
+                    <xs:element name="studentId" type="tns:学号类型"/>
+                    <xs:element name="password" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+        </xs:schema>
+    </types>
+
+    <interface name="VerificationInterface">
+
+        <fault name = "invalidDataFault"
+               element = "info:ErrorMsg"/>
+
+        <operation name="verity"
+                   pattern="http://www.w3.org/ns/wsdl/in-out"
+                   wsdlx:safe="true">
+            <documentation>
+                This operation return the verity student account based on student-id and password
+            </documentation>
+
+            <input messageLabel="In1" element="info:studentId"/>
+            <input messageLabel="In2" element="info:password"/>
+            <output messageLabel="Out" element="info:VerifyMsg"/>
+            <outfault ref="info:invalidDataFault" messageLabel="Out"/>
+        </operation>
+    </interface>
+
+    <binding name="VerificationSOAPBinding"
+             type="http://www.w3.org/ns/wsdl/soap"
+             wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/">
+        <operation ref="info:verify" wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response"/>
+    </binding>
+
+    <service name="VerificationService" interface="info:VerificationInterface">
+        <endpoint name="VerificationEndPoint" binding="info:VerificationSOAPBinding" />
+    </service>
 </description>
