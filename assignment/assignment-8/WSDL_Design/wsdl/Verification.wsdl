@@ -41,8 +41,7 @@
                 This operation return the verity student account based on student-id and password
             </documentation>
 
-            <input messageLabel="In1" element="info:studentId"/>
-            <input messageLabel="In2" element="info:password"/>
+            <input messageLabel="In" element="info:verifyInfo"/>
             <output messageLabel="Out" element="info:VerifyMsg"/>
             <outfault ref="info:invalidDataFault" messageLabel="Out"/>
         </operation>
