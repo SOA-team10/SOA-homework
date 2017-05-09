@@ -4,8 +4,9 @@
     targetNamespace="http://jw.nju.edu.cn/wsdl"
     xmlns:tns="http://jw.nju.edu.cn/wsdl"
     xmlns:ft="http://jw.nju.edu.cn/fault"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:sch="http://jw.nju.edu.cn/schema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions"
     xmlns:wsoap="http://www.w3.org/ns/wsdl/soap"
     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
     <documentation>
@@ -14,21 +15,25 @@
     <import namespace="http://jw.nju.edu.cn/fault"
             location="student-score-faults.wsdl"/>
     <types>
-        <xs:import
-            namespace="http://jw.nju.edu.cn/schema"
-            schemaLocation="Student.xsd"/>
-        <xs:import
-            namespace="http://jw.nju.edu.cn/schema"
-            schemaLocation="ScoreList.xsd"/>
-        <xs:element name="studentId" type="sch:学号类型"/>
-        <xs:element name="stuScore" type="sch:课程成绩类型"/>
+        <xs:schema xmlns="http://www.w3.org/2001/XMLSchema"
+                   targetNamespace="http://jw.nju.edu.cn/schema">
+            <xs:import
+                    namespace="http://jw.nju.edu.cn/schema"
+                    schemaLocation="Student.xsd"/>
+            <xs:import
+                    namespace="http://jw.nju.edu.cn/schema"
+                    schemaLocation="ScoreList.xsd"/>
+            <xs:element name="studentId" type="sch:学号类型"/>
+            <xs:element name="stuScore" type="sch:课程成绩类型"/>
+        </xs:schema>
+
     </types>
 
     <interface name="stuScoreInterface" extends="ft:scoreManageFaults">
         <operation name="getScore"
                    pattern="http://www.w3.org/ns/wsdl/in-out"
                    style="http://www.w3.org/ns/wsdl/style/iri">
-            <input messageLabel="In" element="tns:studentId"/>
+            <input messageLabel="In" element="sch:studentId"/>
             <output messageLabel="Out" element="sch:student"/>
             <infault ref="ft:noIdInputFault" messageLabel="In"/>
             <outfault ref="ft:idNotFoundFault" messageLabel="Out"/>
@@ -37,8 +42,8 @@
         <operation name="addScore"
                    pattern="http://www.w3.org/ns/wsdl/in-out"
                    style="http://www.w3.org/ns/wsdl/style/iri">
-            <input messageLabel="StuIn" element="tns:studentId"/>
-            <input messageLabel="ScoreIn" element="tns:stuScore"/>
+            <input messageLabel="StuIn" element="sch:studentId"/>
+            <input messageLabel="ScoreIn" element="sch:stuScore"/>
             <output messageLabel="Out" element="sch:student"/>
             <infault ref="ft:noIdInputFault" messageLabel="StuIn"/>
             <infault ref="ft:noScoreInputFault" messageLabel="ScoreIn"/>
@@ -51,8 +56,8 @@
         <operation name="modifyScore"
                    pattern="http://www.w3.org/ns/wsdl/in-out"
                    style="http://www.w3.org/ns/wsdl/style/iri">
-            <input messageLabel="StuIn" element="tns:studentId"/>
-            <input messageLabel="ScoreIn" element="tns:stuScore"/>
+            <input messageLabel="StuIn" element="sch:studentId"/>
+            <input messageLabel="ScoreIn" element="sch:stuScore"/>
             <output messageLabel="Out" element="sch:student"/>
             <infault ref="ft:noIdInputFault" messageLabel="StuIn"/>
             <infault ref="ft:noScoreInputFault" messageLabel="ScoreIn"/>
@@ -65,8 +70,8 @@
         <operation name="delScore"
                    pattern="http://www.w3.org/ns/wsdl/in-out"
                    style="http://www.w3.org/ns/wsdl/style/iri">
-            <input messageLabel="StuIn" element="tns:studentId"/>
-            <input messageLabel="ScoreIn" element="tns:stuScore"/>
+            <input messageLabel="StuIn" element="sch:studentId"/>
+            <input messageLabel="ScoreIn" element="sch:stuScore"/>
             <output messageLabel="Out" element="sch:student"/>
             <infault ref="ft:noIdInputFault" messageLabel="StuIn"/>
             <infault ref="ft:noScoreInputFault" messageLabel="ScoreIn"/>
