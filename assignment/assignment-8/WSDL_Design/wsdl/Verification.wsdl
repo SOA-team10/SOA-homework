@@ -5,6 +5,7 @@
              xmlns:wsoap= "http://www.w3.org/ns/wsdl/soap"
              xmlns:xs="http://www.w3.org/2001/XMLSchema"
              xmlns:tns="http://jw.nju.edu.cn/schema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
              xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions">
     <documentation>
         This documentation illustrate the VerificationService
@@ -36,6 +37,7 @@
 
         <operation name="verity"
                    pattern="http://www.w3.org/ns/wsdl/in-out"
+                   style="http://www.w3.org/ns/wsdl/style/iri"
                    wsdlx:safe="true">
             <documentation>
                 This operation return the verity student account based on student-id and password
@@ -50,7 +52,10 @@
     <binding name="VerificationSOAPBinding"
              type="http://www.w3.org/ns/wsdl/soap"
              wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/">
-        <operation ref="info:verify" wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response"/>
+        <operation ref="info:verify"
+                   wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response"/>
+
+        <fault ref="info:invalidDataFault" wsoap:code="soap:Sender"/>
     </binding>
 
     <service name="VerificationService" interface="info:VerificationInterface">

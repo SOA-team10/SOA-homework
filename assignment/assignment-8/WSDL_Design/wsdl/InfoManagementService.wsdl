@@ -5,6 +5,7 @@
              xmlns:wsoap= "http://www.w3.org/ns/wsdl/soap"
              xmlns:xs="http://www.w3.org/2001/XMLSchema"
              xmlns:tns="http://jw.nju.edu.cn/schema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
              xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions">
     <documentation>
         This documentation illustrate the InfoManagementService
@@ -12,7 +13,7 @@
 
     <types>
         <xs:schema xmlns="http://www.w3.org/2001/XMLSchema"
-                   targetNamespace="http://jw.nju.edu.cn/wsdl">
+                   targetNamespace="http://jw.nju.edu.cn/schema">
             <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/Student.xsd"/>
             <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/StudentList.xsd"/>
             <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/ErrorMsg.xsd"/>
@@ -31,6 +32,7 @@
 
         <operation name="getInfoById"
                    pattern="http://www.w3.org/ns/wsdl/in-out"
+                   style="http://www.w3.org/ns/wsdl/style/iri"
                    wsdlx:safe="true">
             <documentation>
                 This operation return the basic info of student which identified by student id
@@ -41,7 +43,10 @@
             <outfault ref="info:invalidDataFault" messageLabel="Out"/>
         </operation>
 
-        <operation name="getInfoByName">
+        <operation name="getInfoByName"
+                   pattern="http://www.w3.org/ns/wsdl/in-out"
+                   style="http://www.w3.org/ns/wsdl/style/iri"
+                   wsdlx:safe="true">
             <documentation>
                 This operation return the basic info of student which match the provided name
             </documentation>
@@ -52,7 +57,9 @@
             <outfault ref="info:invalidDataFault" messageLabel="Out"/>
         </operation>
 
-        <operation name="modifyAddress">
+        <operation name="modifyAddress"
+                   pattern="http://www.w3.org/ns/wsdl/in-out"
+                   style="http://www.w3.org/ns/wsdl/style/iri">
             <documentation>
                 This operation do modification according to the provided information
             </documentation>
@@ -69,6 +76,7 @@
             <operation ref="info:getInfoById" wsoap:mep="http://www.w3.org/2003/05/soap/mep/soap-response"/>
             <operation ref="info:getInfoByName" wsoap:mep="http://www.w3.org/2003/05/soap/mep/soap-response"/>
             <operation ref="info:modifyAddress" wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response"/>
+            <fault ref="info:invalidDataFault" wsoap:code="soap:Sender"/>
     </binding>
     
     <service name="InfoManagementService" interface="info:InfoManagementInterface">
