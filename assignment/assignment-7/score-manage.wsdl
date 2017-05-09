@@ -42,11 +42,9 @@
         <operation name="addScore"
                    pattern="http://www.w3.org/ns/wsdl/in-out"
                    style="http://www.w3.org/ns/wsdl/style/iri">
-            <input messageLabel="StuIn" element="sch:studentId"/>
-            <input messageLabel="ScoreIn" element="sch:stuScore"/>
+            <input messageLabel="In" element="sch:stuScore"/>
             <output messageLabel="Out" element="sch:student"/>
-            <infault ref="ft:noIdInputFault" messageLabel="StuIn"/>
-            <infault ref="ft:noScoreInputFault" messageLabel="ScoreIn"/>
+            <infault ref="ft:noScoreInputFault" messageLabel="In"/>
             <outfault ref="ft:studentNotFoundFault" messageLabel="Out"/>
             <outfault ref="ft:courseNotFoundFault" messageLabel="Out"/>
             <outfault ref="ft:scoreTypeFault" messageLabel="Out"/>
@@ -56,11 +54,9 @@
         <operation name="modifyScore"
                    pattern="http://www.w3.org/ns/wsdl/in-out"
                    style="http://www.w3.org/ns/wsdl/style/iri">
-            <input messageLabel="StuIn" element="sch:studentId"/>
-            <input messageLabel="ScoreIn" element="sch:stuScore"/>
+            <input messageLabel="In" element="sch:stuScore"/>
             <output messageLabel="Out" element="sch:student"/>
-            <infault ref="ft:noIdInputFault" messageLabel="StuIn"/>
-            <infault ref="ft:noScoreInputFault" messageLabel="ScoreIn"/>
+            <infault ref="ft:noScoreInputFault" messageLabel="In"/>
             <outfault ref="ft:studentNotFoundFault" messageLabel="Out"/>
             <outfault ref="ft:courseNotFoundFault" messageLabel="Out"/>
             <outfault ref="ft:scoreTypeFault" messageLabel="Out"/>
@@ -70,21 +66,16 @@
         <operation name="delScore"
                    pattern="http://www.w3.org/ns/wsdl/in-out"
                    style="http://www.w3.org/ns/wsdl/style/iri">
-            <input messageLabel="StuIn" element="sch:studentId"/>
-            <input messageLabel="ScoreIn" element="sch:stuScore"/>
+            <input messageLabel="In" element="sch:stuScore"/>
             <output messageLabel="Out" element="sch:student"/>
-            <infault ref="ft:noIdInputFault" messageLabel="StuIn"/>
-            <infault ref="ft:noScoreInputFault" messageLabel="ScoreIn"/>
+            <infault ref="ft:noScoreInputFault" messageLabel="In"/>
             <outfault ref="ft:studentNotFoundFault" messageLabel="Out"/>
             <outfault ref="ft:scoreNotFoundFault" messageLabel="Out"/>
             <outfault ref="ft:courseNotFoundFault" messageLabel="Out"/>
         </operation>
         
     </interface>
-
-    <interface name="courseInterfacee">
-
-    </interface>
+    
 
     <binding name="stuScoreBinding"
              interface="tns:stuScoreInterface"
