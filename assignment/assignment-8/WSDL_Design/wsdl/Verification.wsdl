@@ -59,6 +59,8 @@
     </binding>
 
     <service name="VerificationService" interface="info:VerificationInterface">
-        <endpoint name="VerificationEndPoint" binding="info:VerificationSOAPBinding" />
+        <endpoint name="VerificationEndPoint"
+                  binding="info:VerificationSOAPBinding"
+                  address="http://www.example.com/wsdl/Verify"/>
     </service>
 </description>

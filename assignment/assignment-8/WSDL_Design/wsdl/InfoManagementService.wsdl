@@ -80,6 +80,8 @@
     </binding>
     
     <service name="InfoManagementService" interface="info:InfoManagementInterface">
-        <endpoint name="InfoManagementEndPoint" binding="info:InfoManagementSOAPBinding" />
+        <endpoint name="InfoManagementEndPoint"
+                  binding="info:InfoManagementSOAPBinding"
+                  address="http://www.example.com/wsdl/InfoManagement"/>
     </service>
 </description>
