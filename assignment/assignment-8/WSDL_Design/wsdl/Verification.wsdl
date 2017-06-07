@@ -12,13 +12,14 @@
     </documentation>
 
     <types>
-        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                   xmlns="http://jw.nju.edu.cn/wsdl"
-                   targetNamespace="http://jw.nju.edu.cn/wsdl">
-            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/ErrorMsg.xsd"/>
-            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/VerifyMsg.xsd"/>
+        <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/ErrorMsg.xsd"/>
+        <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/VerifyMsg.xsd"/>
 
-            <xs:element name="verifyInfo" type="验证信息类型" />
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns="http://www.w3.org/2001/XMLSchema"
+                   xmlns:info= "http://jw.nju.edu.cn/wsdl"
+                   targetNamespace="http://jw.nju.edu.cn/wsdl">
+            <xs:element name="verifyInfo" type="info:验证信息类型" />
 
             <xs:complexType name="验证信息类型">
                 <xs:sequence>
@@ -61,6 +62,6 @@
     <service name="VerificationService" interface="info:VerificationInterface">
         <endpoint name="VerificationEndPoint"
                   binding="info:VerificationSOAPBinding"
-                  address="http://www.example.com/wsdl/Verify"/>
+                  address="http://www.example.com/wsdl/Verify"/> <!-- where to find the service-->
     </service>
 </description>

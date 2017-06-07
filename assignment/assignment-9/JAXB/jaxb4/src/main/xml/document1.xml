@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student studentId='141250033' xmlns="http://jw.nju.edu.cn/schema">
+	<personInfo idCard='11111111111111533X' xmlns="http://www.nju.edu.cn/schema">
+		<name>段正谋</name>
+		<native>云南</native>
+		<birthday>1996-02-19</birthday>
+		<sex>男</sex>
+		<phone>18260068888</phone>
+		<department depId="1">
+			<depType>院系单位</depType>
+			<depName>软件学院</depName>
+			<depAddress>
+				<province>江苏省</province>
+				<city>南京市</city>
+				<district>鼓楼区</district>
+				<street>汉口路</street>
+				<number>22号</number>
+			</depAddress>
+		</department>
+	</personInfo>
+
+	<checkInYear>2014</checkInYear>
+	<courseList>
+		<course courseId="100861" courseName="离散数学">
+			<teacher>Jeff</teacher>
+			<scoreList>
+				<score>
+					<scoreType>作业成绩</scoreType>
+					<scoreValue>90</scoreValue>
+				</score>
+				<score>
+					<scoreType>平时成绩</scoreType>
+					<scoreValue>100</scoreValue>
+				</score>
+			</scoreList>
+		</course>
+		<course courseId="100861" courseName="离散数学">
+			<teacher>Jeff</teacher>
+			<scoreList>
+				<score>
+					<scoreType>作业成绩</scoreType>
+					<scoreValue>90</scoreValue>
+				</score>
+				<score>
+					<scoreType>平时成绩</scoreType>
+					<scoreValue>100</scoreValue>
+				</score>
+			</scoreList>
+		</course>
+	</courseList>
+
+
+
+</student>

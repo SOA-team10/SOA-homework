@@ -12,12 +12,11 @@
     </documentation>
 
     <types>
+        <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/ErrorMsg.xsd"/>
         <xs:schema xmlns="http://www.w3.org/2001/XMLSchema"
                    targetNamespace="http://jw.nju.edu.cn/schema">
             <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/Student.xsd"/>
             <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/StudentList.xsd"/>
-            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/ErrorMsg.xsd"/>
-            <!--<import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/"-->
 
             <xs:element name="studentName" type="string"/>
             <xs:element name="studentId" type="tns:学号类型"/>

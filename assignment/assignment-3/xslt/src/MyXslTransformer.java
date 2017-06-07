@@ -20,10 +20,10 @@ public class MyXslTransformer {
         File inputXsd = new File(inXsdname);
         File inputXml = new File(inFilename);
         boolean isValid = MyValidator.validateXMLByXSD(inputXml, inputXsd);
-        if (! isValid ){
-            System.err.println("not a valid xml input");
-            return ;
-        }
+//        if (! isValid ){
+//            System.err.println("not a valid xml input");
+//            return ;
+//        }
         try {
             // Create transformer factory
             TransformerFactory factory = TransformerFactory.newInstance();
