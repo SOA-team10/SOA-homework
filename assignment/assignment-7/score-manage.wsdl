@@ -75,7 +75,7 @@
         </operation>
         
     </interface>
-    
+
 
     <binding name="stuScoreBinding"
              interface="tns:stuScoreInterface"

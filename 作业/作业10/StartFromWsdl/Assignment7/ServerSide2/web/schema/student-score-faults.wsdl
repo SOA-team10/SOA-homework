@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<description
+<wsdl:definitions
     xmlns="http://www.w3.org/ns/wsdl"
     targetNamespace="http://jw.nju.edu.cn/fault"
     xmlns:tns="http://jw.nju.edu.cn/fault"
     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-    xmlns:sch="http://jw.nju.edu.cn/schema">
+    xmlns:sch="http://jw.nju.edu.cn/schema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <documentation>
         This document describes standard faults for use by
         Web services that process student scores
     </documentation>
-    <types>
+    <wsdl:types>
         <xs:import
-            xmlns:xs="http://www.w3.org/2001/XMLSchema"
             namespace="http://jw.nju.edu.cn/schema"
             schemaLocation="student-score-faults.xsd"/>
-    </types>
+    </wsdl:types>
     <interface name="scoreManageFaults">
         <fault name="noIdInputFault" element="sch:invalidDataFault">
             <documentation>请求缺少id参数</documentation>
@@ -41,4 +41,4 @@
             <documentation>修改成绩时，成绩格式错误</documentation>
         </fault>
     </interface>
-</description>
+</wsdl:definitions>
