@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             targetNamespace= "http://jw.nju.edu.cn/wsdl"
+             xmlns:info= "http://jw.nju.edu.cn/wsdl"
+             xmlns:wsoap= "http://www.w3.org/ns/wsdl/soap"
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             xmlns:tns="http://jw.nju.edu.cn/schema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions"
+             >
+    <documentation>
+        This documentation illustrate the InfoManagementService
+    </documentation>
+
+    <types>
+        <xs:schema xmlns="http://www.w3.org/2001/XMLSchema"
+                   targetNamespace="http://jw.nju.edu.cn/schema">
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/Student.xsd"/>
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/StudentList.xsd"/>
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/ErrorMsg.xsd"/>
+            <!--<import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/"-->
+
+            <xs:element name="studentName" type="string"/>
+            <xs:element name="studentId" type="tns:学号类型"/>
+            <xs:element name="isSuccess" type="string"/>
+
+        </xs:schema>
+    </types>
+
+    <message name="getInfoByIdRequest">
+        <part name="studentId" element="tns:studentId"/>
+    </message>
+    <message name="getInfoByIdResponse">
+        <part name="student" element="tns:student"/>
+    </message>
+
+    <message name="invalidDataFault">
+        <part name="fault" element="tns:ErrorMsg"/>
+    </message>
+
+    <message name="getInfoByNameRequest">
+        <part name="studentName" element="tns:studentName"/>
+    </message>
+    <message name="getInfoByNameResponse">
+        <part name="student" element="tns:student"/>
+    </message>
+
+    <message name="modifyInfoRequest">
+        <part name="student" element="tns:student"/>
+    </message>
+    <message name="modifyInfoResponse">
+        <part name="isSuccess" element="tns:isSuccess"/>
+    </message>
+
+    <portType name="InfoManagementInterface">
+        <operation name="getInfoById">
+            <input message="info:getInfoByIdRequest"/>
+            <output message="info:getInfoByIdResponse"/>
+            <fault name="fault" message="info:invalidDataFault"/>
+        </operation>
+        <operation name="getInfoByName">
+            <input message="info:getInfoByNameRequest"/>
+            <output message="info:getInfoByNameResponse"/>
+            <fault name="fault" message="info:invalidDataFault"/>
+        </operation>
+        <operation name="modifyInfo">
+            <input message="info:modifyInfoRequest"/>
+            <output message="info:modifyInfoResponse"/>
+            <fault name="fault" message="info:invalidDataFault"/>
+        </operation>
+    </portType>
+
+    <binding name="InfoManagementSOAPBinding"
+             type="info:InfoManagementInterface">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+
+        <operation name="getInfoById">
+            <soap:operation soapAction="http://jw.nju.edu.cn/wsdl/getInfoById"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </fault>
+        </operation>
+        <operation name="getInfoByName">
+            <soap:operation soapAction="http://jw.nju.edu.cn/wsdl/getInfoById"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </fault>
+        </operation>
+        <operation name="modifyInfo">
+            <soap:operation soapAction="http://jw.nju.edu.cn/wsdl/getInfoById"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </fault>
+        </operation>
+    </binding>
+    
+    <service name="InfoManagementService">
+        <port name="InfoPort" binding="info:InfoManagementSOAPBinding">
+        </port>
+    </service>
+</definitions>

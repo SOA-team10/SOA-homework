@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://jw.nju.edu.cn/schema"
+        targetNamespace="http://jw.nju.edu.cn/schema"
+        elementFormDefault="qualified">
+
+    <element name="ErrorMsg" type="tns:错误类型"/>
+
+    <complexType name="错误类型">
+        <sequence>
+            <element name="MissingParameter" type="string"/>
+            <element name="NoResult" type="string"/>
+            <element name="InvalidStudentId" type="string"/>
+        </sequence>
+    </complexType>
+
+</schema>
+
