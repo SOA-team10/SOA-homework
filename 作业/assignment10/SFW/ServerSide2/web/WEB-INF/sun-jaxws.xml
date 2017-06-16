@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
-    
+    <endpoint
+            name="HelloWorldWS"
+            implementation="ass8.VerificationImpl"
+            url-pattern="/verify"/>
+
+    <endpoint
+            name="HelloWorldWS2"
+            implementation="ass8.InfoManageImpl"
+            url-pattern="/info"/>
+    <endpoint
+            name="HelloWorldWS2"
+            implementation="ass7.StuScoreImpl"
+            url-pattern="/score"/>
 </endpoints>

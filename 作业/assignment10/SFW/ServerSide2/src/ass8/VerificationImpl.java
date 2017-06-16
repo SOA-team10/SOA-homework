@@ -16,7 +16,7 @@ import javax.jws.WebService;
 public class VerificationImpl implements VerificationInterface{
     @Override
     public 验证结果类型 verify(验证信息类型 verityInfo) throws InvalidDataFault {
-        Document document = IOHelper.getDocument("src/login.xml");
+        Document document = IOHelper.getDocument("login.xml");
 
         验证结果类型 result = new 验证结果类型();
 

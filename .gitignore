@@ -8,6 +8,7 @@
 
 # 忽略生成的编译文件
 out/
-
+production/
+target/
 # 忽略提交作业的临时文件夹 submit/
 submit/

@@ -35,7 +35,7 @@ public class InfoManageImpl implements InfoManagementInterface{
             throw fault;
         }
 
-        Document document = IOHelper.getDocument("src/student.xml");
+        Document document = IOHelper.getDocument("student.xml");
 
         NodeList nodes = document.getDocumentElement().getElementsByTagName("student");
         学生信息类型 student = null;
@@ -120,7 +120,7 @@ public class InfoManageImpl implements InfoManagementInterface{
             throw fault;
         }
         学生列表类型 studentList = new 学生列表类型();
-        Document document = IOHelper.getDocument("src/student.xml");
+        Document document = IOHelper.getDocument("student.xml");
 
         NodeList nodes = document.getDocumentElement().getElementsByTagName("student");
 
@@ -167,7 +167,7 @@ public class InfoManageImpl implements InfoManagementInterface{
 
     @Override
     public String deleteInfo(String studentId) throws InvalidDataFault {
-        Document document = IOHelper.getDocument("src/student.xml");
+        Document document = IOHelper.getDocument("student.xml");
 
         NodeList nodes = document.getDocumentElement().getElementsByTagName("student");
         boolean isFound = false;
@@ -188,12 +188,12 @@ public class InfoManageImpl implements InfoManagementInterface{
             InvalidDataFault fault = new InvalidDataFault("没有对应ID的用户存在",faultType);
             throw fault;
         }
-        return IOHelper.writeXML(document, "src/student.xml");
+        return IOHelper.writeXML(document, "student.xml");
     }
 
     @Override
     public String addInfo(学生信息类型 student) throws InvalidDataFault {
-        Document document = IOHelper.getDocument("src/student.xml");
+        Document document = IOHelper.getDocument("student.xml");
 
         boolean existed = false;
         NodeList nodes = document.getElementsByTagName("student");
@@ -293,7 +293,7 @@ public class InfoManageImpl implements InfoManagementInterface{
         document.getDocumentElement().appendChild(studentEle);
 
 
-        return IOHelper.writeXML(document,"src/student.xml");
+        return IOHelper.writeXML(document,"student.xml");
     }
 
 

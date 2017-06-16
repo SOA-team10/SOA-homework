@@ -16,7 +16,8 @@ public class HelloWorld {
   public static void main(String[] argv) {
 //    ScoreService service = new ScoreService();
     StuScoreInterface score = new StuScoreImpl();
-    String address = "http://localhost:8888/ns";
+    String address = "http://0.0.0.0:8888/ns";
     Endpoint.publish(address, score);
+    System.out.println("service published");
   }
 }
