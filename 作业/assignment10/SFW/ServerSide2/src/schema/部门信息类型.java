@@ -1,11 +1,7 @@
 
 package schema;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
@@ -43,7 +39,7 @@ public class 部门信息类型 {
     @XmlElement(required = true)
     protected 地址类型 depAddress;
     @XmlAttribute(name = "depId")
-    protected Integer depId;
+    protected String depId;
 
     /**
      * 获取depName属性的值。
@@ -125,7 +121,7 @@ public class 部门信息类型 {
      *     {@link Integer }
      *     
      */
-    public Integer getDepId() {
+    public String getDepId() {
         return depId;
     }
 
@@ -137,7 +133,7 @@ public class 部门信息类型 {
      *     {@link Integer }
      *     
      */
-    public void setDepId(Integer value) {
+    public void setDepId(String value) {
         this.depId = value;
     }
 

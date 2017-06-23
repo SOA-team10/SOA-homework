@@ -18,11 +18,13 @@
             <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/Student.xsd"/>
             <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/StudentList.xsd"/>
             <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/ErrorMsg.xsd"/>
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/InfoManage.xsd"/>
             <!--<import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/"-->
 
             <xs:element name="studentName" type="string"/>
             <xs:element name="studentId" type="tns:学号类型"/>
             <xs:element name="isSuccess" type="string"/>
+            <xs:element name="modifyInfo" type="tns:修改学生信息类型"/>
 
 
         </xs:schema>
@@ -61,7 +63,7 @@
     </message>
 
     <message name="modifyInfoRequest">
-        <part name="student" element="tns:student"/>
+        <part name="student" element="tns:modifyInfo"/>
     </message>
     <message name="modifyInfoResponse">
         <part name="isSuccess" element="tns:isSuccess"/>

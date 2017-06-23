@@ -1,7 +1,9 @@
 
 package ass8;
 
-import schema.*;
+import schema.修改学生信息类型;
+import schema.学生信息类型;
+import schema.学生列表类型;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -17,7 +19,7 @@ import javax.xml.bind.annotation.XmlSeeAlso;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "InfoManagementInterface", targetNamespace = "http://jw.nju.edu.cn/ass7")
+@WebService(name = "InfoManagementInterface", targetNamespace = "http://jw.nju.edu.cn/wsdl")
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
     ObjectFactory.class
@@ -29,10 +31,10 @@ public interface InfoManagementInterface {
      *
      * @param studentId
      * @return
-     *     returns wsdl2.学生信息类型
+     *     returns test.学生信息类型
      * @throws InvalidDataFault
      */
-    @WebMethod(action = "http://jw.nju.edu.cn/ass7/getInfoById")
+    @WebMethod(action = "http://jw.nju.edu.cn/wsdl/getInfoById")
     @WebResult(name = "student", targetNamespace = "http://jw.nju.edu.cn/schema", partName = "student")
     public 学生信息类型 getInfoById(
             @WebParam(name = "studentId", targetNamespace = "http://jw.nju.edu.cn/schema", partName = "studentId")
@@ -44,10 +46,10 @@ public interface InfoManagementInterface {
      *
      * @param studentName
      * @return
-     *     returns wsdl2.学生列表类型
+     *     returns test.学生列表类型
      * @throws InvalidDataFault
      */
-    @WebMethod(action = "http://jw.nju.edu.cn/ass7/getInfoByName")
+    @WebMethod(action = "http://jw.nju.edu.cn/wsdl/getInfoByName")
     @WebResult(name = "studentList", targetNamespace = "http://jw.nju.edu.cn/schema", partName = "students")
     public 学生列表类型 getInfoByName(
             @WebParam(name = "studentName", targetNamespace = "http://jw.nju.edu.cn/schema", partName = "studentName")
@@ -62,11 +64,11 @@ public interface InfoManagementInterface {
      *     returns java.lang.String
      * @throws InvalidDataFault
      */
-    @WebMethod(action = "http://jw.nju.edu.cn/ass7/modifyInfo")
+    @WebMethod(action = "http://jw.nju.edu.cn/wsdl/modifyInfo")
     @WebResult(name = "isSuccess", targetNamespace = "http://jw.nju.edu.cn/schema", partName = "isSuccess")
     public String modifyInfo(
-            @WebParam(name = "student", targetNamespace = "http://jw.nju.edu.cn/schema", partName = "student")
-                    学生信息类型 student)
+            @WebParam(name = "modifyInfo", targetNamespace = "http://jw.nju.edu.cn/schema", partName = "student")
+                    修改学生信息类型 student)
         throws InvalidDataFault
     ;
 
@@ -77,7 +79,7 @@ public interface InfoManagementInterface {
      *     returns java.lang.String
      * @throws InvalidDataFault
      */
-    @WebMethod(action = "http://jw.nju.edu.cn/ass7/addInfo")
+    @WebMethod(action = "http://jw.nju.edu.cn/wsdl/addInfo")
     @WebResult(name = "isSuccess", targetNamespace = "http://jw.nju.edu.cn/schema", partName = "isSuccess")
     public String addInfo(
             @WebParam(name = "student", targetNamespace = "http://jw.nju.edu.cn/schema", partName = "student")
@@ -92,7 +94,7 @@ public interface InfoManagementInterface {
      *     returns java.lang.String
      * @throws InvalidDataFault
      */
-    @WebMethod(action = "http://jw.nju.edu.cn/ass7/deleteInfo")
+    @WebMethod(action = "http://jw.nju.edu.cn/wsdl/deleteInfo")
     @WebResult(name = "isSuccess", targetNamespace = "http://jw.nju.edu.cn/schema", partName = "isSuccess")
     public String deleteInfo(
             @WebParam(name = "studentId", targetNamespace = "http://jw.nju.edu.cn/schema", partName = "studentId")

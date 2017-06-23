@@ -8,7 +8,9 @@ import javax.jws.WebService;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.text.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -18,7 +20,8 @@ import java.util.List;
  * Created by 张文玘 on 2017/6/15.
  */
 @WebService
-public class InfoManageImpl implements InfoManagementInterface{
+public class InfoManageImpl implements InfoManagementInterface {
+    private String SPACE = "?";
     @Override
     public 学生信息类型 getInfoById(String studentId) throws InvalidDataFault {
         InvalidDataFault fault = null;
@@ -165,6 +168,7 @@ public class InfoManageImpl implements InfoManagementInterface{
         }
     }
 
+
     @Override
     public String deleteInfo(String studentId) throws InvalidDataFault {
         Document document = IOHelper.getDocument("src/student.xml");
@@ -262,6 +266,110 @@ public class InfoManageImpl implements InfoManagementInterface{
         List<课程信息类型> courseList = student.getCourseList().getCourse();
         for(int i = 0; i < courseList.size(); i++){
             课程信息类型 course = courseList.get(i);
+            addScoresToNode(document, courseListEle, course);
+
+        }
+
+        studentEle.appendChild(personInfoEle);
+        studentEle.appendChild(checkInYearEle);
+        studentEle.appendChild(courseListEle);
+
+        document.getDocumentElement().appendChild(studentEle);
+
+
+        return IOHelper.writeXML(document,"src/student.xml");
+    }
+
+
+    @Override
+    public String modifyInfo(修改学生信息类型 student) throws InvalidDataFault {
+        //没有对数据结构进行验证，例如部门类型，没有验证其完整性，如果你觉得需要的话可以加上
+        //因为我觉得这个东西在前面的各种服务里也没有验证，所以没写
+
+        if(student.getStudentId()==null){
+            错误类型 faultType = new 错误类型();
+            faultType.setInvalidStudentId("null");
+            throw new InvalidDataFault("学生id不能为空！",faultType);
+        }else if(student.getStudentId().trim().length()!=9) {
+            错误类型 faultType = new 错误类型();
+            faultType.setInvalidStudentId(student.getStudentId());
+            throw new InvalidDataFault("学生id格式错误！",faultType);
+        }
+
+        Document document = IOHelper.getDocument("src/student.xml");
+
+        NodeList nodes = document.getElementsByTagName("student");
+        for(int i = 0; i < nodes.getLength(); i++){
+            Node n = nodes.item(i);
+            String id = n.getAttributes().getNamedItem("studentId").getTextContent();
+            if(id.equals(student.getStudentId())){
+                //找到对应学生
+                //学生基本信息
+                if(student.getName()!=null){
+                    Node n1 = getNodeByTagName(n,"name");
+                    n1.setTextContent(student.getName());
+                }
+                if(student.getNative()!=null){
+                    getNodeByTagName(n,"native").setTextContent(student.getNative());
+                }
+                if(student.getBirthday()!=null){
+                    getNodeByTagName(n,"birthday").setTextContent(date2String(student.getBirthday(),new SimpleDateFormat("yyyy-MM-dd")));
+                }
+                if(student.getSex()!=null){
+                    getNodeByTagName(n,"sex").setTextContent(student.getSex().value());
+                }
+                if(student.getIdCard()!=null){
+                    getNodeByTagName(n,"personInfo").getAttributes().getNamedItem("idCard").setTextContent(student.getIdCard());
+                }
+                if(student.getPhone()!=null){
+                    getNodeByTagName(n,"phone").setTextContent(student.getPhone());
+                }
+                if(student.getDepartment()!=null){
+                    Node depNode = getNodeByTagName(n, "department");
+                    部门信息类型 department = student.getDepartment();
+                    depNode.getAttributes().getNamedItem("depId").setTextContent(department.getDepId());
+                    getNodeByTagName(depNode, "depType").setTextContent(department.getDepType().value());
+                    getNodeByTagName(depNode, "depName").setTextContent(department.getDepName());
+
+                    地址类型 address = department.getDepAddress();
+                    getNodeByTagName(depNode, "province").setTextContent(address.getProvince());
+                    getNodeByTagName(depNode, "city").setTextContent(address.getCity());
+                    getNodeByTagName(depNode, "district").setTextContent(address.getDistrict());
+                    getNodeByTagName(depNode, "street").setTextContent(address.getDistrict());
+                    getNodeByTagName(depNode, "number").setTextContent(address.getNumber());
+                }
+
+                if(student.getCourse()!=null){
+                    Node coursesNode = getNodeByTagName(n, "courseList");
+                    List<课程信息类型> courseList = student.getCourse();
+                    for(int j = 0; j < courseList.size(); j++){
+                        课程信息类型 course = courseList.get(j);
+                        String courseId = course.getCourseId();
+                        if(courseId==null){
+                            错误类型 faultType = new 错误类型();
+                            faultType.setMissingParameter("courseId");
+                            throw new InvalidDataFault("请填写course中的id属性！",faultType);
+                        }
+                        //查找文档中对应的course节点
+                        Node courseNode = getCourseById(courseId, coursesNode);
+                        if(courseNode!=null){
+                            coursesNode.removeChild(courseNode);
+                            addScoresToNode(document, coursesNode, course);
+                        }else{
+                            addScoresToNode(document, coursesNode, course);
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        return IOHelper.writeXML(document,"src/student.xml");
+
+    }
+
+    private void addScoresToNode(Document document, Node node, 课程信息类型 course){
             Element courseEle = document.createElement("course");
             courseEle.setAttribute("courseId",course.getCourseId());
             courseEle.setAttribute("courseName",course.getCourseName());
@@ -281,37 +389,15 @@ public class InfoManageImpl implements InfoManagementInterface{
 
                 scoreListEle.appendChild(scoreEle);
             }
+            courseEle.appendChild(teacherEle);
             courseEle.appendChild(scoreListEle);
-            courseListEle.appendChild(courseEle);
-
-        }
-
-        studentEle.appendChild(personInfoEle);
-        studentEle.appendChild(checkInYearEle);
-        studentEle.appendChild(courseListEle);
-
-        document.getDocumentElement().appendChild(studentEle);
+            node.appendChild(courseEle);
 
 
-        return IOHelper.writeXML(document,"src/student.xml");
+
+
     }
 
-
-    @Override
-    public String modifyInfo(学生信息类型 student) throws InvalidDataFault {
-        //可以改进
-        try {
-            deleteInfo(student.getStudentId());
-        }catch (InvalidDataFault e){
-            throw e;
-        }
-        try {
-            addInfo(student);
-        }catch (InvalidDataFault e){
-            throw e;
-        }
-        return "操作成功";
-    }
 
     private String date2String(XMLGregorianCalendar date, DateFormat format){
         Date d = date.toGregorianCalendar().getTime();
@@ -340,6 +426,140 @@ public class InfoManageImpl implements InfoManagementInterface{
 
 
     }
+    private Node getNodeByTagName(Node root, String name){
+
+        if(root.getNodeName().equals(name)){
+            System.out.println("-------------------"+name);
+            return root;
+        }else{
+            if(root.hasChildNodes()){
+                NodeList nodes = root.getChildNodes();
+                for(int i = 0; i < nodes.getLength(); i++){
+                    Node n = nodes.item(i);
+                    System.out.print(n.getNodeName());
+                    Node n1 = getNodeByTagName(n,name);
+                    if(n1!=null){
+                        return n1;
+                    }
+                }
+                return null;
+            }else{
+                return null;
+            }
+        }
+
+    }
+//    /*
+//    修改个人信息类型
+//     */
+//    private void modifyPersonInfo(Node root, 个人基本信息类型 personInfo) throws InvalidDataFault{
+//        NodeList nodes = root.getChildNodes();
+//        for(int i = 0; i < nodes.getLength(); i++){
+//            Node n = nodes.item(i);
+//            Node nameNode = getNodeByTagName(n,"name");
+//            if(personInfo.getName()!=null && !personInfo.getName().trim().equals(SPACE)){
+//                nameNode.setTextContent(personInfo.getName());
+//            }
+//            Node nativeNode = getNodeByTagName(n,"native");
+//            if(personInfo.getNative()!=null && !personInfo.getName().trim().equals(SPACE)){
+//                nativeNode.setTextContent(personInfo.getNative());
+//            }
+//            Node sexNode = getNodeByTagName(n, "sex");
+//            if(personInfo.getSex()!=null){
+//                sexNode.setTextContent(personInfo.getSex().value());
+//            }
+//            Node phoneNode = getNodeByTagName(n, "phone");
+//            if(phoneNode!=null && !personInfo.getPhone().trim().equals(SPACE)){
+//                phoneNode.setTextContent(personInfo.getPhone());
+//            }
+//            Node birthdayNode = getNodeByTagName(n, "birthday");
+//            if(birthdayNode!=null){
+//                birthdayNode.setTextContent(date2String(personInfo.getBirthday(),new SimpleDateFormat("yyyy-MM-dd")));
+//            }
+//            Node departmentNode = getNodeByTagName(n, "department");
+//            部门信息类型 department = personInfo.getDepartment();
+//
+//            Node depIdNode = departmentNode.getAttributes().getNamedItem("depId");
+//            if(department.getDepId()!=null && !department.getDepId().equals(SPACE)){
+//                depIdNode.setTextContent(department.getDepId());
+//            }
+//            Node depNameNode = getNodeByTagName(departmentNode, "depName");
+//            if(department.getDepName()!=null && !department.getDepName().equals(SPACE)){
+//                depNameNode.setTextContent(department.getDepName());
+//            }
+//            Node depTypeNode = getNodeByTagName(departmentNode, "depType");
+//            if(department.getDepType()!=null){
+//                depTypeNode.setTextContent(department.getDepType().value());
+//            }
+//            Node depAddressNode = getNodeByTagName(departmentNode, "depAddress");
+//            地址类型 address = department.getDepAddress();
+//            if(address!=null){
+//                Node provinceNode = getNodeByTagName(depAddressNode, "province");
+//                if(address.getProvince()!=null && !address.getProvince().equals(SPACE)){
+//                    provinceNode.setTextContent(address.getProvince());
+//                }
+//                Node cityNode = getNodeByTagName(depAddressNode,"city");
+//                if(address.getCity()!=null && !address.getCity().equals(SPACE)){
+//                    cityNode.setTextContent(address.getCity());
+//                }
+//                Node districtNode = getNodeByTagName(depAddressNode,"district");
+//                if(address.getDistrict()!=null && !address.getDistrict().equals(SPACE)){
+//                    districtNode.setTextContent(address.getDistrict());
+//                }
+//                Node streetNode = getNodeByTagName(depAddressNode,"street");
+//                if(address.getStreet()!=null && !address.getStreet().equals(SPACE)){
+//                    streetNode.setTextContent(address.getStreet());
+//                }
+//                Node numberNode = getNodeByTagName(depAddressNode, "number");
+//                if(address.getNumber()!=null && !address.getNumber().equals(SPACE)){
+//                    numberNode.setTextContent(address.getNumber());
+//                }
+//            }
+//
+//
+//        }
+//    }
+    /*
+    修改课程列表类型
+     */
+//    private void modifyCourseList(Node node, 课程列表类型 courseList) throws InvalidDataFault{
+//        NodeList nodes = node.getChildNodes();
+//        List<课程信息类型> courses = courseList.getCourse();
+//        for(int i = 0; i < courses.size(); i++){
+//            课程信息类型 course = courses.get(i);
+//            if(course.getCourseId()==null || course.getCourseId().equals(SPACE)){
+//                错误类型 faultType = new 错误类型();
+//                faultType.setMissingParameter("courseId");
+//                throw new InvalidDataFault("要修改的课程缺失id属性",faultType);
+//            }
+//            Node foundNode = getCourseById(course.getCourseId(), node);
+//            if(foundNode!=null){
+//
+//            }
+//
+//        }
+//
+//    }
+
+    /*
+    获取数据文件中对应id的course节点
+     */
+    private Node getCourseById(String id, Node node){
+        NodeList nodes = node.getChildNodes();
+        System.out.println(node.getNodeName());
+        for(int i = 0; i < nodes.getLength(); i++){
+            Node n = nodes.item(i);
+            if(n.getNodeType()!=Node.ELEMENT_NODE){
+                continue;
+            }
+            System.out.println(n.getNodeName());
+            String courseId = n.getAttributes().getNamedItem("courseId").getTextContent();
+            if(id.equals(courseId)){
+                return n;
+            }
+        }
+        return null;
+    }
 
     /*
     转换部门类型（因为上个方法的嵌套层数太多了。。。
@@ -347,7 +567,7 @@ public class InfoManageImpl implements InfoManagementInterface{
     private 部门信息类型 xml2Department(Node node){
         部门信息类型 department = new 部门信息类型();
         String depId = node.getAttributes().getNamedItem("depId").getTextContent();
-        department.setDepId(Integer.parseInt(depId));
+        department.setDepId(depId);
         NodeList nodeList = node.getChildNodes();
         for(int i = 0; i < nodeList.getLength(); i++){
             Node temp = nodeList.item(i);
