@@ -17,7 +17,7 @@ public class StuScoreImpl implements StuScoreInterface {
 
     @Override
     public 单个学生成绩列表类型 searchScore(String studentId) throws SearchScoreFault {
-        Document document = IOHelper.getDocument("src/scores.xml");
+        Document document = IOHelper.getDocument("scores.xml");
         ArrayList<单科成绩类型> list = new ArrayList<>();
 
         if(studentId==null){
@@ -92,7 +92,7 @@ public class StuScoreImpl implements StuScoreInterface {
     @Override
     public String addScore(添加或修改成绩数据类型 student) throws AddScoreFault {
 
-        Document document = IOHelper.getDocument("src/scores.xml");
+        Document document = IOHelper.getDocument("scores.xml");
 //        System.out.println(student.get学号());
 //        System.out.println(student.get课程编号());
 //         System.out.println(student.get得分性质().value());
@@ -169,12 +169,12 @@ public class StuScoreImpl implements StuScoreInterface {
         score.appendChild(studentScore);
         courseScoreEle.appendChild(score);
 
-        return IOHelper.writeXML(document,"src/scores.xml");
+        return IOHelper.writeXML(document,"scores.xml");
     }
 
     @Override
     public String deleteScore(删除成绩数据类型 student) throws DeleteScoreFault {
-        Document document = IOHelper.getDocument("src/scores.xml");
+        Document document = IOHelper.getDocument("scores.xml");
 
         NodeList nodes = document.getElementsByTagName("tns:courseScore");
 
@@ -220,7 +220,7 @@ public class StuScoreImpl implements StuScoreInterface {
             throw new DeleteScoreFault("没有找到对应项成绩",faultType);
         }
 
-        return IOHelper.writeXML(document,"src/scores.xml");
+        return IOHelper.writeXML(document,"scores.xml");
     }
 
     @Override
