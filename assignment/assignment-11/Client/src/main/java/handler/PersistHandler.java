@@ -17,6 +17,8 @@ import java.util.Set;
  */
 public class PersistHandler implements SOAPHandler<SOAPMessageContext>{
     public static String FILE_NAME = System.getProperty("user.dir")+"/src/main/resource/log.txt";
+
+
     public Set<QName> getHeaders() {
         return null;
     }

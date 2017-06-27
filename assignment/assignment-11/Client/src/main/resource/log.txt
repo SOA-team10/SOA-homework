@@ -1,0 +1,17 @@
+
+=============Request=============
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><S:Header><email>141250019@smail.nju.edu.cn</email><pwd>141250019</pwd></S:Header><S:Body><addScore xmlns="http://jw.nju.edu.cn/schema"><课程成绩列表><课程成绩 成绩性质="总评成绩" 课程编号="0"><成绩><学号>141250019</学号><得分>100</得分></成绩></课程成绩></课程成绩列表></addScore></S:Body></S:Envelope>
+=============Response============
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><soap:Body><modifyScore xmlns="http://jw.nju.edu.cn/schema"><课程成绩列表><课程成绩 成绩性质="总评成绩" 课程编号="0"><成绩><学号>141250019</学号><得分>100</得分></成绩></课程成绩></课程成绩列表></modifyScore></soap:Body></soap:Envelope>
+=============Request=============
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><S:Header><email>141250019@smail.nju.edu.cn</email><pwd>141250019</pwd></S:Header><S:Body><addScore xmlns="http://jw.nju.edu.cn/schema"><课程成绩列表><课程成绩 成绩性质="总评成绩" 课程编号="0"><成绩><学号>141250019</学号><得分>100</得分></成绩></课程成绩></课程成绩列表></addScore></S:Body></S:Envelope>
+=============Response============
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><soap:Body><modifyScore xmlns="http://jw.nju.edu.cn/schema"><课程成绩列表><课程成绩 成绩性质="总评成绩" 课程编号="0"><成绩><学号>141250019</学号><得分>100</得分></成绩></课程成绩></课程成绩列表></modifyScore></soap:Body></soap:Envelope>
+=============Request=============
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><S:Header><email>141250019@smail.nju.edu.cn</email><pwd>141250019</pwd></S:Header><S:Body><addScore xmlns="http://jw.nju.edu.cn/schema"><课程成绩列表><课程成绩 成绩性质="总评成绩" 课程编号="0"><成绩><学号>141250019</学号><得分>100</得分></成绩></课程成绩></课程成绩列表></addScore></S:Body></S:Envelope>
+=============Response============
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><soap:Body><modifyScore xmlns="http://jw.nju.edu.cn/schema"><课程成绩列表><课程成绩 成绩性质="总评成绩" 课程编号="0"><成绩><学号>141250019</学号><得分>100</得分></成绩></课程成绩></课程成绩列表></modifyScore></soap:Body></soap:Envelope>
+=============Request=============
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><S:Header><email>141250019@smail.nju.edu.cn</email><pwd>141250019</pwd></S:Header><S:Body><addScore xmlns="http://jw.nju.edu.cn/schema"><课程成绩列表><课程成绩 成绩性质="总评成绩" 课程编号="0"><成绩><学号>141250019</学号><得分>100</得分></成绩></课程成绩></课程成绩列表></addScore></S:Body></S:Envelope>
+=============Response============
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><soap:Body><modifyScore xmlns="http://jw.nju.edu.cn/schema"><课程成绩列表><课程成绩 成绩性质="总评成绩" 课程编号="0"><成绩><学号>141250019</学号><得分>100</得分></成绩></课程成绩></课程成绩列表></modifyScore></soap:Body></soap:Envelope>

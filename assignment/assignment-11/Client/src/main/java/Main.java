@@ -50,8 +50,7 @@ public class Main {
 
 
         ScoreManage scoreManage = new ScoreManage();
-        List<课程成绩类型> list = scoreManage.testSearch();
-        System.out.println(list.size());
+        scoreManage.testAdd();
 
 //        String relativelyPath=System.getProperty("user.dir");
 //        System.out.println(relativelyPath+"/src/main/resource/log.txt");

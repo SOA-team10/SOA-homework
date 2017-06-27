@@ -33,24 +33,24 @@ import java.util.List;
 public class ScoreServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ScoreControllerService service = new ScoreControllerService();
-        Score port = service.getScorePort();
+
         //handler
         String username = "141250019@smail.nju.edu.cn";
         String password = "141250019";
-
-        WSBindingProvider bp = (WSBindingProvider) port;
 
         //对成绩的操作
         int type = 0; //操作类型，从request中拿
         switch (type){
             case 0://提交成绩
+                service.setHandlerResolver(new VeriHandlerResolver());
+                Score port = service.getScorePort();
+
+                WSBindingProvider bp = (WSBindingProvider) port;
 
                 bp.setOutboundHeaders(
                         Headers.create(new QName("email"),username),
                         Headers.create(new QName("pwd"), password)
                 );
-
-                service.setHandlerResolver(new VeriHandlerResolver());
 
                 String addStr = request.getParameter("scores");//获取提交的成绩
 
@@ -77,17 +77,21 @@ public class ScoreServlet extends HttpServlet {
                 break;
             case 1://删除成绩
 
-                bp.setOutboundHeaders(
+                service.setHandlerResolver(new VeriHandlerResolver());
+
+                Score delPort = service.getScorePort();
+
+                WSBindingProvider delbp = (WSBindingProvider) delPort;
+
+                delbp.setOutboundHeaders(
                         Headers.create(new QName("email"),username),
                         Headers.create(new QName("pwd"), password)
                 );
 
-                service.setHandlerResolver(new VeriHandlerResolver());
-
                 String delStr = request.getParameter("scores");//获取提交的成绩
 
                 try {
-                    port.deleteScore(getHolder(delStr));
+                    delPort.deleteScore(getHolder(delStr));
                     request.setAttribute("error",false);
                 } catch (AuthorityException e) {
                     request.setAttribute("error",true);
@@ -107,17 +111,20 @@ public class ScoreServlet extends HttpServlet {
                 break;
             case 2://修改成绩
 
-                bp.setOutboundHeaders(
+                service.setHandlerResolver(new VeriHandlerResolver());
+
+                Score modPort = service.getScorePort();
+
+                WSBindingProvider modbp = (WSBindingProvider) modPort;
+
+                modbp.setOutboundHeaders(
                         Headers.create(new QName("email"),username),
                         Headers.create(new QName("pwd"), password)
                 );
-
-                service.setHandlerResolver(new VeriHandlerResolver());
-
                 String modStr = request.getParameter("scores");//获取提交的成绩
 
                 try {
-                    port.modifyScore(getHolder(modStr));
+                    modPort.modifyScore(getHolder(modStr));
                     request.setAttribute("error",false);
                 } catch (AuthorityException e) {
                     request.setAttribute("error",true);
@@ -137,17 +144,14 @@ public class ScoreServlet extends HttpServlet {
                 break;
             case 3://查询成绩
 
-                bp.setOutboundHeaders(
-                        Headers.create(new QName("email"),username),
-                        Headers.create(new QName("pwd"), password)
-                );
-
                 service.setHandlerResolver(new DefaultHandlerResolver());
+
+                Score searchPort = service.getScorePort();
 
                 String studentId = "141250019";//从request中拿
                 List<课程成绩类型> list = new ArrayList<课程成绩类型>();
                 try {
-                    list = port.getScore(studentId).get课程成绩();
+                    list = searchPort.getScore(studentId).get课程成绩();
                     request.setAttribute("error",false);
                     request.setAttribute("scores",list);//查询成功，返回课程成绩列表
 

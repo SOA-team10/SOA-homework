@@ -20,25 +20,26 @@ public class ScoreManage {
 
     public void testAdd(){
         ScoreControllerService service = new ScoreControllerService();
-        Score port = service.getScorePort();
+
         //handler
         String username = "141250019@smail.nju.edu.cn";
         String password = "141250019";
 
-        WSBindingProvider bp = (WSBindingProvider) port;
+        service.setHandlerResolver(new VeriHandlerResolver());
 
+        Score port = service.getScorePort();
         //对成绩的操作
-
+        WSBindingProvider bp = (WSBindingProvider) port;
 
                 bp.setOutboundHeaders(
                         Headers.create(new QName("email"),username),
                         Headers.create(new QName("pwd"), password)
                 );
 
-                service.setHandlerResolver(new VeriHandlerResolver());
 
-                String addStr = "[{\"course_id\": 000000,\"score_type\": \"总评成绩\"\"score_detail\": " +
-                        "[{\"value\": 100,\"id\": \"141250033\"}}]";//获取提交的成绩
+
+                String addStr = "[{\"course_id\": 000000,\"score_type\": \"总评成绩\",\"score_detail\": " +
+                        "[{\"value\": 100,\"id\": \"141250019\"}]}]";//获取提交的成绩
 
                 try {
                     port.addScore(getHolder(addStr));
@@ -69,7 +70,7 @@ public class ScoreManage {
 
     public List<课程成绩类型> testSearch(){
         ScoreControllerService service = new ScoreControllerService();
-        Score port = service.getScorePort();
+
 //        WSBindingProvider bp = (WSBindingProvider) port;
 //        String username = "141250019@smail.nju.edu.cn";
 //        String password = "141250019";
@@ -78,7 +79,9 @@ public class ScoreManage {
 //                Headers.create(new QName("pwd"), password)
 //        );
 //
-//        service.setHandlerResolver(new DefaultHandlerResolver());
+        service.setHandlerResolver(new DefaultHandlerResolver());
+
+        Score port = service.getScorePort();
 
         String studentId = "141250019";//从request中拿
         List<课程成绩类型> list = new ArrayList<课程成绩类型>();

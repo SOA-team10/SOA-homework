@@ -1,5 +1,6 @@
 package servlets;
 
+import handlerResolver.DefaultHandlerResolver;
 import services.info.*;
 
 import javax.servlet.ServletException;
@@ -13,7 +14,10 @@ import java.io.IOException;
  */
 public class StudentServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        StudentPort studentPort = new StudentControllerService().getStudentPortPort();
+        StudentControllerService service = new StudentControllerService();
+        service.setHandlerResolver(new DefaultHandlerResolver());
+
+        StudentPort studentPort = service.getStudentPortPort();
 
         String studentId = "141250019";
         String des = request.getParameter("个人简介");//获取修改后的个人简介

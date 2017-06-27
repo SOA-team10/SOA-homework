@@ -11,6 +11,8 @@ import javax.xml.soap.SOAPMessage;
 import javax.xml.ws.handler.MessageContext;
 import javax.xml.ws.handler.soap.SOAPHandler;
 import javax.xml.ws.handler.soap.SOAPMessageContext;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.rmi.RemoteException;
@@ -43,13 +45,16 @@ public class VerifyHandler implements SOAPHandler<SOAPMessageContext>{
             账号认证类型 account = new 账号认证类型();
             account.set邮箱(email);
             account.set密码(password);
-            验证类型 veriResult = auth.verify(account);
-            if(veriResult.get权限().equals(权限级别.本科生) || veriResult.get权限().equals(权限级别.研究生)){
-//                FileWriter writer = new FileWriter(PersistHandler.FILE_NAME,true);
-//                writer.append("权限级别不够");
-//                writer.close();
 
-                return true;
+            验证类型 veriResult = auth.verify(account);
+
+            if(veriResult.get权限().equals(权限级别.本科生) || veriResult.get权限().equals(权限级别.研究生)){
+                File file = new File(PersistHandler.FILE_NAME);
+                FileOutputStream stream = new FileOutputStream(file,true);
+                String err = "你的权限不能进行此项操作";
+                stream.write(err.getBytes());
+
+                return false;
             }
 
         } catch (SOAPException e) {
