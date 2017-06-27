@@ -1,8 +1,6 @@
 
 package services.info;
 
-import schema.学生类型;
-
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -31,7 +29,7 @@ public interface StudentPort {
      * 
      * @param parameters
      * @return
-     *     returns schema.学生类型
+     *     returns services.info.学生类型
      * @throws AuthorityException
      * @throws IdNotFoundException
      */
@@ -51,7 +49,7 @@ public interface StudentPort {
      * 
      * @param parameters
      * @return
-     *     returns schema.学生类型
+     *     returns services.info.学生类型
      * @throws IdNotFoundException
      */
     @WebMethod(action = "student/addInfo")
@@ -69,7 +67,7 @@ public interface StudentPort {
      * 
      * @param parameters
      * @return
-     *     returns schema.学生类型
+     *     returns services.info.学生类型
      * @throws IdNotFoundException
      */
     @WebMethod(action = "student/getInfoById")
@@ -87,7 +85,7 @@ public interface StudentPort {
      * 
      * @param parameters
      * @return
-     *     returns schema.学生类型
+     *     returns services.info.学生类型
      * @throws AuthorityException
      * @throws ScoreTypeException
      * @throws IdNotFoundException

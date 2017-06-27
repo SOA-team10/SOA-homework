@@ -1,15 +1,22 @@
 package servlets;
 
-import schema.课程成绩类型;
-import services.score.IdNotFoundException;
-import services.score.Score;
-import services.score.ScoreControllerService;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
+import services.score.成绩性质类型;
+import services.score.成绩类型;
+import services.score.课程成绩列表类型;
+import services.score.课程成绩类型;
+import services.score.*;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.Holder;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,19 +33,96 @@ public class ScoreServlet extends HttpServlet {
         switch (type){
             case 0://提交成绩
 
+                String addStr = request.getParameter("scores");//获取提交的成绩
+
+                try {
+                    service.addScore(getHolder(addStr));
+                    request.setAttribute("error",false);
+                } catch (AuthorityException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errId",e.getFaultInfo().getId());
+                    request.setAttribute("errReason",e.getFaultInfo().getReason());
+                } catch (IdNotFoundException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errId",e.getFaultInfo().getNotFoundId());
+                    request.setAttribute("errReason",e.getFaultInfo().getNotFoundReason());
+                } catch (ScoreModifyException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
+                    request.setAttribute("errName",e.getFaultInfo().getParamName());
+                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                } catch (ScoreTypeException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
+                    request.setAttribute("errName",e.getFaultInfo().getParamName());
+                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                }
+
+
                 break;
             case 1://删除成绩
+                String delStr = request.getParameter("scores");//获取提交的成绩
+
+                try {
+                    service.deleteScore(getHolder(delStr));
+                    request.setAttribute("error",false);
+                } catch (AuthorityException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errId",e.getFaultInfo().getId());
+                    request.setAttribute("errReason",e.getFaultInfo().getReason());
+                } catch (IdNotFoundException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errId",e.getFaultInfo().getNotFoundId());
+                    request.setAttribute("errReason",e.getFaultInfo().getNotFoundReason());
+                } catch (ScoreModifyException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
+                    request.setAttribute("errName",e.getFaultInfo().getParamName());
+                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                } catch (ScoreTypeException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
+                    request.setAttribute("errName",e.getFaultInfo().getParamName());
+                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                }
                 break;
             case 2://修改成绩
+
+                String modStr = request.getParameter("scores");//获取提交的成绩
+
+                try {
+                    service.modifyScore(getHolder(modStr));
+                    request.setAttribute("error",false);
+                } catch (AuthorityException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errId",e.getFaultInfo().getId());
+                    request.setAttribute("errReason",e.getFaultInfo().getReason());
+                } catch (IdNotFoundException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errId",e.getFaultInfo().getNotFoundId());
+                    request.setAttribute("errReason",e.getFaultInfo().getNotFoundReason());
+                } catch (ScoreModifyException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
+                    request.setAttribute("errName",e.getFaultInfo().getParamName());
+                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                } catch (ScoreTypeException e) {
+                    request.setAttribute("error",true);
+                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
+                    request.setAttribute("errName",e.getFaultInfo().getParamName());
+                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                }
                 break;
             case 3://查询成绩
                 String studentId = "141250019";//从request中拿
                 List<课程成绩类型> list = new ArrayList<课程成绩类型>();
                 try {
                     list = service.getScore(studentId).get课程成绩();
+                    request.setAttribute("error",false);
                     request.setAttribute("scores",list);//查询成功，返回课程成绩列表
 
                 } catch (IdNotFoundException e) {
+                    request.setAttribute("error",true);
                     String errId = e.getFaultInfo().getNotFoundId();
                     String errRsn = e.getFaultInfo().getNotFoundReason().value();
                     request.setAttribute("errId",errId);//查询没有结果，返回学生id和错误原因
@@ -55,5 +139,38 @@ public class ScoreServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/jsp/score.jsp").forward(request,response);
+    }
+
+    private Holder<课程成绩列表类型> getHolder(String jsonStr){
+
+        课程成绩列表类型 result = new 课程成绩列表类型();
+        List<课程成绩类型> csList = result.get课程成绩();
+
+        JSONArray array = JSONArray.fromObject(jsonStr);//获取课程成绩列表
+        for(int i = 0; i < array.size(); i++){
+            JSONObject object = array.getJSONObject(i);
+
+            课程成绩类型 course = new 课程成绩类型();
+            course.set成绩性质(成绩性质类型.fromValue(object.getString("score_type")));
+            course.set课程编号(object.getString("course_id"));
+            List<成绩类型> scoreList = course.get成绩();
+
+            JSONArray jsonScore = object.getJSONArray("score_detail");
+            for(int j = 0; j < jsonScore.size(); j++){
+                JSONObject scoreObject = jsonScore.getJSONObject(i);
+
+                成绩类型 score = new 成绩类型();
+                score.set学号(scoreObject.getString("id"));
+                score.set得分(scoreObject.getInt("value"));
+
+
+
+                scoreList.add(score);
+            }
+
+            csList.add(course);
+        }
+        Holder<课程成绩列表类型> holder = new Holder<课程成绩列表类型>(result);
+        return holder;
     }
 }

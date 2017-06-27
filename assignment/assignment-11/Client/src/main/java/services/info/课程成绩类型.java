@@ -1,5 +1,5 @@
 
-package schema;
+package services.info;
 
 import java.util.ArrayList;
 import java.util.List;

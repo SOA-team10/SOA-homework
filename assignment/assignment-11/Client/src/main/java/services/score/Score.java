@@ -1,8 +1,6 @@
 
 package services.score;
 
-import schema.课程成绩列表类型;
-
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -32,10 +30,10 @@ public interface Score {
     /**
      * 
      * @param parameters
-     * @throws ScoreTypeException
      * @throws ScoreModifyException
      * @throws IdNotFoundException
      * @throws AuthorityException
+     * @throws ScoreTypeException
      */
     @WebMethod(action = "score/deleteScore")
     @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
@@ -54,10 +52,10 @@ public interface Score {
     /**
      * 
      * @param 课程成绩列表
-     * @throws ScoreTypeException
      * @throws ScoreModifyException
      * @throws IdNotFoundException
      * @throws AuthorityException
+     * @throws ScoreTypeException
      */
     @WebMethod(action = "score/addScore")
     @RequestWrapper(localName = "addScore", targetNamespace = "http://jw.nju.edu.cn/schema", className = "services.score.AddScore")
@@ -78,7 +76,7 @@ public interface Score {
      * 
      * @param parameters
      * @return
-     *     returns schema.课程成绩列表类型
+     *     returns services.score.课程成绩列表类型
      * @throws IdNotFoundException
      */
     @WebMethod(action = "score/getScore")
@@ -96,10 +94,10 @@ public interface Score {
     /**
      * 
      * @param parameters
-     * @throws ScoreTypeException
      * @throws ScoreModifyException
      * @throws IdNotFoundException
      * @throws AuthorityException
+     * @throws ScoreTypeException
      */
     @WebMethod(action = "score/modifyScore")
     @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)

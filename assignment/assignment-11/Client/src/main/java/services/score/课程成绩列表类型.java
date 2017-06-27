@@ -1,5 +1,5 @@
 
-package schema;
+package services.score;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,9 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u8bfe\u7a0b\u6210\u7ee9\u5217\u8868\u7c7b\u578b")
+@XmlType(name = "\u8bfe\u7a0b\u6210\u7ee9\u5217\u8868\u7c7b\u578b", propOrder = {
+    "\u8bfe\u7a0b\u6210\u7ee9"
+})
 public class 课程成绩列表类型 {
 
     protected List<课程成绩类型> 课程成绩;
