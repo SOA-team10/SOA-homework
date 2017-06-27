@@ -40,22 +40,18 @@ public class ScoreServlet extends HttpServlet {
                     request.setAttribute("error",false);
                 } catch (AuthorityException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errId",e.getFaultInfo().getId());
-                    request.setAttribute("errReason",e.getFaultInfo().getReason());
+                    request.setAttribute("errMsg",e.getFaultInfo().getId()+";"+e.getFaultInfo().getReason());
                 } catch (IdNotFoundException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errId",e.getFaultInfo().getNotFoundId());
-                    request.setAttribute("errReason",e.getFaultInfo().getNotFoundReason());
+                    request.setAttribute("errMsg",e.getFaultInfo().getNotFoundId()+";"+e.getFaultInfo().getNotFoundReason());
+
                 } catch (ScoreModifyException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
-                    request.setAttribute("errName",e.getFaultInfo().getParamName());
-                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                    request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
+
                 } catch (ScoreTypeException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
-                    request.setAttribute("errName",e.getFaultInfo().getParamName());
-                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                    request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
                 }
 
 
@@ -68,22 +64,18 @@ public class ScoreServlet extends HttpServlet {
                     request.setAttribute("error",false);
                 } catch (AuthorityException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errId",e.getFaultInfo().getId());
-                    request.setAttribute("errReason",e.getFaultInfo().getReason());
+                    request.setAttribute("errMsg",e.getFaultInfo().getId()+";"+e.getFaultInfo().getReason());
                 } catch (IdNotFoundException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errId",e.getFaultInfo().getNotFoundId());
-                    request.setAttribute("errReason",e.getFaultInfo().getNotFoundReason());
+                    request.setAttribute("errMsg",e.getFaultInfo().getNotFoundId()+";"+e.getFaultInfo().getNotFoundReason());
+
                 } catch (ScoreModifyException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
-                    request.setAttribute("errName",e.getFaultInfo().getParamName());
-                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                    request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
+
                 } catch (ScoreTypeException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
-                    request.setAttribute("errName",e.getFaultInfo().getParamName());
-                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                    request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
                 }
                 break;
             case 2://修改成绩
@@ -95,22 +87,18 @@ public class ScoreServlet extends HttpServlet {
                     request.setAttribute("error",false);
                 } catch (AuthorityException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errId",e.getFaultInfo().getId());
-                    request.setAttribute("errReason",e.getFaultInfo().getReason());
+                    request.setAttribute("errMsg",e.getFaultInfo().getId()+";"+e.getFaultInfo().getReason());
                 } catch (IdNotFoundException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errId",e.getFaultInfo().getNotFoundId());
-                    request.setAttribute("errReason",e.getFaultInfo().getNotFoundReason());
+                    request.setAttribute("errMsg",e.getFaultInfo().getNotFoundId()+";"+e.getFaultInfo().getNotFoundReason());
+
                 } catch (ScoreModifyException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
-                    request.setAttribute("errName",e.getFaultInfo().getParamName());
-                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                    request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
+
                 } catch (ScoreTypeException e) {
                     request.setAttribute("error",true);
-                    request.setAttribute("errIndex",e.getFaultInfo().getParamIndex());
-                    request.setAttribute("errName",e.getFaultInfo().getParamName());
-                    request.setAttribute("errInfo",e.getFaultInfo().getFaultInfo());
+                    request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
                 }
                 break;
             case 3://查询成绩
@@ -123,10 +111,7 @@ public class ScoreServlet extends HttpServlet {
 
                 } catch (IdNotFoundException e) {
                     request.setAttribute("error",true);
-                    String errId = e.getFaultInfo().getNotFoundId();
-                    String errRsn = e.getFaultInfo().getNotFoundReason().value();
-                    request.setAttribute("errId",errId);//查询没有结果，返回学生id和错误原因
-                    request.setAttribute("errReason",errRsn);
+                    request.setAttribute("errorMsg",e.getFaultInfo().getNotFoundId()+";"+e.getFaultInfo().getNotFoundReason());
                 }
                 break;
             default:
