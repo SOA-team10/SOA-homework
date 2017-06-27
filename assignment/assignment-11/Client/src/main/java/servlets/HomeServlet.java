@@ -1,5 +1,6 @@
 package servlets;
 
+import javax.jws.WebService;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,13 +11,13 @@ import java.io.IOException;
 /**
  * Created by duanzhengmou on 6/27/17.
  */
-@WebServlet("/score")
-public class ScoreServlet extends HttpServlet {
+@WebServlet("/")
+public class HomeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/jsp/score.jsp").forward(request,response);
+        request.getRequestDispatcher("/jsp/home.jsp").forward(request, response);
     }
 }
