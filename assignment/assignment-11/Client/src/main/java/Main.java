@@ -1,4 +1,5 @@
 
+
 import schema.成绩类型;
 import schema.课程成绩列表类型;
 import schema.课程成绩类型;
@@ -7,9 +8,11 @@ import services.score.*;
 
 import java.util.List;
 
+
 public class Main {
 
     public static void main(String[] args) {
+
 //        ScoreControllerService service = new ScoreControllerServiceLocator();
 //        Score port = null;
 //
@@ -57,6 +60,7 @@ public class Main {
         } catch (IdNotFoundException e) {
             e.printStackTrace();
         }
+
 
     }
 }

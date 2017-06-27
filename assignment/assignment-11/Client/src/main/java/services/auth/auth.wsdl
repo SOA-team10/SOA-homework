@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://jw.nju.edu.cn/schema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="AuthControllerService" targetNamespace="http://jw.nju.edu.cn/schema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://jw.nju.edu.cn/schema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://jw.nju.edu.cn/schema">
+  <xs:complexType name="账号认证类型">
+    <xs:sequence>
+      <xs:element name="邮箱" type="xs:string"/>
+      <xs:element name="密码" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="验证类型">
+    <xs:sequence>
+      <xs:element name="学号" type="xs:string"/>
+      <xs:element name="权限" type="tns:权限级别"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NotFoundType">
+    <xs:sequence>
+      <xs:element name="NotFoundReason" type="tns:NotFoundReasonType"/>
+      <xs:element name="NotFoundId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuthFaultType">
+    <xs:sequence>
+      <xs:element name="Reason" type="xs:string"/>
+      <xs:element name="Id" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="权限级别">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="老师"/>
+      <xs:enumeration value="研究生"/>
+      <xs:enumeration value="本科生"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NotFoundReasonType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="学号不存在"/>
+      <xs:enumeration value="未找到输入学号的成绩"/>
+      <xs:enumeration value="课程不存在"/>
+      <xs:enumeration value="未找到输入课程的成绩"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="NotFoundFault" nillable="true" type="tns:NotFoundType"/>
+  <xs:element name="AuthFault" nillable="true" type="tns:AuthFaultType"/>
+  <xs:element name="认证请求" nillable="true" type="tns:账号认证类型"/>
+  <xs:element name="验证信息" nillable="true" type="tns:验证类型"/>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IdNotFoundException">
+    <wsdl:part element="tns:NotFoundFault" name="IdNotFoundException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="PswErrorException">
+    <wsdl:part element="tns:AuthFault" name="PswErrorException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="verifyResponse">
+    <wsdl:part element="tns:验证信息" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="verify">
+    <wsdl:part element="tns:认证请求" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MyAuth">
+    <wsdl:operation name="verify">
+      <wsdl:input message="tns:verify" name="verify" wsam:Action="auth/verifyRequest" wsaw:Action="auth/verifyRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:verifyResponse" name="verifyResponse" wsam:Action="auth/verifyResponse" wsaw:Action="auth/verifyResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:PswErrorException" name="PswErrorException" wsam:Action="auth/verify/Fault/PswErrorException" wsaw:Action="auth/verify/Fault/PswErrorException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:IdNotFoundException" name="IdNotFoundException" wsam:Action="auth/verify/Fault/IdNotFoundException" wsaw:Action="auth/verify/Fault/IdNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AuthControllerServiceSoapBinding" type="tns:MyAuth">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="verify">
+      <soap:operation soapAction="auth/verify" style="document"/>
+      <wsdl:input name="verify">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="verifyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="PswErrorException">
+        <soap:fault name="PswErrorException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="IdNotFoundException">
+        <soap:fault name="IdNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthControllerService">
+    <wsdl:port binding="tns:AuthControllerServiceSoapBinding" name="MyAuthPort">
+      <soap:address location="http://106.15.183.234:8080/soap-api/auth"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
