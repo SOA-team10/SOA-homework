@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://jw.nju.edu.cn/schema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="StudentControllerService" targetNamespace="http://jw.nju.edu.cn/schema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.nju.edu.cn/schema" elementFormDefault="qualified" targetNamespace="http://www.nju.edu.cn/schema" version="1.0">
+
+  <xs:element name="个人信息" type="tns:个人信息类型"/>
+
+  <xs:element name="部门" type="tns:部门类型"/>
+
+  <xs:complexType name="个人信息类型">
+    <xs:all>
+      <xs:element name="个人姓名" type="xs:string"/>
+      <xs:element name="所在部门" type="tns:部门类型"/>
+      <xs:element name="家庭住址" type="tns:地址类型"/>
+      <xs:element name="个人简介" type="xs:string"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="部门类型">
+    <xs:all>
+      <xs:element name="部门性质" type="tns:部门性质类型"/>
+      <xs:element name="部门介绍" type="xs:string"/>
+      <xs:element name="部门地址" type="tns:地址类型"/>
+    </xs:all>
+    <xs:attribute name="部门编号" type="xs:string"/>
+    <xs:attribute name="部门名称" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="地址类型">
+    <xs:sequence>
+      <xs:element name="国家" type="xs:string"/>
+      <xs:element name="省直辖市" type="xs:string"/>
+      <xs:element name="区县" type="xs:string"/>
+      <xs:element name="街道" type="xs:string"/>
+      <xs:element name="号" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="部门性质类型">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="系"/>
+      <xs:enumeration value="院"/>
+      <xs:enumeration value="直属"/>
+      <xs:enumeration value="行政"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://jw.nju.edu.cn/schema" xmlns:ns1="http://www.nju.edu.cn/schema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://jw.nju.edu.cn/schema">
+  <xs:import namespace="http://www.nju.edu.cn/schema"/>
+  <xs:complexType name="deleteInfoByIdType">
+    <xs:sequence>
+      <xs:element name="sid" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="学生类型">
+    <xs:sequence>
+      <xs:element name="学号" type="xs:string"/>
+      <xs:element ref="ns1:个人信息"/>
+      <xs:element name="课程成绩列表" type="tns:课程成绩列表类型"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="课程成绩列表类型">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="课程成绩" type="tns:课程成绩类型"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="课程成绩类型">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="成绩" type="tns:成绩类型"/>
+    </xs:sequence>
+    <xs:attribute name="课程编号" type="xs:string"/>
+    <xs:attribute name="成绩性质" type="tns:成绩性质类型"/>
+  </xs:complexType>
+  <xs:complexType name="成绩类型">
+    <xs:sequence>
+      <xs:element name="学号" type="xs:string"/>
+      <xs:element name="得分" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuthFaultType">
+    <xs:sequence>
+      <xs:element name="Reason" type="xs:string"/>
+      <xs:element name="Id" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NotFoundType">
+    <xs:sequence>
+      <xs:element name="NotFoundReason" type="tns:NotFoundReasonType"/>
+      <xs:element name="NotFoundId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addInfoType">
+    <xs:sequence>
+      <xs:element name="studentType" type="tns:学生类型"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getInfoByIdType">
+    <xs:sequence>
+      <xs:element name="sid" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParamFaultType">
+    <xs:all>
+      <xs:element name="ParamIndex" type="xs:integer"/>
+      <xs:element name="FaultInfo" type="xs:string"/>
+    </xs:all>
+    <xs:attribute name="ParamName" type="xs:string"/>
+  </xs:complexType>
+  <xs:simpleType name="成绩性质类型">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="平时成绩"/>
+      <xs:enumeration value="作业成绩"/>
+      <xs:enumeration value="期中成绩"/>
+      <xs:enumeration value="期末成绩"/>
+      <xs:enumeration value="总评成绩"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NotFoundReasonType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="学号不存在"/>
+      <xs:enumeration value="未找到输入学号的成绩"/>
+      <xs:enumeration value="课程不存在"/>
+      <xs:enumeration value="未找到输入课程的成绩"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AuthFault" nillable="true" type="tns:AuthFaultType"/>
+  <xs:element name="NotFoundFault" nillable="true" type="tns:NotFoundType"/>
+  <xs:element name="InvalidParamFault" nillable="true" type="tns:ParamFaultType"/>
+  <xs:element name="deleteInfoByIdElement" nillable="true" type="tns:deleteInfoByIdType"/>
+  <xs:element name="学生" nillable="true" type="tns:学生类型"/>
+  <xs:element name="addInfoElement" nillable="true" type="tns:addInfoType"/>
+  <xs:element name="getInfoByIdElement" nillable="true" type="tns:getInfoByIdType"/>
+  <xs:element name="updateInfoElement" nillable="true" type="tns:学生类型"/>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="deleteInfoById">
+    <wsdl:part element="tns:deleteInfoByIdElement" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AuthorityException">
+    <wsdl:part element="tns:AuthFault" name="AuthorityException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IdNotFoundException">
+    <wsdl:part element="tns:NotFoundFault" name="IdNotFoundException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addInfo">
+    <wsdl:part element="tns:addInfoElement" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getInfoById">
+    <wsdl:part element="tns:getInfoByIdElement" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ScoreModifyException">
+    <wsdl:part element="tns:InvalidParamFault" name="ScoreModifyException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteInfoByIdResponse">
+    <wsdl:part element="tns:学生" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addInfoResponse">
+    <wsdl:part element="tns:学生" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getInfoByIdResponse">
+    <wsdl:part element="tns:学生" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ScoreTypeException">
+    <wsdl:part element="tns:InvalidParamFault" name="ScoreTypeException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateInfo">
+    <wsdl:part element="tns:updateInfoElement" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateInfoResponse">
+    <wsdl:part element="tns:学生" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="StudentPort">
+    <wsdl:operation name="deleteInfoById">
+      <wsdl:input message="tns:deleteInfoById" name="deleteInfoById" wsam:Action="student/deleteInfoByIdRequest" wsaw:Action="student/deleteInfoByIdRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteInfoByIdResponse" name="deleteInfoByIdResponse" wsam:Action="student/deleteInfoByIdResponse" wsaw:Action="student/deleteInfoByIdResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:AuthorityException" name="AuthorityException" wsam:Action="student/deleteInfoById/Fault/AuthorityException" wsaw:Action="student/deleteInfoById/Fault/AuthorityException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:IdNotFoundException" name="IdNotFoundException" wsam:Action="student/deleteInfoById/Fault/IdNotFoundException" wsaw:Action="student/deleteInfoById/Fault/IdNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addInfo">
+      <wsdl:input message="tns:addInfo" name="addInfo" wsam:Action="student/addInfoRequest" wsaw:Action="student/addInfoRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:addInfoResponse" name="addInfoResponse" wsam:Action="student/addInfoResponse" wsaw:Action="student/addInfoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:IdNotFoundException" name="IdNotFoundException" wsam:Action="student/addInfo/Fault/AuthorityException" wsaw:Action="student/addInfo/Fault/AuthorityException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getInfoById">
+      <wsdl:input message="tns:getInfoById" name="getInfoById" wsam:Action="student/getInfoByIdRequest" wsaw:Action="student/getInfoByIdRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getInfoByIdResponse" name="getInfoByIdResponse" wsam:Action="student/getInfoByIdResponse" wsaw:Action="student/getInfoByIdResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:IdNotFoundException" name="IdNotFoundException" wsam:Action="student/getInfoById/Fault/IdNotFoundException" wsaw:Action="student/getInfoById/Fault/IdNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateInfo">
+      <wsdl:input message="tns:updateInfo" name="updateInfo" wsam:Action="student/updateInfoRequest" wsaw:Action="student/updateInfoRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateInfoResponse" name="updateInfoResponse" wsam:Action="student/updateInfoResponse" wsaw:Action="student/updateInfoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:ScoreTypeException" name="ScoreTypeException" wsam:Action="student/updateInfo/Fault/ScoreTypeException" wsaw:Action="student/updateInfo/Fault/ScoreTypeException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:ScoreModifyException" name="ScoreModifyException" wsam:Action="student/updateInfo/Fault/ScoreModifyException" wsaw:Action="student/updateInfo/Fault/ScoreModifyException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:AuthorityException" name="AuthorityException" wsam:Action="student/updateInfo/Fault/AuthorityException" wsaw:Action="student/updateInfo/Fault/AuthorityException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:IdNotFoundException" name="IdNotFoundException" wsam:Action="student/updateInfo/Fault/IdNotFoundException" wsaw:Action="student/updateInfo/Fault/IdNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StudentControllerServiceSoapBinding" type="tns:StudentPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="deleteInfoById">
+      <soap:operation soapAction="student/deleteInfoById" style="document"/>
+      <wsdl:input name="deleteInfoById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteInfoByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthorityException">
+        <soap:fault name="AuthorityException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="IdNotFoundException">
+        <soap:fault name="IdNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addInfo">
+      <soap:operation soapAction="student/addInfo" style="document"/>
+      <wsdl:input name="addInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="IdNotFoundException">
+        <soap:fault name="IdNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getInfoById">
+      <soap:operation soapAction="student/getInfoById" style="document"/>
+      <wsdl:input name="getInfoById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getInfoByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="IdNotFoundException">
+        <soap:fault name="IdNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateInfo">
+      <soap:operation soapAction="student/updateInfo" style="document"/>
+      <wsdl:input name="updateInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ScoreTypeException">
+        <soap:fault name="ScoreTypeException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ScoreModifyException">
+        <soap:fault name="ScoreModifyException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthorityException">
+        <soap:fault name="AuthorityException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="IdNotFoundException">
+        <soap:fault name="IdNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StudentControllerService">
+    <wsdl:port binding="tns:StudentControllerServiceSoapBinding" name="StudentPortPort">
+      <soap:address location="http://106.15.183.234:8080/soap-api/student"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

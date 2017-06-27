@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://jw.nju.edu.cn/schema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ScoreControllerService" targetNamespace="http://jw.nju.edu.cn/schema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://jw.nju.edu.cn/schema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://jw.nju.edu.cn/schema">
+  <xs:element name="addScore" type="tns:addScore"/>
+  <xs:element name="modifyScore" type="tns:modifyScore"/>
+  <xs:complexType name="课程成绩列表类型">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="课程成绩" type="tns:课程成绩类型"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="课程成绩类型">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="成绩" type="tns:成绩类型"/>
+    </xs:sequence>
+    <xs:attribute name="课程编号" type="xs:string"/>
+    <xs:attribute name="成绩性质" type="tns:成绩性质类型"/>
+  </xs:complexType>
+  <xs:complexType name="成绩类型">
+    <xs:sequence>
+      <xs:element name="学号" type="xs:string"/>
+      <xs:element name="得分" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuthFaultType">
+    <xs:sequence>
+      <xs:element name="Reason" type="xs:string"/>
+      <xs:element name="Id" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NotFoundType">
+    <xs:sequence>
+      <xs:element name="NotFoundReason" type="tns:NotFoundReasonType"/>
+      <xs:element name="NotFoundId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParamFaultType">
+    <xs:all>
+      <xs:element name="ParamIndex" type="xs:integer"/>
+      <xs:element name="FaultInfo" type="xs:string"/>
+    </xs:all>
+    <xs:attribute name="ParamName" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="addScore">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="课程成绩列表" type="tns:课程成绩列表类型"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyScore">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="课程成绩列表" type="tns:课程成绩列表类型"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="成绩性质类型">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="平时成绩"/>
+      <xs:enumeration value="作业成绩"/>
+      <xs:enumeration value="期中成绩"/>
+      <xs:enumeration value="期末成绩"/>
+      <xs:enumeration value="总评成绩"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NotFoundReasonType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="学号不存在"/>
+      <xs:enumeration value="未找到输入学号的成绩"/>
+      <xs:enumeration value="课程不存在"/>
+      <xs:enumeration value="未找到输入课程的成绩"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AuthFault" nillable="true" type="tns:AuthFaultType"/>
+  <xs:element name="NotFoundFault" nillable="true" type="tns:NotFoundType"/>
+  <xs:element name="InvalidParamFault" nillable="true" type="tns:ParamFaultType"/>
+  <xs:element name="课程成绩列表" nillable="true" type="tns:课程成绩列表类型"/>
+  <xs:element name="学号" nillable="true" type="xs:string"/>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="AuthorityException">
+    <wsdl:part element="tns:AuthFault" name="AuthorityException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IdNotFoundException">
+    <wsdl:part element="tns:NotFoundFault" name="IdNotFoundException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getScore">
+    <wsdl:part element="tns:学号" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modifyScore">
+    <wsdl:part element="tns:课程成绩列表" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ScoreModifyException">
+    <wsdl:part element="tns:InvalidParamFault" name="ScoreModifyException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addScoreResponse">
+    <wsdl:part element="tns:modifyScore" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteScore">
+    <wsdl:part element="tns:课程成绩列表" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addScore">
+    <wsdl:part element="tns:addScore" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteScoreResponse">
+    <wsdl:part element="tns:课程成绩列表" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ScoreTypeException">
+    <wsdl:part element="tns:InvalidParamFault" name="ScoreTypeException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getScoreResponse">
+    <wsdl:part element="tns:课程成绩列表" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modifyScoreResponse">
+    <wsdl:part element="tns:课程成绩列表" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Score">
+    <wsdl:operation name="deleteScore" parameterOrder="parameters">
+      <wsdl:input message="tns:deleteScore" name="deleteScore" wsam:Action="score/deleteScoreRequest" wsaw:Action="score/deleteScoreRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteScoreResponse" name="deleteScoreResponse" wsam:Action="score/deleteScoreResponse" wsaw:Action="score/deleteScoreResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:ScoreTypeException" name="ScoreTypeException" wsam:Action="score/deleteScore/Fault/ScoreTypeException" wsaw:Action="score/deleteScore/Fault/ScoreTypeException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:ScoreModifyException" name="ScoreModifyException" wsam:Action="score/deleteScore/Fault/ScoreModifyException" wsaw:Action="score/deleteScore/Fault/ScoreModifyException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:AuthorityException" name="AuthorityException" wsam:Action="score/deleteScore/Fault/AuthorityException" wsaw:Action="score/deleteScore/Fault/AuthorityException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:IdNotFoundException" name="IdNotFoundException" wsam:Action="score/deleteScore/Fault/IdNotFoundException" wsaw:Action="score/deleteScore/Fault/IdNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addScore">
+      <wsdl:input message="tns:addScore" name="addScore" wsam:Action="score/addScoreRequest" wsaw:Action="score/addScoreRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:addScoreResponse" name="addScoreResponse" wsam:Action="score/addScoreResponse" wsaw:Action="score/addScoreResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:ScoreTypeException" name="ScoreTypeException" wsam:Action="score/addScore/Fault/ScoreTypeException" wsaw:Action="score/addScore/Fault/ScoreTypeException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:ScoreModifyException" name="ScoreModifyException" wsam:Action="score/addScore/Fault/ScoreModifyException" wsaw:Action="score/addScore/Fault/ScoreModifyException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:AuthorityException" name="AuthorityException" wsam:Action="score/addScore/Fault/AuthorityException" wsaw:Action="score/addScore/Fault/AuthorityException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:IdNotFoundException" name="IdNotFoundException" wsam:Action="score/addScore/Fault/IdNotFoundException" wsaw:Action="score/addScore/Fault/IdNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getScore">
+      <wsdl:input message="tns:getScore" name="getScore" wsam:Action="score/getScoreRequest" wsaw:Action="score/getScoreRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getScoreResponse" name="getScoreResponse" wsam:Action="score/getScoreResponse" wsaw:Action="score/getScoreResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:IdNotFoundException" name="IdNotFoundException" wsam:Action="score/getScore/Fault/IdNotFoundException" wsaw:Action="score/getScore/Fault/IdNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modifyScore" parameterOrder="parameters">
+      <wsdl:input message="tns:modifyScore" name="modifyScore" wsam:Action="score/modifyScoreRequest" wsaw:Action="score/modifyScoreRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:modifyScoreResponse" name="modifyScoreResponse" wsam:Action="score/modifyScoreResponse" wsaw:Action="score/modifyScoreResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:ScoreTypeException" name="ScoreTypeException" wsam:Action="score/modifyScore/Fault/ScoreTypeException" wsaw:Action="score/modifyScore/Fault/ScoreTypeException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:ScoreModifyException" name="ScoreModifyException" wsam:Action="score/modifyScore/Fault/ScoreModifyException" wsaw:Action="score/modifyScore/Fault/ScoreModifyException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:AuthorityException" name="AuthorityException" wsam:Action="score/modifyScore/Fault/AuthorityException" wsaw:Action="score/modifyScore/Fault/AuthorityException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:IdNotFoundException" name="IdNotFoundException" wsam:Action="score/modifyScore/Fault/IdNotFoundException" wsaw:Action="score/modifyScore/Fault/IdNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ScoreControllerServiceSoapBinding" type="tns:Score">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="deleteScore">
+      <soap:operation soapAction="score/deleteScore" style="document"/>
+      <wsdl:input name="deleteScore">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteScoreResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ScoreTypeException">
+        <soap:fault name="ScoreTypeException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ScoreModifyException">
+        <soap:fault name="ScoreModifyException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthorityException">
+        <soap:fault name="AuthorityException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="IdNotFoundException">
+        <soap:fault name="IdNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addScore">
+      <soap:operation soapAction="score/addScore" style="document"/>
+      <wsdl:input name="addScore">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addScoreResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ScoreTypeException">
+        <soap:fault name="ScoreTypeException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ScoreModifyException">
+        <soap:fault name="ScoreModifyException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthorityException">
+        <soap:fault name="AuthorityException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="IdNotFoundException">
+        <soap:fault name="IdNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getScore">
+      <soap:operation soapAction="score/getScore" style="document"/>
+      <wsdl:input name="getScore">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getScoreResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="IdNotFoundException">
+        <soap:fault name="IdNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modifyScore">
+      <soap:operation soapAction="score/modifyScore" style="document"/>
+      <wsdl:input name="modifyScore">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="modifyScoreResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ScoreTypeException">
+        <soap:fault name="ScoreTypeException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ScoreModifyException">
+        <soap:fault name="ScoreModifyException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="AuthorityException">
+        <soap:fault name="AuthorityException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="IdNotFoundException">
+        <soap:fault name="IdNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ScoreControllerService">
+    <wsdl:port binding="tns:ScoreControllerServiceSoapBinding" name="ScorePort">
+      <soap:address location="http://106.15.183.234:8080/soap-api/score"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -392,7 +392,7 @@ public class InfoManageImpl implements InfoManagementInterface {
             courseEle.appendChild(teacherEle);
             courseEle.appendChild(scoreListEle);
             node.appendChild(courseEle);
-        
+
 
     }
 

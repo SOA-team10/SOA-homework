@@ -12,6 +12,10 @@ import java.io.IOException;
 public class ScoreServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        int type = 0; //²Ù×÷ÀàÐÍ
+
+
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
