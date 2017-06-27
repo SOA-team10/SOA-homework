@@ -1,13 +1,13 @@
 package handler;
 
+import org.w3c.dom.*;
 import services.auth.*;
 
+import javax.swing.text.html.HTMLDocument;
 import javax.xml.namespace.QName;
 import javax.xml.rpc.ServiceException;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPHeader;
-import javax.xml.soap.SOAPMessage;
+import javax.xml.soap.*;
+import javax.xml.soap.Node;
 import javax.xml.ws.handler.MessageContext;
 import javax.xml.ws.handler.soap.SOAPHandler;
 import javax.xml.ws.handler.soap.SOAPMessageContext;
@@ -16,6 +16,7 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.rmi.RemoteException;
+import java.util.Iterator;
 import java.util.Set;
 
 /**
@@ -37,23 +38,35 @@ public class VerifyHandler implements SOAPHandler<SOAPMessageContext>{
         }
         try {
             SOAPMessage soapMsg = context.getMessage();
-            SOAPHeader soapHeader = soapMsg.getSOAPHeader();
-            String email = soapHeader.getAttribute("email");
-            String password = soapHeader.getAttribute("pwd");
+            SOAPEnvelope soapEnv = soapMsg.getSOAPPart().getEnvelope();
+            SOAPHeader soapHeader = soapEnv.getHeader();
+
+            String email = "";
+            String password="";
+            Iterator it = soapHeader.extractAllHeaderElements();
+            while(it.hasNext()){
+                SOAPHeaderElement ele = (SOAPHeaderElement) it.next();
+                if(ele.getElementName().getLocalName().equals("email")){
+                    email = ele.getValue();
+                }else if(ele.getElementName().getLocalName().equals("pwd")){
+                    password = ele.getValue();
+                }
+
+            }
+
+
             MyAuth auth = new AuthControllerServiceLocator().getMyAuthPort();
 
             账号认证类型 account = new 账号认证类型();
             account.set邮箱(email);
             account.set密码(password);
-
             验证类型 veriResult = auth.verify(account);
-
             if(veriResult.get权限().equals(权限级别.本科生) || veriResult.get权限().equals(权限级别.研究生)){
                 File file = new File(PersistHandler.FILE_NAME);
                 FileOutputStream stream = new FileOutputStream(file,true);
-                String err = "你的权限不能进行此项操作";
+                String err = "你的权限不能进行此项操作\n";
                 stream.write(err.getBytes());
-
+                stream.close();
                 return false;
             }
 

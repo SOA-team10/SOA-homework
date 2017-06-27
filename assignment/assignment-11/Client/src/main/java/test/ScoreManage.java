@@ -2,6 +2,8 @@ package test;
 
 import com.sun.xml.internal.ws.api.message.Headers;
 import com.sun.xml.internal.ws.developer.WSBindingProvider;
+import com.sun.xml.internal.ws.streaming.XMLStreamReaderException;
+import handler.PersistHandler;
 import handlerResolver.DefaultHandlerResolver;
 import handlerResolver.VeriHandlerResolver;
 import net.sf.json.JSONArray;
@@ -10,6 +12,7 @@ import services.score.*;
 
 import javax.xml.namespace.QName;
 import javax.xml.ws.Holder;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,29 +41,31 @@ public class ScoreManage {
 
 
 
-                String addStr = "[{\"course_id\": 000000,\"score_type\": \"总评成绩\",\"score_detail\": " +
-                        "[{\"value\": 100,\"id\": \"141250019\"}]}]";//获取提交的成绩
+                String addStr = "[{\"course_id\": 000004,\"score_type\": \"总评成绩\",\"score_detail\": " +
+                        "[{\"value\": 0,\"id\": \"141250019\"}]}]";//获取提交的成绩
 
                 try {
                     port.addScore(getHolder(addStr));
 
                 } catch (AuthorityException e) {
-                    e.printStackTrace();
+//                    e.printStackTrace();
 //                    request.setAttribute("errMsg",e.getFaultInfo().getId()+";"+e.getFaultInfo().getReason());
                 } catch (IdNotFoundException e) {
-                    e.printStackTrace();
+//                    e.printStackTrace();
 //                    request.setAttribute("error",true);
 //                    request.setAttribute("errMsg",e.getFaultInfo().getNotFoundId()+";"+e.getFaultInfo().getNotFoundReason());
 
                 } catch (ScoreModifyException e) {
-                    e.printStackTrace();
+//                    e.printStackTrace();
 //                    request.setAttribute("error",true);
 //                    request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
 
                 } catch (ScoreTypeException e) {
-                    e.printStackTrace();
+//                    e.printStackTrace();
 //                    request.setAttribute("error",true);
 //                    request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
+                } catch (XMLStreamReaderException e){
+//
                 }
 
 

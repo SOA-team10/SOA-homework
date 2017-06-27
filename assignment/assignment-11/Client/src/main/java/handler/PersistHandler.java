@@ -27,9 +27,9 @@ public class PersistHandler implements SOAPHandler<SOAPMessageContext>{
         Boolean isRequest = (Boolean) context.get(MessageContext.MESSAGE_OUTBOUND_PROPERTY);
         StringBuilder builder = new StringBuilder();
         if(isRequest){
-            builder.append("\n=============Request=============\n");
+            builder.append("=============Request=============\n");
         }else{
-            builder.append("\n=============Response============\n");
+            builder.append("=============Response============\n");
         }
 
         File file = new File(FILE_NAME);
@@ -38,6 +38,8 @@ public class PersistHandler implements SOAPHandler<SOAPMessageContext>{
             stream.write(builder.toString().getBytes());
             SOAPMessage message = context.getMessage();
             message.writeTo(stream);
+            String changeRow = "\n";
+            stream.write(changeRow.getBytes());
             stream.close();
             return true;
 

@@ -16,8 +16,8 @@ public class VeriHandlerResolver implements HandlerResolver{
     @Override
     public List<Handler> getHandlerChain(PortInfo portInfo) {
         List<Handler> handlerChain = new ArrayList<Handler>();
-        handlerChain.add(new VerifyHandler());
         handlerChain.add(new PersistHandler());
+        handlerChain.add(new VerifyHandler());
         return handlerChain;
     }
 }
