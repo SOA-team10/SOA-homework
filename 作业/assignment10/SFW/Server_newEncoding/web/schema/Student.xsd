@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://jw.nju.edu.cn/schema"
+		xmlns:tns="http://jw.nju.edu.cn/schema"
+
+        elementFormDefault="qualified">
+
+    <!--<import namespace="http://www.nju.edu.cn/schema"-->
+            <!--schemaLocation="./PersonInfo.xsd" />-->
+	<include schemaLocation="PersonInfo.xsd"/>
+    <include schemaLocation="CourseList.xsd" />
+
+	
+	<complexType name="StudentInfoType">
+		<all>
+
+			<element name="checkInYear" type="gYear"/>
+			<element ref="tns:personInfo"/>
+			<!--<element name="scoreList" type="tns:CourseScoreListType" minOccurs="0" maxOccurs="1"/>-->
+			<element name="courseList" type="tns:CourseListType"/>
+		</all>
+		<attribute name="studentId" type="tns:StudentIdType" use="required"/>
+	</complexType>
+
+	<simpleType name="StudentIdType">
+		<restriction base="string">
+			<pattern value="\d{9}"/>
+		</restriction>
+	</simpleType>
+
+	<element name="student" type="tns:StudentInfoType"/>
+
+</schema>

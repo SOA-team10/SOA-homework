@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wsdl:definitions
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    targetNamespace="http://jw.nju.edu.cn/wsdl"
+    xmlns:tns="http://jw.nju.edu.cn/wsdl"
+    xmlns:ft="http://jw.nju.edu.cn/fault"
+    xmlns:sch="http://jw.nju.edu.cn/schema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:documentation>
+        student score management web service description
+    </wsdl:documentation>
+
+    
+    <wsdl:types>
+        
+        <xs:schema xmlns="http://www.w3.org/2001/XMLSchema"
+                   targetNamespace="http://jw.nju.edu.cn/wsdl">
+            <xs:import
+                    namespace="http://jw.nju.edu.cn/schema"
+                    schemaLocation="../schema/ScoreManage.xsd"/>
+            <xs:element name="studentId" type="sch:StudentIdType"/>
+            <xs:element name="studentScore" type="sch:IndividualStudentScoreListType"/>
+            <xs:element name="addScore" type="sch:AddOrModifyScoreType"/>
+            <xs:element name="modifyScore" type="sch:AddOrModifyScoreType"/>
+            <xs:element name="deleteScore" type="sch:DeleteScoreType"/>
+            <xs:element name="invalidDataError" type="xs:string"/>
+            <xs:element name="isSuccess" type="xs:string"/>
+
+        </xs:schema>
+
+    </wsdl:types>
+    <wsdl:message name="searchScoreRequest">
+        <wsdl:part element="tns:studentId" name="studentId"/>
+    </wsdl:message>
+    <wsdl:message name="searchScoreResponse">
+        <wsdl:part name="scoreList" element="tns:studentScore"/>
+    </wsdl:message>
+    <wsdl:message name="searchScoreFault">
+        <wsdl:part name="fault" element="tns:invalidDataError"/>
+    </wsdl:message>
+
+    <wsdl:message name="addScoreRequest">
+        <wsdl:part name="student" element="tns:addScore"/>
+    </wsdl:message>
+    <wsdl:message name="addScoreResponse">
+        <wsdl:part name="isSuccess" element="tns:isSuccess"/>
+    </wsdl:message>
+    <wsdl:message name="addScoreFault">
+        <wsdl:part name="fault" element="tns:invalidDataError"/>
+    </wsdl:message>
+
+    <wsdl:message name="modifyScoreRequest">
+        <wsdl:part name="student" element="tns:modifyScore"/>
+    </wsdl:message>
+    <wsdl:message name="modifyScoreResponse">
+        <wsdl:part name="isSuccess" element="tns:isSuccess"/>
+    </wsdl:message>
+    <wsdl:message name="modifyScoreFault">
+        <wsdl:part name="fault" element="tns:invalidDataError"/>
+    </wsdl:message>
+
+    <wsdl:message name="deleteScoreRequest">
+        <wsdl:part name="student" element="tns:deleteScore"/>
+    </wsdl:message>
+    <wsdl:message name="deleteScoreResponse">
+        <wsdl:part name="isSuccess" element="tns:isSuccess"/>
+    </wsdl:message>
+    <wsdl:message name="deleteScoreFault">
+        <wsdl:part name="fault" element="tns:invalidDataError"/>
+    </wsdl:message>
+
+    <wsdl:portType name="stuScoreInterface">
+        <wsdl:operation name="searchScore">
+            <wsdl:input message="tns:searchScoreRequest"/>
+            <wsdl:output message="tns:searchScoreResponse"/>
+            <wsdl:fault name="fault" message="tns:searchScoreFault"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="addScore">
+            <wsdl:input message="tns:addScoreRequest"/>
+            <wsdl:output message="tns:addScoreResponse"/>
+            <wsdl:fault name="fault" message="tns:addScoreFault"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="modifyScore">
+            <wsdl:input message="tns:modifyScoreRequest"/>
+            <wsdl:output message="tns:modifyScoreResponse"/>
+            <wsdl:fault name="fault" message="tns:modifyScoreFault"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="deleteScore">
+            <wsdl:input message="tns:deleteScoreRequest"/>
+            <wsdl:output message="tns:deleteScoreResponse"/>
+            <wsdl:fault name="fault" message="tns:deleteScoreFault"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="stuScoreBinding" type="tns:stuScoreInterface">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+
+        <wsdl:operation name="searchScore">
+            <soap:operation soapAction="http://jw.nju.edu.cn/wsdl/searchScore"/>
+
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+
+        </wsdl:operation>
+        <wsdl:operation name="addScore">
+            <soap:operation soapAction="http://jw.nju.edu.cn/wsdl/addScore"/>
+
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+
+        </wsdl:operation>
+        <wsdl:operation name="deleteScore">
+            <soap:operation soapAction="http://jw.nju.edu.cn/wsdl/deleteScore"/>
+
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+
+        </wsdl:operation>
+        <wsdl:operation name="modifyScore">
+            <soap:operation soapAction="http://jw.nju.edu.cn/wsdl/modifyScore"/>
+
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="ScoreService">
+        <wsdl:port binding="tns:stuScoreBinding" name="ScorePort">
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>

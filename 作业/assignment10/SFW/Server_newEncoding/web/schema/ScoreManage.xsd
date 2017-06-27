@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+
+        xmlns:tns="http://jw.nju.edu.cn/schema"
+        elementFormDefault="qualified"
+        targetNamespace="http://jw.nju.edu.cn/schema">
+
+    <include schemaLocation="ScoreList.xsd"/>
+    <include schemaLocation="PersonInfo.xsd"/>
+    <include schemaLocation="Course.xsd"/>
+
+    <complexType name="IndividualStudentScoreListType">
+        <sequence>
+            <element maxOccurs="unbounded" minOccurs="0" name="单项成绩" type="tns:IndividualCourseScoreType"/>
+        </sequence>
+        <attribute name="学号" type="tns:StudentIdType"/>
+    </complexType>
+
+    <complexType name="IndividualCourseScoreType">
+        <attribute name="课程编号" type="tns:课程编号类型"/>
+        <attribute name="ScoreCategory" type="tns:BJScoreCategoryType"/>
+        <attribute name="分数" type="tns:分数类型"/>
+    </complexType>
+
+    <complexType name="AddOrModifyScoreType">
+        <attribute name="学号" type="tns:StudentIdType"/>
+        <attribute name="分数" type="tns:分数类型"/>
+        <attribute name="课程编号" type="tns:课程编号类型"/>
+        <attribute name="ScoreCategory" type="tns:BJScoreCategoryType"/>
+    </complexType>
+
+    <complexType name="DeleteScoreType">
+        <attribute name="学号" type="tns:StudentIdType"/>
+        <attribute name="课程编号" type="tns:课程编号类型"/>
+        <attribute name="ScoreCategory" type="tns:BJScoreCategoryType"/>
+    </complexType>
+</schema>

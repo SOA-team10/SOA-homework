@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://jw.nju.edu.cn/schema"
+	xmlns:tns="http://jw.nju.edu.cn/schema"
+	elementFormDefault="qualified">
+
+	<include schemaLocation="PersonInfo.xsd"/>
+	<include schemaLocation="Student.xsd" />
+	<include schemaLocation="Course.xsd" />
+
+
+
+	<simpleType name="BJScoreCategoryType">
+		<restriction base="string">
+			<enumeration value="平时成绩" />
+			<enumeration value="作业成绩" />
+			<enumeration value="期中成绩" />
+			<enumeration value="期末成绩" />
+			<enumeration value="总评成绩" />
+		</restriction>
+	</simpleType>
+
+	<complexType name="CourseScoreListType">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<element name="courseScore" type="tns:CourseScoreType" />
+		</sequence>
+	</complexType>
+
+	<element name="scoreList" type="tns:CourseScoreListType" />
+
+
+	<complexType name="CourseScoreType">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<element name="score" type="tns:BJScoreType">
+
+			</element>
+		</sequence>
+		<attribute name="courseId" type="tns:课程编号类型" />
+		<attribute name="scoreType" type="tns:BJScoreCategoryType" />
+	</complexType>
+
+    <complexType name="BJScoreType">
+    	<sequence>
+			<element name="studentId" type="tns:StudentIdType" />
+			<element name="studentScore" type="tns:得分类型" />
+		</sequence>
+    </complexType>
+
+    <simpleType name="得分类型">
+    	<restriction base="int">
+    		<minInclusive value="0" />
+    		<maxInclusive value="100" />
+    	</restriction>
+    </simpleType>
+</schema>

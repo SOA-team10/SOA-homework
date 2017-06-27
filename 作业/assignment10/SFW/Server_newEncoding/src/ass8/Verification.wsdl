@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             targetNamespace= "http://jw.nju.edu.cn/wsdl"
+             xmlns:info= "http://jw.nju.edu.cn/wsdl"
+             xmlns:wsoap= "http://www.w3.org/ns/wsdl/soap"
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             xmlns:tns="http://jw.nju.edu.cn/schema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions">
+    <documentation>
+        This documentation illustrate the VerificationService
+    </documentation>
+
+    <types>
+
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns="http://www.w3.org/2001/XMLSchema"
+                   xmlns:info= "http://jw.nju.edu.cn/wsdl"
+                   targetNamespace="http://jw.nju.edu.cn/wsdl">
+
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/ErrorMsg.xsd"/>
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/VerifyMsg.xsd"/>
+            <xs:import namespace="http://jw.nju.edu.cn/schema" schemaLocation="../schema/Student.xsd"/>
+            <xs:element name="verifyInfo" type="info:VerifyInfoType" />
+
+            <xs:complexType name="VerifyInfoType">
+                <xs:sequence>
+                    <xs:element name="studentId" type="tns:StudentIdType"/>
+                    <xs:element name="password" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+        </xs:schema>
+    </types>
+
+    <message name="verifyRequest">
+        <part name="verityInfo" element="info:verifyInfo"/>
+    </message>
+    <message name="verifyResponse">
+        <part name="verifyMsg" element="tns:VerifyMsg"/>
+    </message>
+    <message name="invalidDataFault">
+        <part name="fault" element="tns:ErrorMsg"/>
+    </message>
+
+    <portType name="verificationInterface">
+        <operation name="verify">
+            <input message="info:verifyRequest"/>
+            <output message="info:verifyResponse"/>
+            <fault name="fault" message="info:invalidDataFault"/>
+        </operation>
+    </portType>
+
+
+    <binding name="VerificationSOAPBinding"
+             type="info:verificationInterface">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+
+        <operation name="verify">
+            <soap:operation soapAction="http://jw.nju.edu.cn/wsdl/verify"/>
+
+            <input>
+                <soap:body use="literal"/>
+            </input>
+
+            <output>
+                <soap:body use="literal"/>
+            </output>
+
+            <fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </fault>
+        </operation>
+    </binding>
+
+    <service name="VerificationService">
+        <port name="verifyPort" binding="info:VerificationSOAPBinding"/>
+    </service>
+</definitions>
