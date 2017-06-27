@@ -1,6 +1,10 @@
 package servlets;
 
 
+import com.sun.xml.internal.ws.api.message.Headers;
+import com.sun.xml.internal.ws.developer.WSBindingProvider;
+import handlerResolver.DefaultHandlerResolver;
+import handlerResolver.VeriHandlerResolver;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -16,6 +20,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.namespace.QName;
 import javax.xml.ws.Holder;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,16 +32,30 @@ import java.util.List;
 @WebServlet("/score")
 public class ScoreServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Score service = new ScoreControllerService().getScorePort();
-        //老师对成绩的操作
+        ScoreControllerService service = new ScoreControllerService();
+        Score port = service.getScorePort();
+        //handler
+        String username = "141250019@smail.nju.edu.cn";
+        String password = "141250019";
+
+        WSBindingProvider bp = (WSBindingProvider) port;
+
+        //对成绩的操作
         int type = 0; //操作类型，从request中拿
         switch (type){
             case 0://提交成绩
 
+                bp.setOutboundHeaders(
+                        Headers.create(new QName("email"),username),
+                        Headers.create(new QName("pwd"), password)
+                );
+
+                service.setHandlerResolver(new VeriHandlerResolver());
+
                 String addStr = request.getParameter("scores");//获取提交的成绩
 
                 try {
-                    service.addScore(getHolder(addStr));
+                    port.addScore(getHolder(addStr));
                     request.setAttribute("error",false);
                 } catch (AuthorityException e) {
                     request.setAttribute("error",true);
@@ -57,10 +76,18 @@ public class ScoreServlet extends HttpServlet {
 
                 break;
             case 1://删除成绩
+
+                bp.setOutboundHeaders(
+                        Headers.create(new QName("email"),username),
+                        Headers.create(new QName("pwd"), password)
+                );
+
+                service.setHandlerResolver(new VeriHandlerResolver());
+
                 String delStr = request.getParameter("scores");//获取提交的成绩
 
                 try {
-                    service.deleteScore(getHolder(delStr));
+                    port.deleteScore(getHolder(delStr));
                     request.setAttribute("error",false);
                 } catch (AuthorityException e) {
                     request.setAttribute("error",true);
@@ -80,10 +107,17 @@ public class ScoreServlet extends HttpServlet {
                 break;
             case 2://修改成绩
 
+                bp.setOutboundHeaders(
+                        Headers.create(new QName("email"),username),
+                        Headers.create(new QName("pwd"), password)
+                );
+
+                service.setHandlerResolver(new VeriHandlerResolver());
+
                 String modStr = request.getParameter("scores");//获取提交的成绩
 
                 try {
-                    service.modifyScore(getHolder(modStr));
+                    port.modifyScore(getHolder(modStr));
                     request.setAttribute("error",false);
                 } catch (AuthorityException e) {
                     request.setAttribute("error",true);
@@ -102,10 +136,18 @@ public class ScoreServlet extends HttpServlet {
                 }
                 break;
             case 3://查询成绩
+
+                bp.setOutboundHeaders(
+                        Headers.create(new QName("email"),username),
+                        Headers.create(new QName("pwd"), password)
+                );
+
+                service.setHandlerResolver(new DefaultHandlerResolver());
+
                 String studentId = "141250019";//从request中拿
                 List<课程成绩类型> list = new ArrayList<课程成绩类型>();
                 try {
-                    list = service.getScore(studentId).get课程成绩();
+                    list = port.getScore(studentId).get课程成绩();
                     request.setAttribute("error",false);
                     request.setAttribute("scores",list);//查询成功，返回课程成绩列表
 
@@ -158,4 +200,9 @@ public class ScoreServlet extends HttpServlet {
         Holder<课程成绩列表类型> holder = new Holder<课程成绩列表类型>(result);
         return holder;
     }
+
+    private void addVeriHandler(){
+
+    }
+
 }

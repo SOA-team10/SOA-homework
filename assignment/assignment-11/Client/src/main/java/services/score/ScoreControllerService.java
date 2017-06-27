@@ -3,6 +3,7 @@ package services.score;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import javax.jws.HandlerChain;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import javax.xml.ws.WebEndpoint;
@@ -18,6 +19,7 @@ import javax.xml.ws.WebServiceFeature;
  * 
  */
 @WebServiceClient(name = "ScoreControllerService", targetNamespace = "http://jw.nju.edu.cn/schema", wsdlLocation = "http://106.15.183.234:8080/soap-api/score?wsdl")
+@HandlerChain(file="default-handler-chain.xml")
 public class ScoreControllerService
     extends Service
 {

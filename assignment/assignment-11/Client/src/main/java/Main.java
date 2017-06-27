@@ -5,6 +5,7 @@ import services.score.成绩类型;
 import services.score.课程成绩列表类型;
 import services.score.课程成绩类型;
 import services.score.*;
+import test.ScoreManage;
 
 
 import java.util.List;
@@ -14,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        ScoreControllerService service = new ScoreControllerService();
+
 //        Score port = service.getScorePort();
 //        try {
 //            课程成绩列表类型 courseScores = port.getScore("141250019");
@@ -46,6 +47,14 @@ public class Main {
 
 //        StudentPort port = new StudentControllerService().getStudentPortPort();
 //        port.getInfoById(new GetInfoByIdType("141250019"));
+
+
+        ScoreManage scoreManage = new ScoreManage();
+        List<课程成绩类型> list = scoreManage.testSearch();
+        System.out.println(list.size());
+
+//        String relativelyPath=System.getProperty("user.dir");
+//        System.out.println(relativelyPath+"/src/main/resource/log.txt");
 
 
 
