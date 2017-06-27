@@ -64,9 +64,10 @@ public class ScoreManage {
 //                    e.printStackTrace();
 //                    request.setAttribute("error",true);
 //                    request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
-                } catch (XMLStreamReaderException e){
-//
                 }
+//                } catch (XMLStreamReaderException e){
+////
+//                }
 
 
 

@@ -72,8 +72,6 @@ public class ScoreServlet extends HttpServlet {
                 } catch (ScoreTypeException e) {
                     request.setAttribute("error",true);
                     request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
-                } catch (XMLStreamReaderException e){
-                    //权限不匹配的时候会抛这个异常，还不知道为啥。。。先这么写着把
                 }
 
 
@@ -110,8 +108,6 @@ public class ScoreServlet extends HttpServlet {
                 } catch (ScoreTypeException e) {
                     request.setAttribute("error",true);
                     request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
-                } catch (XMLStreamReaderException e){
-                    //权限不匹配的时候会抛这个异常，还不知道为啥。。。先这么写着把
                 }
                 break;
             case 2://修改成绩
@@ -145,8 +141,6 @@ public class ScoreServlet extends HttpServlet {
                 } catch (ScoreTypeException e) {
                     request.setAttribute("error",true);
                     request.setAttribute("errMsg",e.getFaultInfo().getParamIndex()+";"+e.getFaultInfo().getParamName()+";"+e.getFaultInfo().getFaultInfo());
-                } catch (XMLStreamReaderException e){
-                    //权限不匹配的时候会抛这个异常，还不知道为啥。。。先这么写着把
                 }
                 break;
             case 3://查询成绩

@@ -67,7 +67,7 @@ public class VerifyHandler implements SOAPHandler<SOAPMessageContext>{
                 String err = "你的权限不能进行此项操作\n";
                 stream.write(err.getBytes());
                 stream.close();
-                return false;
+                return true;
             }
 
         } catch (SOAPException e) {
@@ -77,6 +77,8 @@ public class VerifyHandler implements SOAPHandler<SOAPMessageContext>{
         } catch (RemoteException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (RuntimeException e){
             e.printStackTrace();
         }
 
